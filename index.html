@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CareNote - Local clinical note drafting</title>
+    <meta name="description" content="CareNote is a local-first clinical note drafting app for clinicians who want on-device dictation, AI draft notes, and controlled export.">
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="./">
+          <img src="assets/icon.png" alt="" width="36" height="36">
+          <span>CareNote</span>
+        </a>
+        <div class="nav-links">
+          <a href="#workflow">Workflow</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#legal">Legal</a>
+          <a class="button" href="privacy/">Privacy Policy</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <h1>CareNote</h1>
+            <p>Local clinical note drafting for clinicians who want to capture a session, generate a draft, review it, and export it without turning the app into another cloud chart.</p>
+            <div class="hero-actions">
+              <a class="button" href="#workflow">See the workflow</a>
+              <a class="button-secondary" href="#legal">Read disclosures</a>
+            </div>
+            <div class="hero-proof" aria-label="CareNote product principles">
+              <div class="proof-item">
+                <strong>On-device note drafts</strong>
+                <span>AI drafts are generated locally and must be reviewed before use.</span>
+              </div>
+              <div class="proof-item">
+                <strong>No account required</strong>
+                <span>PIN and recovery-code based local access.</span>
+              </div>
+              <div class="proof-item">
+                <strong>Controlled export</strong>
+                <span>Export reminders keep review and sharing decisions explicit.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band white" id="workflow">
+        <div class="container">
+          <div class="section-head">
+            <h2>Built around the note workflow clinicians already have.</h2>
+            <p>CareNote is meant to sit between your session and your final system of record. It helps produce a reviewed draft, not a signed medical record.</p>
+          </div>
+          <div class="workflow">
+            <article class="step">
+              <div class="step-number">1</div>
+              <h3>Capture</h3>
+              <p>Record or type the session context you need for a note.</p>
+            </article>
+            <article class="step">
+              <div class="step-number">2</div>
+              <h3>Draft</h3>
+              <p>Generate a structured or freeform note draft with on-device AI.</p>
+            </article>
+            <article class="step">
+              <div class="step-number">3</div>
+              <h3>Review</h3>
+              <p>Edit the draft and verify every clinically relevant detail.</p>
+            </article>
+            <article class="step">
+              <div class="step-number">4</div>
+              <h3>Export</h3>
+              <p>Copy, share, email, or export only after the review warning is acknowledged.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band navy" id="privacy">
+        <div class="container split">
+          <div>
+            <div class="section-head">
+              <h2>Local-first by design.</h2>
+              <p>Your clinical content is intended to stay on your device unless you choose to export it. CareNote does not provide cloud storage, team accounts, or EMR integration.</p>
+            </div>
+            <div class="feature-list">
+              <article class="feature">
+                <h3>Encrypted local storage</h3>
+                <p>Local notes and retained audio are protected with app-level encryption and device-bound access controls.</p>
+              </article>
+              <article class="feature">
+                <h3>Clear export responsibility</h3>
+                <p>Before content leaves the app, CareNote asks you to confirm review, authority to share, and destination appropriateness.</p>
+              </article>
+              <article class="feature">
+                <h3>No analytics tracking</h3>
+                <p>The app is built without advertising, analytics, or crash-reporting SDKs in the production dependency path.</p>
+              </article>
+            </div>
+          </div>
+          <div class="phone-frame" aria-label="CareNote generated note screen">
+            <img src="assets/carenote-note-screen.png" alt="CareNote generated note screen showing a routine visit note draft">
+          </div>
+        </div>
+      </section>
+
+      <section class="band white">
+        <div class="container">
+          <div class="section-head">
+            <h2>Important limits, plainly stated.</h2>
+            <p>CareNote is designed for careful individual use. It is not a substitute for professional judgment, legal review, or your final documentation system.</p>
+          </div>
+          <div class="warnings">
+            <article class="warning">
+              <h3>AI drafts are not final notes</h3>
+              <p>Generated output can be wrong or incomplete. You are responsible for reviewing every draft before using it.</p>
+            </article>
+            <article class="warning">
+              <h3>Not a HIPAA Business Associate</h3>
+              <p>If your workflow requires a Business Associate Agreement, CareNote is not the right tool for that use case.</p>
+            </article>
+            <article class="warning">
+              <h3>Not an EMR</h3>
+              <p>CareNote is a local capture, draft, and export tool. Your official record remains wherever you document care.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band navy" id="legal">
+        <div class="container">
+          <div class="section-head">
+            <h2>Legal and privacy documents.</h2>
+            <p>These pages are wired for GitHub Pages and can be finalized once the legal entity, contact email, postal address, and domain are confirmed.</p>
+          </div>
+          <div class="legal-grid">
+            <a class="legal-card" href="privacy/">
+              <strong>Privacy Policy</strong>
+              <span>How CareNote handles local clinical content, update checks, model downloads, and privacy requests.</span>
+            </a>
+            <a class="legal-card" href="privacy/washington/">
+              <strong>Washington Notice</strong>
+              <span>Consumer health data notice for Washington My Health My Data Act positioning.</span>
+            </a>
+            <a class="legal-card" href="terms/">
+              <strong>Terms of Use</strong>
+              <span>Use limitations, AI review responsibilities, export responsibilities, and license terms.</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>CareNote. Local clinical note drafting.</span>
+        <span><a href="privacy/">Privacy</a> · <a href="terms/">Terms</a> · <a href="mailto:privacy@carenote.app">privacy@carenote.app</a></span>
+      </div>
+    </footer>
+  </body>
+</html>
