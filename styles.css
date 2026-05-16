@@ -112,7 +112,7 @@ a {
   min-height: calc(100svh - 132px);
   background:
     linear-gradient(90deg, rgba(16, 41, 68, 0.98) 0%, rgba(16, 41, 68, 0.9) 44%, rgba(16, 41, 68, 0.58) 100%),
-    url("assets/carenote-note-screen.png") right 10% center / min(520px, 42vw) auto no-repeat,
+    url("assets/carenote-template-note.png") right 10% center / min(480px, 40vw) auto no-repeat,
     var(--navy);
   color: var(--white);
   display: flex;
@@ -185,6 +185,10 @@ a {
   background: var(--white);
 }
 
+.band.paper {
+  background: var(--paper);
+}
+
 .band.navy {
   background: var(--navy);
   color: var(--white);
@@ -255,10 +259,59 @@ a {
 
 .step p,
 .feature p,
-.warning p {
+.warning p,
+.module-card p {
   margin: 0;
   color: var(--muted);
   line-height: 1.58;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.module-card {
+  min-height: 278px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  padding: 26px;
+  box-shadow: 0 16px 42px rgba(16, 41, 68, 0.08);
+}
+
+.module-tag {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--teal-soft);
+  color: #08776d;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.module-card:nth-child(2) .module-tag {
+  background: #f8ecd8;
+  color: #8a5f11;
+}
+
+.module-card:nth-child(3) .module-tag {
+  background: #f4e6ec;
+  color: #88435c;
+}
+
+.module-card:nth-child(4) .module-tag {
+  background: #e8edf4;
+  color: #324e70;
+}
+
+.module-card h3 {
+  margin: 24px 0 12px;
+  font-size: 21px;
+  line-height: 1.22;
 }
 
 .split {
@@ -283,7 +336,7 @@ a {
 }
 
 .phone-frame {
-  max-width: 410px;
+  max-width: 430px;
   margin-left: auto;
   border-radius: 38px;
   padding: 14px;
@@ -456,6 +509,7 @@ a {
 
   .hero-proof,
   .workflow,
+  .module-grid,
   .warnings,
   .legal-grid,
   .split {
