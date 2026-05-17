@@ -28,7 +28,6 @@
         <div class="container">
           <h1>Privacy Policy</h1>
           <p>Effective date: pending final publication. Contact: <a href="mailto:privacy@carenote.app">privacy@carenote.app</a>.</p>
-          <div class="draft-note">Draft publication page. Before public store submission, replace the legal entity name, postal address, company state, effective date, and contact details with final values.</div>
         </div>
       </section>
 
@@ -42,6 +41,8 @@
 
         <h2>2. Local clinical content</h2>
         <p>Dictation audio, transcripts, generated drafts, manually entered notes, patient information, and related clinical content are intended to remain on the device where CareNote is installed. CareNote does not transmit that clinical content to our servers and does not provide us a way to retrieve it.</p>
+        <p>This content is encrypted at rest using <strong>AES-256-GCM</strong> with a random data-encryption key that is stored only through hardware-backed key wrapping. Your PIN is not stored; it is used with <strong>PBKDF2-HMAC-SHA512</strong> to unwrap the local encryption key. If you enable biometric unlock, the app stores a separate biometric-protected copy of that key in the iOS Keychain or Android Keystore. We do not transmit, store, back up, or have any technical means to access the encrypted content.</p>
+        <p>At setup, CareNote provides a one-time <strong>recovery code</strong>. The recovery code is the only way to regain access to your encrypted content if you forget your PIN. We do not store the recovery code; if you lose both your PIN and your recovery code, the encrypted content on your device becomes permanently inaccessible.</p>
 
         <h2>3. Data we may receive</h2>
         <p>The app may contact Expo Application Services for app update checks and may contact model hosting endpoints when you download on-device AI models. Those requests can include technical metadata such as IP address, platform, app version, runtime version, and device or installation identifiers needed for app functionality.</p>
