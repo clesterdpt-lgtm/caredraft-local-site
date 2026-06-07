@@ -61,8 +61,51 @@
             </svg>
           </button>
         </div>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
     </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-backdrop"></div>
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+          <a class="brand" href="../../">
+            <img src="../../assets/icon.png" alt="CareDraft Logo">
+            <span>CareDraft</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close mobile menu" type="button">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-menu-links">
+          <a href="../../">Home</a>
+          <a href="../../#workflow">Workflow</a>
+          <a href="../../#tools">Visit Tools</a>
+          <a href="../">Privacy Policy</a>
+          <a href="../../terms/">Terms of Use</a>
+        </nav>
+        <div class="mobile-menu-footer">
+          <span style="font-size: 14px; color: var(--text-muted);">Theme</span>
+          <button class="theme-toggle" id="mobileThemeToggle" aria-label="Toggle dark/light theme" type="button">
+            <!-- Sun Icon (shows in light theme) -->
+            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 21v-2.25m-6.364-.386l1.591-1.591M3 12h2.25m-.386-6.364l1.591 1.591M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z"></path>
+            </svg>
+            <!-- Moon Icon (shows in dark theme) -->
+            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <main>
       <!-- HERO -->
@@ -246,8 +289,9 @@
       document.addEventListener('DOMContentLoaded', () => {
         // Theme Toggle Functionality
         const themeToggleBtn = document.getElementById('themeToggle');
+        const mobileThemeToggleBtn = document.getElementById('mobileThemeToggle');
 
-        themeToggleBtn.addEventListener('click', () => {
+        const toggleTheme = () => {
           const isDark = document.documentElement.classList.toggle('dark-theme');
           if (isDark) {
             document.documentElement.classList.remove('light-theme');
@@ -260,6 +304,50 @@
           setTimeout(() => {
             document.documentElement.classList.remove('theme-transitioning');
           }, 300);
+        };
+
+        if (themeToggleBtn) {
+          themeToggleBtn.addEventListener('click', toggleTheme);
+        }
+        if (mobileThemeToggleBtn) {
+          mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+        }
+
+        // Mobile Menu Functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
+
+        function openMobileMenu() {
+          mobileMenu.classList.add('active');
+          mobileMenuToggle.setAttribute('aria-expanded', 'true');
+          mobileMenu.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+          mobileMenu.classList.remove('active');
+          mobileMenuToggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+
+        if (mobileMenuToggle) {
+          mobileMenuToggle.addEventListener('click', openMobileMenu);
+        }
+        if (mobileMenuClose) {
+          mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+        if (mobileMenu) {
+          mobileMenu.addEventListener('click', (e) => {
+            if (e.target.classList.contains('mobile-menu-backdrop')) {
+              closeMobileMenu();
+            }
+          });
+        }
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
         });
 
         // Scroll Spy Functionality for Sidebar
