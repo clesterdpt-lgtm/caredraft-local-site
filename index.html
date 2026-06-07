@@ -604,6 +604,32 @@
         // Workflow Steps Toggle Simulation
         const stepCards = document.querySelectorAll('.workflow-step-card');
         const screens = document.querySelectorAll('.preview-screen');
+        const workflowPreviewPane = document.querySelector('.workflow-preview-pane');
+        const toolsPreviewPane = document.querySelector('.tools-preview-pane');
+
+        function centerPreviewPane(previewPane) {
+          if (!previewPane) return;
+
+          const rect = previewPane.getBoundingClientRect();
+          const viewportHeight = window.visualViewport?.height || window.innerHeight || document.documentElement.clientHeight;
+          const previewCenter = rect.top + rect.height / 2;
+          const viewportCenter = viewportHeight / 2;
+          const centeredTolerance = Math.min(72, viewportHeight * 0.08);
+
+          if (
+            Math.abs(previewCenter - viewportCenter) <= centeredTolerance &&
+            rect.top >= 0 &&
+            rect.bottom <= viewportHeight
+          ) {
+            return;
+          }
+
+          const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({
+            top: Math.max(0, window.scrollY + previewCenter - viewportCenter),
+            behavior: prefersReducedMotion ? 'auto' : 'smooth',
+          });
+        }
 
         stepCards.forEach(card => {
           card.addEventListener('click', () => {
@@ -625,6 +651,7 @@
             if (activeScreen) {
               activeScreen.classList.add('active');
             }
+            window.requestAnimationFrame(() => centerPreviewPane(workflowPreviewPane));
           });
         });
 
@@ -652,6 +679,7 @@
             if (activeScreen) {
               activeScreen.classList.add('active');
             }
+            window.requestAnimationFrame(() => centerPreviewPane(toolsPreviewPane));
           });
         });
 
