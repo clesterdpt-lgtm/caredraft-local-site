@@ -303,7 +303,7 @@ a {
 }
 
 .nav-links {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 32px;
 }
@@ -319,7 +319,7 @@ a {
 }
 
 .nav-actions {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 16px;
 }
@@ -359,7 +359,7 @@ a {
 
 /* Mobile Menu Toggle Button */
 .mobile-menu-toggle {
-  display: none;
+  display: flex;
   background: none;
   border: 1px solid var(--border-color);
   width: 40px;
