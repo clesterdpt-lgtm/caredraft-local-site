@@ -1,81 +1,359 @@
 <!doctype html>
-<html lang="en" class="legal-page">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CareNote Privacy Policy</title>
-    <meta name="description" content="CareNote privacy policy for the local-first clinical note drafting app.">
+    <title>CareDraft Privacy Policy</title>
+    <meta name="description" content="Privacy policy for CareDraft local-first clinical drafting app. Learn how your clinical notes and dictations remain entirely on your device.">
     <link rel="icon" href="../assets/favicon.png">
+
+    <!-- CSS Link -->
     <link rel="stylesheet" href="../styles.css">
+
+    <script>
+      (function() {
+        const oldHost = 'clesterdpt-lgtm.github.io';
+        const oldBase = '/carenote-local-site';
+        if (window.location.hostname === oldHost && window.location.pathname.startsWith(oldBase)) {
+          const nextPath = window.location.pathname.slice(oldBase.length) || '/';
+          window.location.replace('https://caredraft.app' + nextPath + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
+
+    <!-- Theme Initialization Script to Prevent Flash of Unstyled Content (FOUC) -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark-theme');
+        } else {
+          document.documentElement.classList.remove('dark-theme');
+        }
+      })();
+    </script>
   </head>
   <body>
+    <!-- HEADER -->
     <header class="site-header">
-      <nav class="nav" aria-label="Main navigation">
+      <div class="container nav" aria-label="Main navigation">
         <a class="brand" href="../">
-          <img src="../assets/icon.png" alt="" width="36" height="36">
-          <span>CareNote</span>
+          <img src="../assets/icon.png" alt="CareDraft Logo">
+          <span>CareDraft</span>
         </a>
-        <div class="nav-links">
+        <nav class="nav-links">
           <a href="../">Home</a>
-          <a href="../privacy/washington/">Washington Notice</a>
-          <a href="../terms/">Terms</a>
+          <a href="../#workflow">Workflow</a>
+          <a href="../#tools">Visit Tools</a>
+          <a href="washington/">Washington Notice</a>
+          <a href="../terms/">Terms of Use</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme" type="button">
+            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m0 13.5V21M4.978 4.978l1.59 1.59m10.864 10.864l1.59 1.59m-18-5.454h2.25m13.5 0H21M4.978 19.022l1.59-1.59m10.864-10.864l1.59-1.59M12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z"></path>
+            </svg>
+            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
+            </svg>
+          </button>
         </div>
-      </nav>
+      </div>
     </header>
 
     <main>
-      <section class="legal-hero">
+      <!-- HERO -->
+      <section class="legal-page-header">
         <div class="container">
           <h1>Privacy Policy</h1>
-          <p>Effective date: pending final publication. Contact: <a href="mailto:privacy@carenote.app">privacy@carenote.app</a>.</p>
+          <div class="legal-meta">
+            <span>Effective Date: <strong>May 28, 2026</strong></span> &nbsp;|&nbsp;
+            <span>Last Updated: <strong>June 7, 2026</strong></span>
+          </div>
         </div>
       </section>
 
-      <article class="legal-content">
-        <section class="notice">
-          <p><strong>Short version:</strong> CareNote is designed so clinical content you create in the app stays on your device unless you choose to export it. We do not provide cloud note storage, user accounts, analytics tracking, advertising, or EMR integration.</p>
-        </section>
+      <!-- TWO COLUMN CONTENT LAYOUT -->
+      <div class="container">
+        <div class="legal-page-layout">
+          <!-- Sidebar Navigation -->
+          <aside class="legal-sidebar" aria-label="Table of contents">
+            <h4>Sections</h4>
+            <ul class="legal-toc-list" id="tocList">
+              <li class="legal-toc-item active"><a href="#short-version">The Short Version</a></li>
+              <li class="legal-toc-item"><a href="#sec-1">1. Who We Are</a></li>
+              <li class="legal-toc-item"><a href="#sec-2">2. Important Context</a></li>
+              <li class="legal-toc-item"><a href="#sec-3">3. Local Storage</a></li>
+              <li class="legal-toc-item"><a href="#sec-4">4. Data We Receive</a></li>
+              <li class="legal-toc-item"><a href="#sec-5">5. How Data is Used</a></li>
+              <li class="legal-toc-item"><a href="#sec-6">6. How Data is Shared</a></li>
+              <li class="legal-toc-item"><a href="#sec-7">7. Your Privacy Rights</a></li>
+              <li class="legal-toc-item"><a href="#sec-8">8. Children's Privacy</a></li>
+              <li class="legal-toc-item"><a href="#sec-9">9. Security Architecture</a></li>
+              <li class="legal-toc-item"><a href="#sec-10">10. Data Retention</a></li>
+              <li class="legal-toc-item"><a href="#sec-11">11. International Users</a></li>
+              <li class="legal-toc-item"><a href="#sec-12">12. Policy Changes</a></li>
+              <li class="legal-toc-item"><a href="#sec-13">13. Contact Us</a></li>
+            </ul>
+          </aside>
 
-        <h2>1. Who publishes CareNote</h2>
-        <p>CareNote is published by the final legal entity to be inserted before launch. Privacy questions can be sent to <a href="mailto:privacy@carenote.app">privacy@carenote.app</a>.</p>
+          <!-- Main Legal Content -->
+          <article class="legal-content-box">
+            <blockquote>
+              <p><strong>DRAFT — REQUIRES ATTORNEY REVIEW BEFORE PUBLICATION.</strong> This is a framework-based draft, not legal advice. A qualified US privacy attorney must review before this is published or linked from any app store listing.</p>
+            </blockquote>
 
-        <h2>2. Local clinical content</h2>
-        <p>Dictation audio, transcripts, generated drafts, manually entered notes, patient information, and related clinical content are intended to remain on the device where CareNote is installed. CareNote does not transmit that clinical content to our servers and does not provide us a way to retrieve it.</p>
-        <p>This content is encrypted at rest using <strong>AES-256-GCM</strong> with a random data-encryption key that is stored only through hardware-backed key wrapping. Your PIN is not stored; it is used with <strong>PBKDF2-HMAC-SHA512</strong> to unwrap the local encryption key. If you enable biometric unlock, the app stores a separate biometric-protected copy of that key in the iOS Keychain or Android Keystore. We do not transmit, store, back up, or have any technical means to access the encrypted content.</p>
-        <p>At setup, CareNote provides a one-time <strong>recovery code</strong>. The recovery code is the only way to regain access to your encrypted content if you forget your PIN. We do not store the recovery code; if you lose both your PIN and your recovery code, the encrypted content on your device becomes permanently inaccessible.</p>
+            <section id="short-version">
+              <h2>The Short Version</h2>
+              <p>CareDraft is a clinical productivity tool that runs <strong>entirely on your device</strong>.</p>
+              <ul>
+                <li>CareDraft is intended for clinician-dictated, post-encounter, de-identified note drafting. It is not intended to record patient interactions or to capture patient identifiers.</li>
+                <li>We do not collect, store, or transmit your clinical notes, dictations, transcripts, AI summaries, patient information, or any other content you create in the app.</li>
+                <li>Everything you create stays on your phone or tablet. We have no servers that store your work and no way to access it.</li>
+                <li>The only network connections the app makes are: (1) a one-time download of AI model files from Hugging Face when you first set up the app, and (2) routine app-update checks with Expo (the framework we use to deliver app updates).</li>
+                <li>We do not run analytics, crash reporting, advertising trackers, or any third-party telemetry inside the app.</li>
+                <li>We do not sell your personal information. We do not share it with advertisers. We do not have it to sell or share.</li>
+              </ul>
+              <p>If anything in this policy contradicts the short version, the longer text governs — but we have tried hard to make sure they say the same thing.</p>
+            </section>
 
-        <h2>3. Data we may receive</h2>
-        <p>The app may contact Expo Application Services for app update checks and may contact model hosting endpoints when you download on-device AI models. Those requests can include technical metadata such as IP address, platform, app version, runtime version, and device or installation identifiers needed for app functionality.</p>
+            <hr>
 
-        <h2>4. No analytics or advertising tracking</h2>
-        <p>CareNote is built without production analytics, advertising, attribution, or crash-reporting SDKs. If this changes in a future release, the privacy policy and store privacy disclosures must be updated before that release ships.</p>
+            <section id="sec-1">
+              <h2>1. Who we are</h2>
+              <p>CareDraft is published by <span class="legal-placeholder">[CareDraft LLC]</span> ("we," "us," "our"), located at <span class="legal-placeholder">[Insert Postal Address]</span>. You can contact us about this policy at <a href="mailto:support@caredraft.app">support@caredraft.app</a>.</p>
+              <p>CareDraft is a software application available on the Apple App Store and Google Play (the "App"). This policy describes what limited information we collect, how it is used, and your rights.</p>
+              <p>This policy does not apply to: (a) websites or services we do not control, including the Hugging Face model hosting service and the Expo Application Services update service; (b) your clinical employer's separate policies governing how you may use software with patient information; (c) other apps you may use on your device.</p>
+            </section>
 
-        <h2>5. Exporting content</h2>
-        <p>When you copy, email, share, print, or export a note, that content leaves CareNote's encrypted local storage and is handled by the destination you choose. You are responsible for confirming that you have authority to share the content and that the destination is appropriate.</p>
+            <section id="sec-2">
+              <h2>2. Important context: you are a clinician using a personal productivity tool</h2>
+              <p>CareDraft is sold to individual clinicians as a personal productivity tool, similar to a notebook, a voice recorder, or a notes app. It is <strong>not</strong> sold to clinics, hospitals, or health systems.</p>
+              <p>CareDraft is intended for clinician-dictated, post-encounter, de-identified note drafting. It is not intended to record patient interactions or to capture patient identifiers. Timestamps shown in the App reflect when a draft was created in CareDraft and are not intended to represent encounter date, encounter time, or date of service unless you separately add that information.</p>
+              <p><strong><span class="legal-placeholder">[CareDraft LLC]</span> is not a HIPAA Covered Entity. We are not a HIPAA Business Associate.</strong> We do not enter Business Associate Agreements. If your professional obligations under HIPAA, state medical privacy law, your employer's policies, or your malpractice insurance require a Business Associate Agreement before using a software tool with patient information, <strong>CareDraft is not the right tool for that use case</strong>, and you should not use it for that purpose.</p>
+              <p>You are solely responsible for:</p>
+              <ul>
+                <li>Determining whether your use of the App is permitted under your employer's policies, your professional licensure rules, and applicable law.</li>
+                <li>Securing the device the App is installed on, including device-level encryption, screen-lock, and OS updates.</li>
+                <li>Protecting your PIN, biometric credentials, and any recovery code we provide.</li>
+                <li>Any decision to export, share, print, email, or otherwise transmit notes you create in the App.</li>
+              </ul>
+            </section>
 
-        <h2>6. HIPAA and professional obligations</h2>
-        <p>CareNote is not a HIPAA Covered Entity and is not a HIPAA Business Associate. We do not enter Business Associate Agreements. If your use of a tool with protected health information requires a Business Associate Agreement, CareNote is not the right tool for that use case.</p>
+            <section id="sec-3">
+              <h2>3. Information stored on your device (we do not have access to this)</h2>
+              <p>When you use CareDraft, the following is created and stored <strong>locally on your device</strong>, never on our servers:</p>
+              <ul>
+                <li>Audio recordings of your dictations</li>
+                <li>Text transcriptions of those dictations</li>
+                <li>AI-generated summaries, templates, and other note content</li>
+                <li>Notes you type or edit manually</li>
+                <li>Any patient identifiers, clinical details, or other information you enter</li>
+                <li>Your settings and preferences</li>
+              </ul>
+              <p>This information is encrypted at rest using <strong>AES-256-GCM</strong> with a random data-encryption key stored only through hardware-backed key wrapping. Your PIN is not stored; it is used with PBKDF2-HMAC-SHA512 to unwrap the local encryption key. If you enable biometric unlock, the App stores a separate biometric-protected copy of that encryption key in iOS Keychain or Android Keystore. We do not transmit, store, back up, or have any technical means to access this information.</p>
+              <p><strong>This means: if you lose your PIN and your recovery code, your data is permanently inaccessible. We cannot recover it.</strong> The App provides a recovery code at setup; you should store it in a safe place outside the App.</p>
+            </section>
 
-        <h2>7. Your choices</h2>
-        <ul>
-          <li>You can delete locally stored app data from within the app or by uninstalling the app.</li>
-          <li>You can decide whether to export content from the app.</li>
-          <li>You can contact us at <a href="mailto:privacy@carenote.app">privacy@carenote.app</a> for privacy requests or questions.</li>
-        </ul>
+            <section id="sec-4">
+              <h2>4. Information we do receive</h2>
+              <p>We receive a small amount of information indirectly when you use the App. We do not associate this information with you personally.</p>
 
-        <h2>8. Children</h2>
-        <p>CareNote is not directed to children under 13 and is not intended for use by children.</p>
+              <h3>4.1 App update checks (Expo Application Services)</h3>
+              <p>The App is built using the Expo framework. On launch, the App contacts <strong>Expo Application Services</strong> (<code style="color: var(--teal);">u.expo.dev</code>) to check whether a code update is available. This connection conveys basic technical information including: the App version, the platform (iOS or Android), the runtime version, and a randomly generated device identifier used by Expo to deliver updates. It does not convey your name, your patients' information, the contents of your notes, or any other personal or clinical information.</p>
+              <p>Expo's privacy practices are governed by Expo's own privacy policy at <a href="https://expo.dev/privacy" target="_blank" rel="noopener">https://expo.dev/privacy</a>. We do not receive this information ourselves.</p>
 
-        <h2>9. Changes</h2>
-        <p>We may update this policy when the app changes. Material privacy changes should be reflected here and in the App Store and Google Play privacy disclosures before the changed version is released.</p>
-      </article>
+              <h3>4.2 Model downloads (Hugging Face)</h3>
+              <p>The first time you set up the App, it downloads the AI model files needed to run speech transcription and note generation entirely on your device. These files are hosted by <strong>Hugging Face</strong> and the App makes a one-time HTTPS request to download them. This request conveys standard HTTP information (your IP address, your user agent) to Hugging Face. It does not convey any account, identity, or clinical information.</p>
+              <p>Hugging Face's privacy practices are governed by Hugging Face's own privacy policy at <a href="https://huggingface.co/privacy" target="_blank" rel="noopener">https://huggingface.co/privacy</a>. We do not receive this information ourselves.</p>
+
+              <h3>4.3 App Store / Play Store activity</h3>
+              <p>When you download, install, or purchase the App, Apple and Google receive information about that transaction. Their handling of that information is governed by their own privacy policies. We may receive de-identified aggregate sales reports from Apple and Google, which contain no personal information.</p>
+
+              <h3>4.4 Direct communications with us</h3>
+              <p>If you email us at <a href="mailto:support@caredraft.app">support@caredraft.app</a> or otherwise contact us directly, we will receive whatever information you choose to send. We use that information only to respond to you. We do not add you to marketing lists.</p>
+
+              <h3>4.5 What we do <strong>not</strong> receive</h3>
+              <p>To be explicit: we do <strong>not</strong> receive, and the App does <strong>not</strong> transmit to us or any third party:</p>
+              <ul>
+                <li>The audio of your dictations</li>
+                <li>The text of your notes, transcriptions, or summaries</li>
+                <li>Patient names, identifiers, dates of birth, medical record numbers, diagnoses, treatments, or any other clinical information</li>
+                <li>Your name, email address (unless you write to us), phone number, or other contact information</li>
+                <li>Your location</li>
+                <li>Crash reports, analytics events, or usage telemetry</li>
+                <li>Advertising identifiers</li>
+              </ul>
+            </section>
+
+            <section id="sec-5">
+              <h2>5. How information is used</h2>
+              <p>The limited information described in Section 4 is used only to deliver the App to you (update checks, model downloads) and to respond to you when you contact us. We do not use it to build profiles about you, target advertising to you, or share it with marketers.</p>
+            </section>
+
+            <section id="sec-6">
+              <h2>6. How information is shared</h2>
+              <p><strong>We do not sell personal information.</strong> We do not "share" personal information for cross-context behavioral advertising as those terms are defined under the California Consumer Privacy Act / California Privacy Rights Act (Cal. Civ. Code § 1798.140).</p>
+              <p>We may disclose information in the following narrow circumstances:</p>
+              <ul>
+                <li>To respond to a lawful subpoena, court order, or legal process (and we will resist any request that is overbroad or unlawful);</li>
+                <li>To protect our legal rights or comply with legal obligations;</li>
+                <li>In connection with a merger, acquisition, or asset sale, subject to a successor's agreement to honor this policy.</li>
+              </ul>
+            </section>
+
+            <section id="sec-7">
+              <h2>7. Your privacy rights</h2>
+
+              <h3>7.1 Rights that apply to everyone</h3>
+              <p>You can exercise these rights at any time without contacting us:</p>
+              <ul>
+                <li><strong>Right to delete:</strong> Uninstalling the App deletes your encrypted data along with the App. On iOS, you may need to confirm "Delete App" rather than "Remove from Home Screen." On Android, choose "Uninstall" from the App's information panel.</li>
+                <li><strong>Right to access:</strong> Your data is on your device, in the App. You can view, edit, and export it at any time.</li>
+                <li><strong>Right to opt out of selling/sharing:</strong> We do not sell or share personal information for advertising. There is nothing to opt out of.</li>
+              </ul>
+
+              <h3>7.2 California residents (CCPA / CPRA)</h3>
+              <p>California residents have additional rights under the California Consumer Privacy Act and California Privacy Rights Act:</p>
+              <ul>
+                <li><strong>Right to know</strong> what personal information we collect, use, disclose, and (if applicable) sell or share. See Section 4 above.</li>
+                <li><strong>Right to delete</strong> personal information. We retain essentially no personal information about you, so there is nothing for us to delete. To delete data stored locally on your device, uninstall the App.</li>
+                <li><strong>Right to correct</strong> inaccurate personal information.</li>
+                <li><strong>Right to limit use of sensitive personal information.</strong> Information you input into the App is "sensitive personal information" (including health information), but it never leaves your device, so we do not use it.</li>
+                <li><strong>Right to non-discrimination</strong> for exercising your rights.</li>
+              </ul>
+              <p>To exercise California rights, email us at <a href="mailto:support@caredraft.app">support@caredraft.app</a>. We will verify your identity before responding to substantive requests. We will respond within 45 days as required by law.</p>
+
+              <h3>7.3 Other US states</h3>
+              <p>If you are a resident of a state with a comprehensive consumer privacy law (currently including Colorado, Connecticut, Delaware, Indiana, Iowa, Montana, New Hampshire, New Jersey, Oregon, Tennessee, Texas, Utah, and Virginia, with others taking effect), you have rights similar to those described in Section 7.2 under your state's law. To exercise them, email <a href="mailto:support@caredraft.app">support@caredraft.app</a>.</p>
+
+              <h3>7.4 Washington residents (My Health My Data Act)</h3>
+              <p>Washington residents have additional rights specifically governing consumer health data under the Washington My Health My Data Act (RCW 19.373). Those rights, and how to exercise them, are described in our separate <strong>Washington Consumer Health Data Privacy Policy</strong>, available at <a href="washington/"><strong>https://caredraft.app/privacy/washington</strong></a>.</p>
+
+              <h3>7.5 Appeals</h3>
+              <p>If we deny a privacy rights request and you wish to appeal, reply to our denial within 30 days. We will respond to your appeal within 60 days. If we deny your appeal, you may contact your state's attorney general.</p>
+            </section>
+
+            <section id="sec-8">
+              <h2>8. Children's privacy</h2>
+              <p>CareDraft is not directed to children under 13 and is not intended for use by children under 13. We do not knowingly collect information from children under 13. If you believe a child under 13 has used the App and provided information to us, contact us at <a href="mailto:support@caredraft.app">support@caredraft.app</a> and we will investigate.</p>
+            </section>
+
+            <section id="sec-9">
+              <h2>9. Security</h2>
+              <p>We have designed the App to keep your information secure:</p>
+              <ul>
+                <li>All clinical content stored by the App on your device is encrypted using <strong>AES-256-GCM</strong>.</li>
+                <li>Access to the App requires a <strong>PIN</strong> (4 to 6 digits) and supports <strong>biometric authentication</strong> (Face ID, Touch ID, or fingerprint).</li>
+                <li>The PIN is processed using <strong>PBKDF2-HMAC-SHA512 key derivation</strong> to unwrap a hardware-backed encrypted key. The PIN itself is not stored.</li>
+                <li>Optional biometric unlock uses a separate biometric-protected key in iOS Keychain or Android Keystore; it does not store or replay your PIN.</li>
+                <li>Session keys exist only in device memory during an unlocked session and are cleared on app lock.</li>
+              </ul>
+              <p>No security measure is perfect. The security of your information also depends on you: keep your device updated, use a strong device passcode, do not share your PIN, store your recovery code in a safe place, and uninstall the App if your device is lost or shared with others.</p>
+            </section>
+
+            <section id="sec-10">
+              <h2>10. Data retention</h2>
+              <p>Because we do not collect or store your clinical content, we do not retain it. Your data is retained on your device for as long as the App is installed; uninstalling the App deletes it.</p>
+              <p>For the limited information described in Section 4 (Expo update checks, Hugging Face model downloads, App Store purchase reports), retention is governed by those third parties' own policies. Direct communications you send to us are retained as long as needed to respond and to maintain records of our correspondence, and then deleted.</p>
+            </section>
+
+            <section id="sec-11">
+              <h2>11. International users</h2>
+              <p>The App is currently offered only in the United States. If you are accessing the App from outside the United States, please be aware that we have not designed the App for use outside the United States, and our practices may not comply with the privacy laws of your country. If you wish us to support additional jurisdictions, contact us at <a href="mailto:support@caredraft.app">support@caredraft.app</a>.</p>
+            </section>
+
+            <section id="sec-12">
+              <h2>12. Changes to this policy</h2>
+              <p>We may update this policy from time to time. When we do, we will update the "Last Updated" date at the top of the policy. If we make material changes, we will provide additional notice through the App (such as a banner or prompt on next launch). Your continued use of the App after we post changes constitutes your acceptance of those changes.</p>
+            </section>
+
+            <section id="sec-13">
+              <h2>13. Contact us</h2>
+              <p>For privacy questions, requests, or complaints:</p>
+              <p>
+                <strong><span class="legal-placeholder">[CareDraft LLC]</span></strong><br>
+                <span class="legal-placeholder">[Insert Postal Address]</span><br>
+                Email: <a href="mailto:support@caredraft.app">support@caredraft.app</a>
+              </p>
+
+              <hr>
+              <p style="font-size: 13px; color: var(--text-muted); font-style: italic;">
+                *This policy was prepared with assistance from an AI legal-workflow tool and reviewed by qualified counsel before publication. It is not a substitute for individualized legal advice about your situation.*
+              </p>
+            </section>
+
+          </article>
+        </div>
+      </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
-      <div class="footer-inner">
-        <span>CareNote Privacy Policy</span>
-        <span><a href="../">Home</a> · <a href="../terms/">Terms</a></span>
+      <div class="container footer-inner">
+        <a class="footer-logo" href="../">
+          <img src="../assets/icon.png" alt="CareDraft icon">
+          <span>CareDraft</span>
+        </a>
+        <div class="footer-links">
+          <a href="../">Home</a>
+          <a href="washington/">Washington Notice</a>
+          <a href="../terms/">Terms of Use</a>
+          <a href="mailto:support@caredraft.app">Contact Us</a>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2026 CareDraft LLC. All rights reserved. Draft policies pending final attorney review.</p>
+        </div>
       </div>
     </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Theme Toggle Functionality
+        const themeToggleBtn = document.getElementById('themeToggle');
+
+        themeToggleBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.toggle('dark-theme');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          document.documentElement.classList.add('theme-transitioning');
+          setTimeout(() => {
+            document.documentElement.classList.remove('theme-transitioning');
+          }, 300);
+        });
+
+        // Scroll Spy Functionality for Sidebar
+        const sections = document.querySelectorAll('article.legal-content-box section');
+        const tocItems = document.querySelectorAll('#tocList li');
+
+        const observerOptions = {
+          root: null,
+          rootMargin: '-20% 0px -60% 0px', // Trigger when section is in the middle of viewport
+          threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const activeId = entry.target.getAttribute('id');
+
+              tocItems.forEach(item => {
+                const link = item.querySelector('a');
+                if (link && link.getAttribute('href') === `#${activeId}`) {
+                  item.classList.add('active');
+                } else {
+                  item.classList.remove('active');
+                }
+              });
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach(section => {
+          observer.observe(section);
+        });
+      });
+    </script>
   </body>
 </html>
