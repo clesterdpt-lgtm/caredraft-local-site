@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CareDraft - Local-First Clinical Drafting & Visit Tools</title>
-    <meta name="description" content="CareDraft runs AI locally on your phone, so home health clinicians can draft notes offline and privately without an internet connection in the field.">
+    <title>CareDraft - Local-First Clinical Drafting, Visit Routing & Tools</title>
+    <meta name="description" content="CareDraft runs AI on your phone hardware, so clinicians can draft notes, plan visit routes, and work privately without a recurring AI subscription fee.">
     <link rel="icon" href="assets/favicon.png">
 
     <!-- CSS Link -->
-    <link rel="stylesheet" href="styles.css?v=20260607-desktop-menu">
+    <link rel="stylesheet" href="styles.css?v=20260609-visit-router">
 
     <script>
       (function() {
@@ -116,17 +116,17 @@
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.248-8.25-3.285z"></path>
               </svg>
-              AI Runs Locally on Your Phone
+              AI Runs on Your Phone Hardware
             </div>
             <h1>AI Note Drafting. <span>Offline and Private.</span></h1>
-            <p>CareDraft runs AI transcription and note drafting locally on your phone after setup. No internet connection is required to work in the field, and your clinical content stays private on-device.</p>
+            <p>CareDraft runs AI transcription and note drafting locally on your phone after setup. No internet connection is required to work in the field, and because processing runs on your own phone hardware, there is no recurring CareDraft AI subscription fee.</p>
             <div class="hero-actions">
               <a class="button" href="#workflow">See the workflow</a>
               <a class="button-secondary" href="#tools">Explore visit tools</a>
             </div>
             <div class="hero-proof" aria-label="CareDraft product principles">
               <div class="proof-item">
-                <strong>Runs on Your Phone</strong>
+                <strong>Runs on Phone Hardware</strong>
                 <span>AI transcription and draft generation happen locally on the device.</span>
               </div>
               <div class="proof-item">
@@ -136,6 +136,10 @@
               <div class="proof-item">
                 <strong>Private by Design</strong>
                 <span>Your clinical content stays on your phone, not on CareDraft servers.</span>
+              </div>
+              <div class="proof-item">
+                <strong>No Recurring Subscription</strong>
+                <span>On-device AI means no server-hosted AI meter or monthly model fee from CareDraft.</span>
               </div>
             </div>
           </div>
@@ -174,7 +178,7 @@
                 <div class="step-num">3</div>
                 <div class="step-info">
                   <h3>Organize</h3>
-                  <p>Build exercise lists, medication summaries, and vehicle logs in the same visit workspace.</p>
+                  <p>Build visit routes, exercise lists, medication summaries, and vehicle logs in the same visit workspace.</p>
                 </div>
               </div>
               <div class="workflow-step-card" data-step="4" role="button" aria-pressed="false">
@@ -238,9 +242,12 @@
               <div class="preview-screen" id="screen-3">
                 <div class="preview-header">
                   <span>Visit Toolkit Packages</span>
-                  <span style="font-size: 11px; color: var(--text-muted);">Active Packages: 3</span>
+                  <span style="font-size: 11px; color: var(--text-muted);">Active Packages: 4</span>
                 </div>
                 <div class="preview-body">
+                  <p style="color: #60a5fa; font-weight: bold;">[VISIT ROUTER]</p>
+                  <p>Today's stops sorted by optional visit time. Open the full route in Maps, then save counted mileage back to Vehicle Tracking.</p>
+
                   <p style="color: var(--teal); font-weight: bold;">[HOME EXERCISE PROGRAM]</p>
                   <p>1. Shoulder Pendulums: 3 sets of 10 reps, clockwise and counter-clockwise.<br>
                   2. Wand Shoulder Flexion: 2 sets of 15 reps, hold for 2s at end range.</p>
@@ -307,6 +314,11 @@
                 <span class="module-tag">Education Packets</span>
                 <h3>Patient Education</h3>
                 <p>Create patient teaching checklists and packets to keep topics and instructions consistent between visits.</p>
+              </div>
+              <div class="tool-select-card" id="visit-router" data-tool="router" role="button" aria-pressed="false">
+                <span class="module-tag">Visit Router</span>
+                <h3>Daily Route Planning</h3>
+                <p>Order visit stops, open a full route in Maps, and send counted mileage totals into Vehicle Tracking.</p>
               </div>
               <div class="tool-select-card" data-tool="vehicle" role="button" aria-pressed="false">
                 <span class="module-tag">Vehicle Log</span>
@@ -422,14 +434,51 @@
                 </div>
               </div>
 
-              <!-- Tool Preview 4: Vehicle -->
+              <!-- Tool Preview 4: Visit Router -->
+              <div class="tool-preview-screen" id="tool-router">
+                <div class="preview-header">
+                  <span>Visit Router</span>
+                  <span style="font-size: 11px; color: #60a5fa; font-weight: bold;">Status: Route Draft</span>
+                </div>
+                <div class="preview-body">
+                  <p style="color: #60a5fa; font-weight: bold; margin-bottom: 8px;">TODAY'S VISIT ORDER</p>
+                  <div style="display: grid; gap: 8px; margin-bottom: 10px;">
+                    <div style="display: grid; grid-template-columns: 24px 1fr auto; gap: 8px; align-items: center; color: rgba(255,255,255,0.86);">
+                      <strong style="color: #60a5fa;">1</strong>
+                      <span>Visit 1 - North Ridge</span>
+                      <span>09:30</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 24px 1fr auto; gap: 8px; align-items: center; color: rgba(255,255,255,0.86);">
+                      <strong style="color: #60a5fa;">2</strong>
+                      <span>Visit 2 - Cedar Lane</span>
+                      <span>11:00</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 24px 1fr auto; gap: 8px; align-items: center; color: rgba(255,255,255,0.86);">
+                      <strong style="color: #60a5fa;">3</strong>
+                      <span>Visit 3 - Lakeside</span>
+                      <span>13:15</span>
+                    </div>
+                  </div>
+                  <div class="export-warning-sim" style="border-left-color: #60a5fa; background-color: rgba(96, 165, 250, 0.15); margin-top: 8px; font-size: 10px;">
+                    <strong>Mileage Summary:</strong><br>
+                    Home round trip counted: 42.6 mi. Vehicle Tracking receives total mileage and generic leg labels, not visit addresses.
+                  </div>
+                  <p style="color: rgba(255,255,255,0.62); font-size: 10px; margin-top: 10px;">Temporary route addresses auto-expire from the route draft.</p>
+                </div>
+                <div class="preview-actions">
+                  <button class="preview-btn secondary" type="button">Open Full Route</button>
+                  <button class="preview-btn primary" type="button">Save Mileage</button>
+                </div>
+              </div>
+
+              <!-- Tool Preview 5: Vehicle -->
               <div class="tool-preview-screen" id="tool-vehicle">
                 <div class="preview-header">
                   <span>Vehicle Travel & Expense Log</span>
-                  <span style="font-size: 11px; color: #38bdf8; font-weight: bold;">Total Mileage: 18.2 mi</span>
+                  <span style="font-size: 11px; color: #22c55e; font-weight: bold;">Total Mileage: 18.2 mi</span>
                 </div>
                 <div class="preview-body" style="font-size: 11px;">
-                  <p style="color: #38bdf8; font-weight: bold; margin-bottom: 8px;">DAILY TRAVEL RECORD: JUNE 5, 2026</p>
+                  <p style="color: #22c55e; font-weight: bold; margin-bottom: 8px;">DAILY TRAVEL RECORD: JUNE 5, 2026</p>
                   <div style="display: flex; flex-direction: column; gap: 4px; color: rgba(255,255,255,0.85);">
                     <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3px;">
                       <span>1. Start (Office) &rarr; Visit 1 (Pt Smith)</span>
@@ -444,7 +493,7 @@
                       <span>18.2 mi / 36 min</span>
                     </div>
                   </div>
-                  <div class="export-warning-sim" style="border-left-color: #38bdf8; background-color: rgba(56, 189, 248, 0.15); margin-top: 10px; font-size: 10px;">
+                  <div class="export-warning-sim" style="border-left-color: #22c55e; background-color: rgba(34, 197, 94, 0.15); margin-top: 10px; font-size: 10px;">
                     <strong>Reimbursement Export Block:</strong><br>
                     Date: 06/05/2026 | Total Mileage: 18.2 mi | Travel Time: 36 min | stops: 2. Trip validated via local GPS tracker.
                   </div>
@@ -465,7 +514,7 @@
           <div class="sec-copy">
             <div class="section-head" style="text-align: left; margin-bottom: 38px;">
               <h2 style="color: #ffffff;">Private by Architecture, Not Just Policy</h2>
-              <p style="color: rgba(255, 255, 255, 0.72);">CareDraft is a local-first application. The AI runs locally on your phone, so note drafting does not require an internet connection after setup, and patient data never traverses or resides on a third-party cloud.</p>
+              <p style="color: rgba(255, 255, 255, 0.72);">CareDraft is a local-first application. The AI runs locally on your phone hardware, so note drafting does not require an internet connection after setup, there is no recurring CareDraft AI subscription fee, and patient data never traverses or resides on a third-party cloud.</p>
             </div>
             <div class="sec-features">
               <div class="sec-item">
