@@ -905,42 +905,81 @@ h2 {
 
 .edu-label-alert { color: var(--red); }
 
-/* Visit Router map */
-.map-mock {
+/* Visit Router route handoff */
+.route-handoff {
   background: #fff;
   border: 1px solid var(--line-soft);
   border-radius: 14px;
-  overflow: hidden;
+  padding: 13px;
   margin-bottom: 12px;
 }
 
-.map-mock svg { display: block; width: 100%; height: auto; }
-
-.map-road {
-  stroke: var(--line-soft);
-  stroke-width: 7;
-  fill: none;
+.route-handoff-head,
+.route-handoff-line,
+.route-handoff-apps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
-.map-route {
-  stroke: #0e7490;
-  stroke-width: 2.5;
-  stroke-dasharray: 6 5;
-  fill: none;
+.route-handoff-head {
+  color: var(--navy);
+  font-size: 13px;
+  margin-bottom: 12px;
 }
 
-.map-pin {
-  fill: #0e7490;
+.route-handoff-head span {
+  color: var(--ink-soft);
+  font-weight: 600;
 }
 
-.map-pin-home { fill: var(--navy); }
+.route-handoff-head strong {
+  color: #0e7490;
+  font-size: 12px;
+}
 
-.map-mock text {
-  fill: #fff;
+.route-handoff-line {
+  position: relative;
+  color: #0e7490;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.route-handoff-line::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 50%;
+  border-top: 2px dashed rgba(14, 116, 144, 0.35);
+}
+
+.route-handoff-line span {
+  position: relative;
+  z-index: 1;
+  background: #e7f6f8;
+  border: 1px solid #b8e2e9;
+  border-radius: 999px;
+  padding: 7px 10px;
+}
+
+.route-handoff-apps {
+  flex-wrap: wrap;
+}
+
+.route-handoff-apps span {
+  flex: 1 1 120px;
+  background: #f7fbfa;
+  border: 1px solid var(--line-soft);
+  border-radius: 10px;
+  color: var(--ink);
   font-family: var(--font-sans);
-  font-size: 9.5px;
+  font-size: 12px;
   font-weight: 700;
-  text-anchor: middle;
+  padding: 8px 10px;
+  text-align: center;
 }
 
 .stop-row {

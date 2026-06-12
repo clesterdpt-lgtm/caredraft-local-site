@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260611a">
+  <link rel="stylesheet" href="styles.css?v=20260612a">
 
   <script>
     // Redirect old GitHub Pages host to the custom domain.
@@ -420,26 +420,27 @@
         </div>
 
         <!-- Visit Router -->
-        <div class="feature-row reveal" style="--tool-accent:#0e7490">
+        <div class="feature-row reveal" id="visit-router" style="--tool-accent:#0e7490">
           <div class="feature-copy">
             <span class="feature-tag">Visit Router</span>
             <h3>Your day, in driving order.</h3>
             <p>
-              Type the day's addresses, map them, and drag the stops into the
-              order that makes sense from the driver's seat. When the day is
-              planned, send the whole route's mileage to the vehicle log in one
-              tap.
+              Type the day's addresses and visit times, then drag the stops into
+              the order that makes sense from the driver's seat. When the day is
+              planned, open the full route in Apple Maps or Google Maps, or send
+              the day's mileage to the vehicle log in one tap.
             </p>
             <ul class="feature-points">
-              <li>Map the day's stops with numbered pins and a route guide</li>
+              <li>Build and reorder the day's stop list without an in-app pin map</li>
               <li>Drag to reorder, or sort automatically by visit time</li>
-              <li>Open the full route in your maps app for turn-by-turn</li>
+              <li>Open the full route in Apple Maps or Google Maps when you choose</li>
               <li>One tap logs the day's mileage to Vehicle Tracking</li>
             </ul>
             <p class="feature-fine">
-              Placing pins uses your phone's built-in geocoder — the same service
-              your maps app uses, asked only when you tap "map addresses," and
-              never with any clinical content. Routes stay encrypted on-device.
+              CareDraft does not display visit pins on an in-app map. Route
+              details stay in the encrypted local draft until you choose to open
+              the route in your maps app, where Apple or Google handles the
+              navigation handoff.
             </p>
           </div>
           <div class="feature-shot">
@@ -448,19 +449,20 @@
                 <span class="mini-title">Thursday · 4 stops</span>
                 <span class="mini-chip">18.4 mi</span>
               </div>
-              <div class="map-mock">
-                <svg viewBox="0 0 280 150" aria-hidden="true">
-                  <path class="map-road" d="M0 38 H280 M0 96 H280 M52 0 V150 M148 0 V150 M226 0 V150"/>
-                  <path class="map-route" d="M30 122 C 70 100, 90 60, 122 52 S 200 70, 248 34"/>
-                  <circle class="map-pin-home" cx="30" cy="122" r="9"/>
-                  <circle class="map-pin" cx="122" cy="52" r="9"/>
-                  <circle class="map-pin" cx="186" cy="62" r="9"/>
-                  <circle class="map-pin" cx="248" cy="34" r="9"/>
-                  <text x="30" y="126">H</text>
-                  <text x="122" y="56">1</text>
-                  <text x="186" y="66">2</text>
-                  <text x="248" y="38">3</text>
-                </svg>
+              <div class="route-handoff">
+                <div class="route-handoff-head">
+                  <span>Local stop order</span>
+                  <strong>No map pins</strong>
+                </div>
+                <div class="route-handoff-line">
+                  <span>Home</span>
+                  <span>3 visits</span>
+                  <span>Home</span>
+                </div>
+                <div class="route-handoff-apps">
+                  <span>Apple Maps</span>
+                  <span>Google Maps</span>
+                </div>
               </div>
               <div class="stop-row"><span class="stop-num">1</span><span class="stop-addr">9:00 — Oakwood Dr</span><span class="stop-grip">≡</span></div>
               <div class="stop-row"><span class="stop-num">2</span><span class="stop-addr">10:30 — Maple Court</span><span class="stop-grip">≡</span></div>
