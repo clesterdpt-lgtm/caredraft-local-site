@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=redesign-1">
+  <link rel="stylesheet" href="styles.css?v=redesign-2">
 
   <script>
     // Redirect old GitHub Pages host to the custom domain.
@@ -265,35 +265,249 @@
         <p class="kicker">The visit toolkit</p>
         <h2>More than a note drafter.</h2>
         <p class="section-lede">
-          CareDraft carries the rest of the visit bag too — all of it working
-          to the same rule: your data stays on your phone.
+          Notes are the headline act, but CareDraft carries the rest of the
+          visit bag too — exercise programs, med lists, teaching materials,
+          routing, and mileage. Your records stay encrypted on your phone,
+          same as your notes.
         </p>
-        <div class="tool-grid">
-          <article class="tool reveal" style="--tool-accent:#0d9488">
-            <h3>Visit notes</h3>
-            <p>Seven note types, from routine visits to recerts and discharges — drafted in summary or template mode.</p>
-          </article>
-          <article class="tool reveal" style="--tool-accent:#d97706">
-            <h3>HEP builder</h3>
-            <p>Assemble illustrated home exercise programs from a built-in library and export patient-ready handouts.</p>
-          </article>
-          <article class="tool reveal" style="--tool-accent:#7c3aed">
-            <h3>Medication manager</h3>
-            <p>Keep med lists current — point your camera at a label or list to import it. The OCR runs on-device too.</p>
-          </article>
-          <article class="tool reveal" style="--tool-accent:#15803d">
-            <h3>Patient education</h3>
-            <p>Curated teaching topics with printable handouts for patients and caregivers.</p>
-          </article>
-          <article class="tool reveal" style="--tool-accent:#0e7490">
-            <h3>Visit Router</h3>
-            <p>Plan the day's stops on a map, reorder with a drag, and drive an efficient route between patients.</p>
-          </article>
-          <article class="tool reveal" style="--tool-accent:#dc2626">
-            <h3>Mileage log</h3>
-            <p>Log drives between visits for reimbursement — without a tracking app reporting your location to anyone.</p>
-          </article>
+
+        <!-- HEP builder -->
+        <div class="feature-row reveal" style="--tool-accent:#d97706">
+          <div class="feature-copy">
+            <span class="feature-tag">HEP builder</span>
+            <h3>Exercise programs patients can actually follow.</h3>
+            <p>
+              Build a home exercise program in a couple of taps from a searchable
+              library of illustrated exercises — each with step-by-step
+              instructions written for patients, not therapists.
+            </p>
+            <ul class="feature-points">
+              <li>Set reps, sets, and frequency per exercise</li>
+              <li>Save programs as reusable templates for common diagnoses</li>
+              <li>Add your own custom exercises to the library</li>
+              <li>Export a patient-ready illustrated handout, and drop a summary straight into your visit note</li>
+            </ul>
+          </div>
+          <div class="feature-shot">
+            <div class="mini-app">
+              <div class="mini-head">
+                <span class="mini-title">Knee &amp; Balance Program</span>
+                <span class="mini-chip">3 exercises</span>
+              </div>
+              <div class="hep-row">
+                <img src="assets/hep-sit-to-stand.png" alt="Sit to stand exercise illustration" loading="lazy">
+                <div>
+                  <p class="hep-name">Sit to Stand</p>
+                  <p class="hep-dose">3 sets × 10 reps · daily</p>
+                </div>
+              </div>
+              <div class="hep-row">
+                <img src="assets/hep-single-leg-stance.png" alt="Single leg stance exercise illustration" loading="lazy">
+                <div>
+                  <p class="hep-name">Single Leg Stance</p>
+                  <p class="hep-dose">3 × 30 sec holds · at counter</p>
+                </div>
+              </div>
+              <div class="hep-row">
+                <img src="assets/hep-heel-rise.png" alt="Heel raise exercise illustration" loading="lazy">
+                <div>
+                  <p class="hep-name">Standing Heel Raises</p>
+                  <p class="hep-dose">2 sets × 15 reps · daily</p>
+                </div>
+              </div>
+              <div class="mini-actions">
+                <span class="mini-btn mini-btn-ghost">Save template</span>
+                <span class="mini-btn">Export handout</span>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Medication manager -->
+        <div class="feature-row reveal" style="--tool-accent:#7c3aed">
+          <div class="feature-copy">
+            <span class="feature-tag">Medication manager</span>
+            <h3>Med lists without the typing.</h3>
+            <p>
+              Point your camera at a medication list or a row of bottles and
+              CareDraft reads it, cleans it up, and turns it into a structured
+              med list — name, dose, frequency, route. The text recognition runs
+              on your phone, like everything else.
+            </p>
+            <ul class="feature-points">
+              <li>Camera import with on-device OCR — review every extracted med before it's added</li>
+              <li>Field-by-field dictation tuned for drug names and doses</li>
+              <li>Save dated snapshots, so reconciliation has a paper trail</li>
+              <li>Search your medication history instantly</li>
+            </ul>
+          </div>
+          <div class="feature-shot">
+            <div class="mini-app">
+              <div class="mini-head">
+                <span class="mini-title">Current medications</span>
+                <span class="mini-chip">8 active</span>
+              </div>
+              <div class="scan-banner">
+                <svg viewBox="0 0 24 24"><path d="M4 4h4V2H2v6h2V4zm16 0v4h2V2h-6v2h4zM4 20v-4H2v6h6v-2H4zm16 0h-4v2h6v-6h-2v4zM7 9h10v2H7V9zm0 4h10v2H7v-2z"/></svg>
+                Scanned from photo — 3 medications found, review to add
+              </div>
+              <div class="med-row">
+                <div><p class="med-name">Lisinopril</p><p class="med-dose">10 mg · once daily · oral</p></div>
+                <span class="med-chip">reviewed</span>
+              </div>
+              <div class="med-row">
+                <div><p class="med-name">Metformin</p><p class="med-dose">500 mg · twice daily · with meals</p></div>
+                <span class="med-chip">reviewed</span>
+              </div>
+              <div class="med-row">
+                <div><p class="med-name">Apixaban</p><p class="med-dose">5 mg · twice daily · oral</p></div>
+                <span class="med-chip med-chip-new">new</span>
+              </div>
+              <div class="mini-actions">
+                <span class="mini-btn mini-btn-ghost">Save snapshot</span>
+                <span class="mini-btn">Add medication</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Patient education -->
+        <div class="feature-row reveal" style="--tool-accent:#15803d">
+          <div class="feature-copy">
+            <span class="feature-tag">Patient education</span>
+            <h3>Teaching materials, ready before you ring the doorbell.</h3>
+            <p>
+              A built-in library of plain-language education modules — CHF, COPD,
+              diabetes, fall prevention, wound care, blood thinner safety, and
+              more. Combine modules into a packet for the visit and document the
+              teaching in one step.
+            </p>
+            <ul class="feature-points">
+              <li>15+ condition modules, each with key points, red flags, and "when to call 911"</li>
+              <li>Build reusable packets for common patient types</li>
+              <li>Write custom modules for anything the library doesn't cover</li>
+              <li>Export patient-facing handouts and a documentation summary for your note</li>
+            </ul>
+          </div>
+          <div class="feature-shot">
+            <div class="mini-app">
+              <div class="mini-head">
+                <span class="mini-title">Education packet</span>
+                <span class="mini-chip">2 modules</span>
+              </div>
+              <div class="edu-chips">
+                <span class="edu-chip edu-chip-on">CHF ✓</span>
+                <span class="edu-chip edu-chip-on">Fall Prevention ✓</span>
+                <span class="edu-chip">COPD</span>
+                <span class="edu-chip">Diabetes</span>
+              </div>
+              <div class="edu-card">
+                <p class="edu-title">Congestive Heart Failure</p>
+                <p class="edu-label">Key points</p>
+                <div class="skel" style="width: 90%"></div>
+                <div class="skel" style="width: 76%"></div>
+                <div class="skel" style="width: 84%"></div>
+                <p class="edu-label edu-label-alert">When to call your doctor or 911</p>
+                <div class="skel" style="width: 82%"></div>
+                <div class="skel" style="width: 64%"></div>
+              </div>
+              <div class="mini-actions">
+                <span class="mini-btn mini-btn-ghost">Save packet</span>
+                <span class="mini-btn">Export handout</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visit Router -->
+        <div class="feature-row reveal" style="--tool-accent:#0e7490">
+          <div class="feature-copy">
+            <span class="feature-tag">Visit Router</span>
+            <h3>Your day, in driving order.</h3>
+            <p>
+              Type the day's addresses, map them, and drag the stops into the
+              order that makes sense from the driver's seat. When the day is
+              planned, send the whole route's mileage to the vehicle log in one
+              tap.
+            </p>
+            <ul class="feature-points">
+              <li>Map the day's stops with numbered pins and a route guide</li>
+              <li>Drag to reorder, or sort automatically by visit time</li>
+              <li>Open the full route in your maps app for turn-by-turn</li>
+              <li>One tap logs the day's mileage to Vehicle Tracking</li>
+            </ul>
+            <p class="feature-fine">
+              Placing pins uses your phone's built-in geocoder — the same service
+              your maps app uses, asked only when you tap "map addresses," and
+              never with any clinical content. Routes stay encrypted on-device.
+            </p>
+          </div>
+          <div class="feature-shot">
+            <div class="mini-app">
+              <div class="mini-head">
+                <span class="mini-title">Thursday · 4 stops</span>
+                <span class="mini-chip">18.4 mi</span>
+              </div>
+              <div class="map-mock">
+                <svg viewBox="0 0 280 150" aria-hidden="true">
+                  <path class="map-road" d="M0 38 H280 M0 96 H280 M52 0 V150 M148 0 V150 M226 0 V150"/>
+                  <path class="map-route" d="M30 122 C 70 100, 90 60, 122 52 S 200 70, 248 34"/>
+                  <circle class="map-pin-home" cx="30" cy="122" r="9"/>
+                  <circle class="map-pin" cx="122" cy="52" r="9"/>
+                  <circle class="map-pin" cx="186" cy="62" r="9"/>
+                  <circle class="map-pin" cx="248" cy="34" r="9"/>
+                  <text x="30" y="126">H</text>
+                  <text x="122" y="56">1</text>
+                  <text x="186" y="66">2</text>
+                  <text x="248" y="38">3</text>
+                </svg>
+              </div>
+              <div class="stop-row"><span class="stop-num">1</span><span class="stop-addr">9:00 — Oakwood Dr</span><span class="stop-grip">≡</span></div>
+              <div class="stop-row"><span class="stop-num">2</span><span class="stop-addr">10:30 — Maple Court</span><span class="stop-grip">≡</span></div>
+              <div class="stop-row"><span class="stop-num">3</span><span class="stop-addr">1:00 — Cedar Lane</span><span class="stop-grip">≡</span></div>
+              <div class="mini-actions">
+                <span class="mini-btn mini-btn-ghost">Open full route</span>
+                <span class="mini-btn">Log mileage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vehicle tracking -->
+        <div class="feature-row reveal" style="--tool-accent:#dc2626">
+          <div class="feature-copy">
+            <span class="feature-tag">Vehicle tracking</span>
+            <h3>Every reimbursable mile, accounted for.</h3>
+            <p>
+              Log trips between visits, capture vehicle expenses, and pull a
+              clean monthly report at tax time — without installing a mileage
+              app that tracks your location and sells the breadcrumbs.
+            </p>
+            <ul class="feature-points">
+              <li>Trip breakdowns per day, with "duplicate last trip" and "add return trip" shortcuts</li>
+              <li>Monthly totals and per-month browsing</li>
+              <li>Vehicle expenses too — fill-ups, oil changes, repairs</li>
+              <li>Export a monthly report for reimbursement or taxes</li>
+            </ul>
+          </div>
+          <div class="feature-shot">
+            <div class="mini-app">
+              <div class="mini-head">
+                <span class="mini-title">June</span>
+                <span class="mini-chip">412.6 mi total</span>
+              </div>
+              <div class="trip-row"><span class="trip-route">Home → Oakwood Dr</span><span class="trip-miles">8.2 mi</span></div>
+              <div class="trip-row"><span class="trip-route">Oakwood → Maple Court</span><span class="trip-miles">5.1 mi</span></div>
+              <div class="trip-row"><span class="trip-route">Maple Court → Home</span><span class="trip-miles">9.6 mi</span></div>
+              <div class="trip-row trip-row-expense"><span class="trip-route">Fill-up</span><span class="trip-miles">$46.75</span></div>
+              <div class="mini-actions">
+                <span class="mini-btn mini-btn-ghost">Add return trip</span>
+                <span class="mini-btn">Export report</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
