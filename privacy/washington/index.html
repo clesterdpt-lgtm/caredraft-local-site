@@ -1,388 +1,270 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CareDraft Washington Consumer Health Data Privacy Policy</title>
-    <meta name="description" content="Washington Consumer Health Data Privacy Policy for CareDraft under My Health My Data Act (MHMDA).">
-    <link rel="icon" href="../../assets/favicon.png">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Washington Consumer Health Data Privacy Policy — CareDraft</title>
+  <meta name="description" content="Washington Consumer Health Data Privacy Policy for CareDraft under My Health My Data Act (MHMDA).">
 
-    <!-- CSS Link (two levels up) -->
-    <link rel="stylesheet" href="../../styles.css?v=20260607-desktop-menu">
+  <link rel="icon" type="image/png" href="../../assets/favicon.png">
+  <link rel="canonical" href="https://caredraft.app/privacy/washington/">
 
-    <script>
-      (function() {
-        const oldHost = 'clesterdpt-lgtm.github.io';
-        const oldBase = '/carenote-local-site';
-        if (window.location.hostname === oldHost && window.location.pathname.startsWith(oldBase)) {
-          const nextPath = window.location.pathname.slice(oldBase.length) || '/';
-          window.location.replace('https://caredraft.app' + nextPath + window.location.search + window.location.hash);
-        }
-      })();
-    </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Theme Initialization Script to Prevent Flash of Unstyled Content (FOUC) -->
-    <script>
-      (function() {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-          document.documentElement.classList.add('dark-theme');
-          document.documentElement.classList.remove('light-theme');
-        } else {
-          document.documentElement.classList.remove('dark-theme');
-          document.documentElement.classList.add('light-theme');
-        }
-      })();
-    </script>
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="container nav" aria-label="Main navigation">
-        <a class="brand" href="../../">
-          <img src="../../assets/icon.png" alt="CareDraft Logo">
-          <span>CareDraft</span>
-        </a>
-        <nav class="nav-links">
-          <a href="../../">Home</a>
-          <a href="../../#workflow">Workflow</a>
-          <a href="../../#tools">Visit Tools</a>
-          <a href="../">Privacy Policy</a>
-          <a href="../../terms/">Terms of Use</a>
-        </nav>
-        <div class="nav-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme" type="button">
-            <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 21v-2.25m-6.364-.386l1.591-1.591M3 12h2.25m-.386-6.364l1.591 1.591M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z"></path>
-            </svg>
-            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
-            </svg>
-          </button>
-          <a class="button" href="../../#legal">Legal</a>
-        </div>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-    </header>
+  <link rel="stylesheet" href="../../styles.css?v=20260611a">
 
-    <!-- MOBILE MENU OVERLAY -->
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <div class="mobile-menu-backdrop"></div>
-      <div class="mobile-menu-content">
-        <div class="mobile-menu-header">
-          <a class="brand" href="../../">
-            <img src="../../assets/icon.png" alt="CareDraft Logo">
-            <span>CareDraft</span>
-          </a>
-          <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close mobile menu" type="button">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <nav class="mobile-menu-links">
-          <a href="../../">Home</a>
-          <a href="../../#workflow">Workflow</a>
-          <a href="../../#tools">Visit Tools</a>
-          <a href="../">Privacy Policy</a>
-          <a href="../../terms/">Terms of Use</a>
-          <a href="../../#legal">Legal</a>
-        </nav>
-        <div class="mobile-menu-footer">
-          <span style="font-size: 14px; color: var(--text-muted);">Theme</span>
-          <button class="theme-toggle" id="mobileThemeToggle" aria-label="Toggle dark/light theme" type="button">
-            <!-- Sun Icon (shows in light theme) -->
-            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 21v-2.25m-6.364-.386l1.591-1.591M3 12h2.25m-.386-6.364l1.591 1.591M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z"></path>
-            </svg>
-            <!-- Moon Icon (shows in dark theme) -->
-            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
+  <script>
+    // Redirect old GitHub Pages host to the custom domain.
+    (function () {
+      var oldHost = 'clesterdpt-lgtm.github.io';
+      var oldBase = '/carenote-local-site';
+      if (window.location.hostname === oldHost && window.location.pathname.indexOf(oldBase) === 0) {
+        var nextPath = window.location.pathname.slice(oldBase.length) || '/';
+        window.location.replace('https://caredraft.app' + nextPath + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ───────────────────────── Nav ───────────────────────── -->
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="../../" aria-label="CareDraft home">
+        <img src="../../assets/caredraft-login-mark.png" alt="" width="30" height="30">
+        <span>CareDraft</span>
+      </a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="../../">Home</a>
+        <a href="../">Privacy Policy</a>
+        <a href="../../terms/">Terms of Use</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="../../#get">Get the app</a>
     </div>
+  </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="legal-page-header">
-        <div class="container">
-          <h1>Washington Consumer Health Data Privacy Policy</h1>
-          <div class="legal-meta">
-            <span>Effective Date: <strong>May 28, 2026</strong></span> &nbsp;|&nbsp;
-            <span>Last Updated: <strong>June 7, 2026</strong></span>
-          </div>
+  <main>
+
+    <section class="legal-hero">
+      <div class="shell">
+        <p class="kicker">Legal</p>
+        <h1>Washington Consumer Health Data Privacy Policy</h1>
+        <div class="legal-meta">
+          <span>Effective date <strong>May 28, 2026</strong></span>
+          <span>Last updated <strong>June 7, 2026</strong></span>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TWO COLUMN CONTENT LAYOUT -->
-      <div class="container">
-        <div class="legal-page-layout">
-          <!-- Sidebar Navigation -->
-          <aside class="legal-sidebar" aria-label="Table of contents">
-            <h4>Sections</h4>
-            <ul class="legal-toc-list" id="tocList">
-              <li class="legal-toc-item active"><a href="#why-this-policy">Why This Policy</a></li>
-              <li class="legal-toc-item"><a href="#how-caredraft-works">How CareDraft Works</a></li>
-              <li class="legal-toc-item"><a href="#sec-1">1. Categories Collected</a></li>
-              <li class="legal-toc-item"><a href="#sec-2">2. Categories of Sources</a></li>
-              <li class="legal-toc-item"><a href="#sec-3">3. Categories Shared</a></li>
-              <li class="legal-toc-item"><a href="#sec-4">4. Third Parties Shared With</a></li>
-              <li class="legal-toc-item"><a href="#sec-5">5. Exercise MHMDA Rights</a></li>
-              <li class="legal-toc-item"><a href="#sec-6">6. Processors</a></li>
-              <li class="legal-toc-item"><a href="#sec-7">7. Consent & Authorization</a></li>
-              <li class="legal-toc-item"><a href="#sec-8">8. Geofencing</a></li>
-              <li class="legal-toc-item"><a href="#sec-9">9. Policy Changes</a></li>
-              <li class="legal-toc-item"><a href="#sec-10">10. Contact Us</a></li>
+    <section class="legal-section">
+      <div class="shell legal-layout">
+
+        <details class="legal-toc" id="toc" open>
+          <summary>On this page</summary>
+          <ul>
+            <li><a class="active" href="#why-this-policy">Why This Policy</a></li>
+            <li><a href="#how-caredraft-works">How CareDraft Works</a></li>
+            <li><a href="#sec-1">1. Categories Collected</a></li>
+            <li><a href="#sec-2">2. Categories of Sources</a></li>
+            <li><a href="#sec-3">3. Categories Shared</a></li>
+            <li><a href="#sec-4">4. Third Parties Shared With</a></li>
+            <li><a href="#sec-5">5. Exercise MHMDA Rights</a></li>
+            <li><a href="#sec-6">6. Processors</a></li>
+            <li><a href="#sec-7">7. Consent &amp; Authorization</a></li>
+            <li><a href="#sec-8">8. Geofencing</a></li>
+            <li><a href="#sec-9">9. Policy Changes</a></li>
+            <li><a href="#sec-10">10. Contact Us</a></li>
+          </ul>
+        </details>
+
+        <article class="legal-body">
+          <div class="legal-callout">
+            <p><strong>DRAFT — REQUIRES ATTORNEY REVIEW BEFORE PUBLICATION.</strong> This document is required by Washington's My Health My Data Act (RCW 19.373) ("MHMDA") and must be a separate, dedicated policy distinct from our general Privacy Policy. A Washington-licensed privacy attorney should review before publication.</p>
+          </div>
+
+          <section id="why-this-policy">
+            <h2>Why this policy exists</h2>
+            <p>The Washington My Health My Data Act (RCW 19.373) requires regulated entities that collect "consumer health data" of Washington consumers to publish a dedicated privacy policy describing their consumer health data practices. This is that policy.</p>
+            <p>Our general Privacy Policy is available at <a href="../"><strong>https://caredraft.app/privacy</strong></a>. This document supplements that policy with specific information required by Washington law. If anything in this document conflicts with the general Privacy Policy, this document governs with respect to Washington consumer health data.</p>
+          </section>
+
+          <section id="how-caredraft-works">
+            <h2>How CareDraft works (important context)</h2>
+            <p>CareDraft is a clinical productivity application that runs <strong>entirely on the device</strong> of the clinician who installs it. The App is intended for clinician-dictated, post-encounter, de-identified note drafting. It is not intended to record patient interactions or to capture patient identifiers. The App does not transmit clinical content, audio, transcripts, summaries, notes, or any patient information to <span class="legal-placeholder">[CareDraft LLC]</span>'s servers, to cloud services, or to any third party. Everything you create stays on your device. <span class="legal-placeholder">[CareDraft LLC]</span> does not have, and cannot obtain, access to your clinical content.</p>
+            <p>This architectural decision shapes everything below. Because we do not collect or process consumer health data, our MHMDA obligations are substantially narrower than those of cloud-based health applications. We have nonetheless prepared this policy to be transparent about our practices and to provide a clear mechanism for Washington consumers to exercise their rights under MHMDA.</p>
+          </section>
+
+          <hr>
+
+          <section id="sec-1">
+            <h2>1. Categories of consumer health data we collect</h2>
+            <p><strong>We do not collect, receive, process, or store consumer health data on our servers or in any system we control.</strong></p>
+            <p>When you use the App, the following types of information are created and stored exclusively on your device, encrypted at rest:</p>
+            <ul>
+              <li>Audio recordings of dictations</li>
+              <li>Text transcriptions</li>
+              <li>AI-generated summaries and templates</li>
+              <li>Notes, including any patient information you input</li>
+              <li>Diagnoses, treatment plans, medication information, or other clinical content you enter</li>
             </ul>
-          </aside>
+            <p>While this information may meet MHMDA's definition of "consumer health data" with respect to <em>patients</em> whose information a clinician dictates, <span class="legal-placeholder">[CareDraft LLC]</span> does not collect, receive, or process any of it. It never leaves the device of the clinician who entered it.</p>
+          </section>
 
-          <!-- Main Legal Content -->
-          <article class="legal-content-box">
-            <blockquote>
-              <p><strong>DRAFT — REQUIRES ATTORNEY REVIEW BEFORE PUBLICATION.</strong> This document is required by Washington's My Health My Data Act (RCW 19.373) ("MHMDA") and must be a separate, dedicated policy distinct from our general Privacy Policy. A Washington-licensed privacy attorney should review before publication.</p>
-            </blockquote>
+          <section id="sec-2">
+            <h2>2. Categories of sources from which consumer health data is collected</h2>
+            <p>Not applicable. <span class="legal-placeholder">[CareDraft LLC]</span> does not collect consumer health data from any source.</p>
+          </section>
 
-            <section id="why-this-policy">
-              <h2>Why this policy exists</h2>
-              <p>The Washington My Health My Data Act (RCW 19.373) requires regulated entities that collect "consumer health data" of Washington consumers to publish a dedicated privacy policy describing their consumer health data practices. This is that policy.</p>
-              <p>Our general Privacy Policy is available at <a href="../"><strong>https://caredraft.app/privacy</strong></a>. This document supplements that policy with specific information required by Washington law. If anything in this document conflicts with the general Privacy Policy, this document governs with respect to Washington consumer health data.</p>
-            </section>
+          <section id="sec-3">
+            <h2>3. Categories of consumer health data shared</h2>
+            <p>Not applicable. <span class="legal-placeholder">[CareDraft LLC]</span> does not collect, and therefore cannot share, consumer health data.</p>
+            <p>We do not sell consumer health data, and we will not sell consumer health data in the future without first obtaining a separate, written, signed Valid Authorization from the consumer as required by RCW 19.373.040.</p>
+          </section>
 
-            <section id="how-caredraft-works">
-              <h2>How CareDraft works (important context)</h2>
-              <p>CareDraft is a clinical productivity application that runs <strong>entirely on the device</strong> of the clinician who installs it. The App is intended for clinician-dictated, post-encounter, de-identified note drafting. It is not intended to record patient interactions or to capture patient identifiers. The App does not transmit clinical content, audio, transcripts, summaries, notes, or any patient information to <span class="legal-placeholder">[CareDraft LLC]</span>'s servers, to cloud services, or to any third party. Everything you create stays on your device. <span class="legal-placeholder">[CareDraft LLC]</span> does not have, and cannot obtain, access to your clinical content.</p>
-              <p>This architectural decision shapes everything below. Because we do not collect or process consumer health data, our MHMDA obligations are substantially narrower than those of cloud-based health applications. We have nonetheless prepared this policy to be transparent about our practices and to provide a clear mechanism for Washington consumers to exercise their rights under MHMDA.</p>
-            </section>
+          <section id="sec-4">
+            <h2>4. Categories of third parties and affiliates with whom consumer health data is shared</h2>
+            <p>Not applicable. <span class="legal-placeholder">[CareDraft LLC]</span> does not share consumer health data with any third party, affiliate, processor, or service provider, because we do not collect it.</p>
+          </section>
+
+          <section id="sec-5">
+            <h2>5. How a consumer can exercise their MHMDA rights</h2>
+            <p>Even though we do not collect consumer health data, we provide the following process so that Washington consumers can confirm this and exercise the rights MHMDA provides:</p>
+
+            <h3>5.1 Rights</h3>
+            <p>Washington consumers have the right to:</p>
+            <ul>
+              <li><strong>Confirm</strong> whether <span class="legal-placeholder">[CareDraft LLC]</span> is collecting, sharing, or selling consumer health data about them, and to access that data.</li>
+              <li><strong>Withdraw consent</strong> from <span class="legal-placeholder">[CareDraft LLC]</span>'s collection and sharing of consumer health data.</li>
+              <li><strong>Delete</strong> consumer health data <span class="legal-placeholder">[CareDraft LLC]</span> has collected.</li>
+            </ul>
+
+            <h3>5.2 How to exercise these rights</h3>
+            <p>Email <strong>support@caredraft.app</strong> with the subject line "Washington MHMDA Request" and include:</p>
+            <ul>
+              <li>Your name (and, if you are a patient submitting a request about your own data, the name of the clinician who may have used the App with respect to your care, if known);</li>
+              <li>The specific right you wish to exercise (confirm/access, withdraw consent, or delete);</li>
+              <li>A description sufficient for us to verify your identity (we will request additional verification information if needed);</li>
+              <li>Your preferred contact method for our response.</li>
+            </ul>
+
+            <h3>5.3 Our response</h3>
+            <p>We will respond within <strong>45 days</strong> of receiving a verifiable request, as required by RCW 19.373.050. We may extend that period by an additional 45 days if reasonably necessary, in which case we will notify you of the extension and the reason for it.</p>
+            <p>Because we do not collect consumer health data on our servers, the substance of our response to confirm/access, withdraw consent, and delete requests will typically be: <em>"<span class="legal-placeholder">[CareDraft LLC]</span> does not collect, receive, store, or process any consumer health data about you on our systems. Any clinical information about you created in the CareDraft App resides exclusively on the device of the clinician who installed the App; we have no access to it and cannot retrieve, modify, or delete it. To address consumer health data residing on a specific clinician's device, please contact that clinician directly or their healthcare practice."</em></p>
+
+            <h3>5.4 Appeals</h3>
+            <p>If we deny your request and you wish to appeal, reply to our denial within 30 days. We will respond to your appeal within 60 days. If we deny your appeal, you may submit a complaint to the Washington State Attorney General at <a href="https://www.atg.wa.gov/file-complaint" target="_blank" rel="noopener"><strong>https://www.atg.wa.gov/file-complaint</strong></a>.</p>
+          </section>
+
+          <section id="sec-6">
+            <h2>6. Processors</h2>
+            <p><span class="legal-placeholder">[CareDraft LLC]</span> does not engage processors to handle consumer health data, because we do not collect consumer health data.</p>
+          </section>
+
+          <section id="sec-7">
+            <h2>7. Consent and authorization</h2>
+            <p>Because <span class="legal-placeholder">[CareDraft LLC]</span> does not collect, share, or sell consumer health data, no consumer consent or authorization is required for those activities. The App, however, displays a privacy notice at first launch that summarizes its on-device architecture and confirms the user has read this policy and the general Privacy Policy.</p>
+            <p>If our architecture or practices ever change such that <span class="legal-placeholder">[CareDraft LLC]</span> would collect, process, share, or sell consumer health data of Washington consumers, we will:</p>
+            <ul>
+              <li>Update this policy before any such change takes effect;</li>
+              <li>Obtain affirmative opt-in consent under RCW 19.373.030 before any collection;</li>
+              <li>Obtain a separate written, signed Valid Authorization under RCW 19.373.040 before any sale.</li>
+            </ul>
+          </section>
+
+          <section id="sec-8">
+            <h2>8. Geofencing</h2>
+            <p><span class="legal-placeholder">[CareDraft LLC]</span> does not operate a geofence around any in-person healthcare facility, as those terms are defined in RCW 19.373.005, and does not use any geofencing technology to identify, track, or collect information from Washington consumers near healthcare facilities.</p>
+          </section>
+
+          <section id="sec-9">
+            <h2>9. Changes to this policy</h2>
+            <p>We may update this policy from time to time. When we do, we will update the "Last Updated" date at the top of the policy. If we make material changes that expand the scope of consumer health data we collect, share, or sell, we will obtain any consents required by MHMDA before those changes apply to existing users.</p>
+          </section>
+
+          <section id="sec-10">
+            <h2>10. Contact us</h2>
+            <p>
+              <strong><span class="legal-placeholder">[CareDraft LLC]</span></strong><br>
+              <span class="legal-placeholder">[Insert Postal Address]</span><br>
+              Email: <a href="mailto:support@caredraft.app">support@caredraft.app</a>
+            </p>
 
             <hr>
+            <p class="legal-fine">This policy was prepared with assistance from an AI legal-workflow tool and reviewed by qualified counsel before publication. It is not a substitute for individualized legal advice.</p>
+          </section>
 
-            <section id="sec-1">
-              <h2>1. Categories of consumer health data we collect</h2>
-              <p><strong>We do not collect, receive, process, or store consumer health data on our servers or in any system we control.</strong></p>
-              <p>When you use the App, the following types of information are created and stored exclusively on your device, encrypted at rest:</p>
-              <ul>
-                <li>Audio recordings of dictations</li>
-                <li>Text transcriptions</li>
-                <li>AI-generated summaries and templates</li>
-                <li>Notes, including any patient information you input</li>
-                <li>Diagnoses, treatment plans, medication information, or other clinical content you enter</li>
-              </ul>
-              <p>While this information may meet MHMDA's definition of "consumer health data" with respect to <em>patients</em> whose information a clinician dictates, <span class="legal-placeholder">[CareDraft LLC]</span> does not collect, receive, or process any of it. It never leaves the device of the clinician who entered it.</p>
-            </section>
-
-            <section id="sec-2">
-              <h2>2. Categories of sources from which consumer health data is collected</h2>
-              <p>Not applicable. <span class="legal-placeholder">[CareDraft LLC]</span> does not collect consumer health data from any source.</p>
-            </section>
-
-            <section id="sec-3">
-              <h2>3. Categories of consumer health data shared</h2>
-              <p>Not applicable. <span class="legal-placeholder">[CareDraft LLC]</span> does not collect, and therefore cannot share, consumer health data.</p>
-              <p>We do not sell consumer health data, and we will not sell consumer health data in the future without first obtaining a separate, written, signed Valid Authorization from the consumer as required by RCW 19.373.040.</p>
-            </section>
-
-            <section id="sec-4">
-              <h2>4. Categories of third parties and affiliates with whom consumer health data is shared</h2>
-              <p>Not applicable. <span class="legal-placeholder">[CareDraft LLC]</span> does not share consumer health data with any third party, affiliate, processor, or service provider, because we do not collect it.</p>
-            </section>
-
-            <section id="sec-5">
-              <h2>5. How a consumer can exercise their MHMDA rights</h2>
-              <p>Even though we do not collect consumer health data, we provide the following process so that Washington consumers can confirm this and exercise the rights MHMDA provides:</p>
-
-              <h3>5.1 Rights</h3>
-              <p>Washington consumers have the right to:</p>
-              <ul>
-                <li><strong>Confirm</strong> whether <span class="legal-placeholder">[CareDraft LLC]</span> is collecting, sharing, or selling consumer health data about them, and to access that data.</li>
-                <li><strong>Withdraw consent</strong> from <span class="legal-placeholder">[CareDraft LLC]</span>'s collection and sharing of consumer health data.</li>
-                <li><strong>Delete</strong> consumer health data <span class="legal-placeholder">[CareDraft LLC]</span> has collected.</li>
-              </ul>
-
-              <h3>5.2 How to exercise these rights</h3>
-              <p>Email <strong>support@caredraft.app</strong> with the subject line "Washington MHMDA Request" and include:</p>
-              <ul>
-                <li>Your name (and, if you are a patient submitting a request about your own data, the name of the clinician who may have used the App with respect to your care, if known);</li>
-                <li>The specific right you wish to exercise (confirm/access, withdraw consent, or delete);</li>
-                <li>A description sufficient for us to verify your identity (we will request additional verification information if needed);</li>
-                <li>Your preferred contact method for our response.</li>
-              </ul>
-
-              <h3>5.3 Our response</h3>
-              <p>We will respond within <strong>45 days</strong> of receiving a verifiable request, as required by RCW 19.373.050. We may extend that period by an additional 45 days if reasonably necessary, in which case we will notify you of the extension and the reason for it.</p>
-              <p>Because we do not collect consumer health data on our servers, the substance of our response to confirm/access, withdraw consent, and delete requests will typically be: <em>"<span class="legal-placeholder">[CareDraft LLC]</span> does not collect, receive, store, or process any consumer health data about you on our systems. Any clinical information about you created in the CareDraft App resides exclusively on the device of the clinician who installed the App; we have no access to it and cannot retrieve, modify, or delete it. To address consumer health data residing on a specific clinician's device, please contact that clinician directly or their healthcare practice."</em></p>
-
-              <h3>5.4 Appeals</h3>
-              <p>If we deny your request and you wish to appeal, reply to our denial within 30 days. We will respond to your appeal within 60 days. If we deny your appeal, you may submit a complaint to the Washington State Attorney General at <a href="https://www.atg.wa.gov/file-complaint" target="_blank" rel="noopener"><strong>https://www.atg.wa.gov/file-complaint</strong></a>.</p>
-            </section>
-
-            <section id="sec-6">
-              <h2>6. Processors</h2>
-              <p><span class="legal-placeholder">[CareDraft LLC]</span> does not engage processors to handle consumer health data, because we do not collect consumer health data.</p>
-            </section>
-
-            <section id="sec-7">
-              <h2>7. Consent and authorization</h2>
-              <p>Because <span class="legal-placeholder">[CareDraft LLC]</span> does not collect, share, or sell consumer health data, no consumer consent or authorization is required for those activities. The App, however, displays a privacy notice at first launch that summarizes its on-device architecture and confirms the user has read this policy and the general Privacy Policy.</p>
-              <p>If our architecture or practices ever change such that <span class="legal-placeholder">[CareDraft LLC]</span> would collect, process, share, or sell consumer health data of Washington consumers, we will:</p>
-              <ul>
-                <li>Update this policy before any such change takes effect;</li>
-                <li>Obtain affirmative opt-in consent under RCW 19.373.030 before any collection;</li>
-                <li>Obtain a separate written, signed Valid Authorization under RCW 19.373.040 before any sale.</li>
-              </ul>
-            </section>
-
-            <section id="sec-8">
-              <h2>8. Geofencing</h2>
-              <p><span class="legal-placeholder">[CareDraft LLC]</span> does not operate a geofence around any in-person healthcare facility, as those terms are defined in RCW 19.373.005, and does not use any geofencing technology to identify, track, or collect information from Washington consumers near healthcare facilities.</p>
-            </section>
-
-            <section id="sec-9">
-              <h2>9. Changes to this policy</h2>
-              <p>We may update this policy from time to time. When we do, we will update the "Last Updated" date at the top of the policy. If we make material changes that expand the scope of consumer health data we collect, share, or sell, we will obtain any consents required by MHMDA before those changes apply to existing users.</p>
-            </section>
-
-            <section id="sec-10">
-              <h2>10. Contact us</h2>
-              <p>
-                <strong><span class="legal-placeholder">[CareDraft LLC]</span></strong><br>
-                <span class="legal-placeholder">[Insert Postal Address]</span><br>
-                Email: <a href="mailto:support@caredraft.app">support@caredraft.app</a>
-              </p>
-
-              <hr>
-              <p style="font-size: 13px; color: var(--text-muted); font-style: italic;">
-                *This policy was prepared with assistance from an AI legal-workflow tool and reviewed by qualified counsel before publication. It is not a substitute for individualized legal advice.*
-              </p>
-            </section>
-
-          </article>
-        </div>
+        </article>
       </div>
-    </main>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <a class="footer-logo" href="../../">
-          <img src="../../assets/icon.png" alt="CareDraft icon">
+  </main>
+
+  <!-- ───────────────────────── Footer ───────────────────────── -->
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../">
+          <img src="../../assets/caredraft-login-mark.png" alt="" width="26" height="26">
           <span>CareDraft</span>
         </a>
-        <div class="footer-links">
-          <a href="../../">Home</a>
-          <a href="../">Privacy Policy</a>
-          <a href="../../terms/">Terms of Use</a>
-          <a href="mailto:support@caredraft.app">Contact Us</a>
-        </div>
-        <div class="footer-copy">
-          <p>&copy; 2026 CareDraft LLC. All rights reserved. Draft policies pending final attorney review.</p>
-        </div>
+        <p>AI drafts. You decide.</p>
       </div>
-    </footer>
+      <nav class="footer-links" aria-label="Legal">
+        <a href="../../">Home</a>
+        <a href="../">Privacy Policy</a>
+        <a href="./" aria-current="page">Washington Health Data Notice</a>
+        <a href="../../terms/">Terms of Use</a>
+      </nav>
+      <p class="footer-fine">
+        On-device drafting powered by Gemma (Google), running locally. Speech
+        recognition runs on-device. CareDraft generates drafts, not final clinical
+        documentation — review every note before you rely on it.
+      </p>
+      <p class="footer-copy">© <span id="year">2026</span> CareDraft</p>
+    </div>
+  </footer>
 
-    <!-- INTERACTIVE SCRIPTS -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Theme Toggle Functionality
-        const themeToggleBtn = document.getElementById('themeToggle');
-        const mobileThemeToggleBtn = document.getElementById('mobileThemeToggle');
+  <script>
+    (function () {
+      var toc = document.getElementById('toc');
+      var links = toc ? Array.prototype.slice.call(toc.querySelectorAll('a')) : [];
+      var mobile = window.matchMedia('(max-width: 980px)');
 
-        const toggleTheme = () => {
-          const isDark = document.documentElement.classList.toggle('dark-theme');
-          if (isDark) {
-            document.documentElement.classList.remove('light-theme');
-            localStorage.setItem('theme', 'dark');
-          } else {
-            document.documentElement.classList.add('light-theme');
-            localStorage.setItem('theme', 'light');
-          }
-          document.documentElement.classList.add('theme-transitioning');
-          setTimeout(() => {
-            document.documentElement.classList.remove('theme-transitioning');
-          }, 300);
-        };
+      // Sidebar on desktop, collapsible "On this page" on mobile.
+      function syncToc() {
+        if (!toc) return;
+        if (mobile.matches) { toc.removeAttribute('open'); }
+        else { toc.setAttribute('open', ''); }
+      }
+      syncToc();
+      if (mobile.addEventListener) { mobile.addEventListener('change', syncToc); }
+      else { mobile.addListener(syncToc); }
 
-        if (themeToggleBtn) {
-          themeToggleBtn.addEventListener('click', toggleTheme);
-        }
-        if (mobileThemeToggleBtn) {
-          mobileThemeToggleBtn.addEventListener('click', toggleTheme);
-        }
-
-        // Mobile Menu Functionality
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
-
-        function openMobileMenu() {
-          mobileMenu.classList.add('active');
-          mobileMenuToggle.setAttribute('aria-expanded', 'true');
-          mobileMenu.setAttribute('aria-hidden', 'false');
-          document.body.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-          mobileMenu.classList.remove('active');
-          mobileMenuToggle.setAttribute('aria-expanded', 'false');
-          mobileMenu.setAttribute('aria-hidden', 'true');
-          document.body.style.overflow = '';
-        }
-
-        if (mobileMenuToggle) {
-          mobileMenuToggle.addEventListener('click', openMobileMenu);
-        }
-        if (mobileMenuClose) {
-          mobileMenuClose.addEventListener('click', closeMobileMenu);
-        }
-        if (mobileMenu) {
-          mobileMenu.addEventListener('click', (e) => {
-            if (e.target.classList.contains('mobile-menu-backdrop')) {
-              closeMobileMenu();
-            }
-          });
-        }
-        mobileMenuLinks.forEach(link => {
-          link.addEventListener('click', closeMobileMenu);
-        });
-
-        // Scroll Spy Functionality for Sidebar
-        const sections = document.querySelectorAll('article.legal-content-box section');
-        const tocItems = document.querySelectorAll('#tocList li');
-
-        const observerOptions = {
-          root: null,
-          rootMargin: '-20% 0px -60% 0px',
-          threshold: 0
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const activeId = entry.target.getAttribute('id');
-
-              tocItems.forEach(item => {
-                const link = item.querySelector('a');
-                if (link && link.getAttribute('href') === `#${activeId}`) {
-                  item.classList.add('active');
-                } else {
-                  item.classList.remove('active');
-                }
-              });
-            }
-          });
-        }, observerOptions);
-
-        sections.forEach(section => {
-          observer.observe(section);
+      links.forEach(function (a) {
+        a.addEventListener('click', function () {
+          if (mobile.matches) { toc.removeAttribute('open'); }
         });
       });
-    </script>
-  </body>
+
+      // Highlight the section currently in view.
+      if ('IntersectionObserver' in window) {
+        var sections = document.querySelectorAll('.legal-body section[id]');
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            var id = e.target.id;
+            links.forEach(function (a) {
+              a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+            });
+          });
+        }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+        sections.forEach(function (s) { io.observe(s); });
+      }
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
 </html>

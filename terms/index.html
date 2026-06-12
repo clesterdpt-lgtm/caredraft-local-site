@@ -1,616 +1,498 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CareDraft Terms of Use</title>
-    <meta name="description" content="Terms of Use and End User License Agreement (EULA) for CareDraft clinical note drafting application.">
-    <link class="favicon" rel="icon" href="../assets/favicon.png">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use — CareDraft</title>
+  <meta name="description" content="Terms of Use and End User License Agreement (EULA) for CareDraft clinical note drafting application.">
 
-    <!-- CSS Link -->
-    <link rel="stylesheet" href="../styles.css?v=20260607-desktop-menu">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="canonical" href="https://caredraft.app/terms/">
 
-    <script>
-      (function() {
-        const oldHost = 'clesterdpt-lgtm.github.io';
-        const oldBase = '/carenote-local-site';
-        if (window.location.hostname === oldHost && window.location.pathname.startsWith(oldBase)) {
-          const nextPath = window.location.pathname.slice(oldBase.length) || '/';
-          window.location.replace('https://caredraft.app' + nextPath + window.location.search + window.location.hash);
-        }
-      })();
-    </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Theme Initialization Script to Prevent Flash of Unstyled Content (FOUC) -->
-    <script>
-      (function() {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-          document.documentElement.classList.add('dark-theme');
-          document.documentElement.classList.remove('light-theme');
-        } else {
-          document.documentElement.classList.remove('dark-theme');
-          document.documentElement.classList.add('light-theme');
-        }
-      })();
-    </script>
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="container nav" aria-label="Main navigation">
-        <a class="brand" href="../">
-          <img src="../assets/icon.png" alt="CareDraft Logo">
-          <span>CareDraft</span>
-        </a>
-        <nav class="nav-links">
-          <a href="../">Home</a>
-          <a href="../#workflow">Workflow</a>
-          <a href="../#tools">Visit Tools</a>
-          <a href="../privacy/">Privacy Policy</a>
-          <a href="../privacy/washington/">Washington Notice</a>
-        </nav>
-        <div class="nav-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme" type="button">
-            <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 21v-2.25m-6.364-.386l1.591-1.591M3 12h2.25m-.386-6.364l1.591 1.591M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z"></path>
-            </svg>
-            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
-            </svg>
-          </button>
-          <a class="button" href="../#legal">Legal</a>
-        </div>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-    </header>
+  <link rel="stylesheet" href="../styles.css?v=20260611a">
 
-    <!-- MOBILE MENU OVERLAY -->
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <div class="mobile-menu-backdrop"></div>
-      <div class="mobile-menu-content">
-        <div class="mobile-menu-header">
-          <a class="brand" href="../">
-            <img src="../assets/icon.png" alt="CareDraft Logo">
-            <span>CareDraft</span>
-          </a>
-          <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close mobile menu" type="button">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <nav class="mobile-menu-links">
-          <a href="../">Home</a>
-          <a href="../#workflow">Workflow</a>
-          <a href="../#tools">Visit Tools</a>
-          <a href="../privacy/">Privacy Policy</a>
-          <a href="../privacy/washington/">Washington Notice</a>
-          <a href="../#legal">Legal</a>
-        </nav>
-        <div class="mobile-menu-footer">
-          <span style="font-size: 14px; color: var(--text-muted);">Theme</span>
-          <button class="theme-toggle" id="mobileThemeToggle" aria-label="Toggle dark/light theme" type="button">
-            <!-- Sun Icon (shows in light theme) -->
-            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 21v-2.25m-6.364-.386l1.591-1.591M3 12h2.25m-.386-6.364l1.591 1.591M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z"></path>
-            </svg>
-            <!-- Moon Icon (shows in dark theme) -->
-            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
+  <script>
+    // Redirect old GitHub Pages host to the custom domain.
+    (function () {
+      var oldHost = 'clesterdpt-lgtm.github.io';
+      var oldBase = '/carenote-local-site';
+      if (window.location.hostname === oldHost && window.location.pathname.indexOf(oldBase) === 0) {
+        var nextPath = window.location.pathname.slice(oldBase.length) || '/';
+        window.location.replace('https://caredraft.app' + nextPath + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ───────────────────────── Nav ───────────────────────── -->
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="../" aria-label="CareDraft home">
+        <img src="../assets/caredraft-login-mark.png" alt="" width="30" height="30">
+        <span>CareDraft</span>
+      </a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../privacy/washington/">Washington Notice</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="../#get">Get the app</a>
     </div>
+  </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="legal-page-header">
-        <div class="container">
-          <h1>Terms of Use</h1>
-          <div class="legal-meta">
-            <span>Effective Date: <strong>May 28, 2026</strong></span> &nbsp;|&nbsp;
-            <span>Last Updated: <strong>June 7, 2026</strong></span>
-          </div>
+  <main>
+
+    <section class="legal-hero">
+      <div class="shell">
+        <p class="kicker">Legal</p>
+        <h1>Terms of Use</h1>
+        <div class="legal-meta">
+          <span>Effective date <strong>May 28, 2026</strong></span>
+          <span>Last updated <strong>June 7, 2026</strong></span>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TWO COLUMN CONTENT LAYOUT -->
-      <div class="container">
-        <div class="legal-page-layout">
-          <!-- Sidebar Navigation -->
-          <aside class="legal-sidebar" aria-label="Table of contents">
-            <h4>Sections</h4>
-            <ul class="legal-toc-list" id="tocList">
-              <li class="legal-toc-item active"><a href="#summary">EULA Summary</a></li>
-              <li class="legal-toc-item"><a href="#sec-1">1. Acceptance & Parties</a></li>
-              <li class="legal-toc-item"><a href="#sec-2">2. Eligibility</a></li>
-              <li class="legal-toc-item"><a href="#sec-3">3. License Grant</a></li>
-              <li class="legal-toc-item"><a href="#sec-4">4. Scope of App</a></li>
-              <li class="legal-toc-item"><a href="#sec-5">5. AI Disclaimers</a></li>
-              <li class="legal-toc-item"><a href="#sec-6">6. Your Responsibilities</a></li>
-              <li class="legal-toc-item"><a href="#sec-7">7. Security & Data Loss</a></li>
-              <li class="legal-toc-item"><a href="#sec-8">8. Purchases & Refunds</a></li>
-              <li class="legal-toc-item"><a href="#sec-9">9. App Updates</a></li>
-              <li class="legal-toc-item"><a href="#sec-10">10. Intellectual Property</a></li>
-              <li class="legal-toc-item"><a href="#sec-11">11. Use Restrictions</a></li>
-              <li class="legal-toc-item"><a href="#sec-12">12. Privacy Policy</a></li>
-              <li class="legal-toc-item"><a href="#sec-13">13. Disclaimer of Warranties</a></li>
-              <li class="legal-toc-item"><a href="#sec-14">14. Limitation of Liability</a></li>
-              <li class="legal-toc-item"><a href="#sec-15">15. Indemnification</a></li>
-              <li class="legal-toc-item"><a href="#sec-16">16. Termination</a></li>
-              <li class="legal-toc-item"><a href="#sec-17">17. Arbitration & Waiver</a></li>
-              <li class="legal-toc-item"><a href="#sec-18">18. Governing Law</a></li>
-              <li class="legal-toc-item"><a href="#sec-19">19. Apple Terms</a></li>
-              <li class="legal-toc-item"><a href="#sec-20">20. Google Play Terms</a></li>
-              <li class="legal-toc-item"><a href="#sec-21">21. Miscellaneous</a></li>
-              <li class="legal-toc-item"><a href="#sec-22">22. Contact Us</a></li>
+    <section class="legal-section">
+      <div class="shell legal-layout">
+
+        <details class="legal-toc" id="toc" open>
+          <summary>On this page</summary>
+          <ul>
+            <li><a class="active" href="#summary">EULA Summary</a></li>
+            <li><a href="#sec-1">1. Acceptance &amp; Parties</a></li>
+            <li><a href="#sec-2">2. Eligibility</a></li>
+            <li><a href="#sec-3">3. License Grant</a></li>
+            <li><a href="#sec-4">4. Scope of App</a></li>
+            <li><a href="#sec-5">5. AI Disclaimers</a></li>
+            <li><a href="#sec-6">6. Your Responsibilities</a></li>
+            <li><a href="#sec-7">7. Security &amp; Data Loss</a></li>
+            <li><a href="#sec-8">8. Purchases &amp; Refunds</a></li>
+            <li><a href="#sec-9">9. App Updates</a></li>
+            <li><a href="#sec-10">10. Intellectual Property</a></li>
+            <li><a href="#sec-11">11. Use Restrictions</a></li>
+            <li><a href="#sec-12">12. Privacy Policy</a></li>
+            <li><a href="#sec-13">13. Disclaimer of Warranties</a></li>
+            <li><a href="#sec-14">14. Limitation of Liability</a></li>
+            <li><a href="#sec-15">15. Indemnification</a></li>
+            <li><a href="#sec-16">16. Termination</a></li>
+            <li><a href="#sec-17">17. Arbitration &amp; Waiver</a></li>
+            <li><a href="#sec-18">18. Governing Law</a></li>
+            <li><a href="#sec-19">19. Apple Terms</a></li>
+            <li><a href="#sec-20">20. Google Play Terms</a></li>
+            <li><a href="#sec-21">21. Miscellaneous</a></li>
+            <li><a href="#sec-22">22. Contact Us</a></li>
+          </ul>
+        </details>
+
+        <article class="legal-body">
+          <div class="legal-callout">
+            <p><strong>DRAFT — REQUIRES ATTORNEY REVIEW BEFORE PUBLICATION.</strong> This document allocates legal risk between <span class="legal-placeholder">[CareDraft LLC]</span> and the user. A qualified US attorney must review and approve before this is published or surfaced to users. It is a framework-based draft, not legal advice.</p>
+          </div>
+
+          <section id="summary">
+            <h2>Read this first — plain-language summary</h2>
+            <p>This is the contract between you and <strong><span class="legal-placeholder">[CareDraft LLC]</span></strong> ("we") for use of the CareDraft app ("the App"). The short version:</p>
+            <ul>
+              <li><strong>CareDraft is a personal productivity tool for clinicians.</strong> You — not us — are responsible for whether using it is appropriate for your work, your patients, your employer's rules, and the law that applies to you.</li>
+              <li><strong>CareDraft is intended for post-encounter, de-identified clinician dictation.</strong> Do not record patient interactions or enter patient identifiers. Timestamps reflect draft creation in CareDraft, not encounter date/time or date of service.</li>
+              <li><strong>We are not a HIPAA Business Associate.</strong> We do not sign Business Associate Agreements. Do not use the App with patient information unless you have confirmed that you are permitted to do so.</li>
+              <li><strong>The App's AI generates drafts. They can be wrong.</strong> You must review every detail before signing, sharing, or relying on any AI-generated content.</li>
+              <li><strong>Everything you create is encrypted on your device with your PIN.</strong> If you lose your PIN and your recovery code, your data is permanently gone. We cannot recover it.</li>
+              <li><strong>You agree to resolve disputes by individual arbitration, not in court, and not as part of a class action</strong> — with carve-outs for small-claims court and intellectual property disputes. You may opt out of arbitration within 30 days of first accepting these Terms (see Section 17).</li>
             </ul>
-          </aside>
+            <p>The full text below governs your use of the App. <strong>By installing or using the App, you accept these Terms.</strong></p>
+          </section>
 
-          <!-- Main Legal Content -->
-          <article class="legal-content-box">
-            <blockquote>
-              <p><strong>DRAFT — REQUIRES ATTORNEY REVIEW BEFORE PUBLICATION.</strong> This document allocates legal risk between <span class="legal-placeholder">[CareDraft LLC]</span> and the user. A qualified US attorney must review and approve before this is published or surfaced to users. It is a framework-based draft, not legal advice.</p>
-            </blockquote>
+          <hr>
 
-            <section id="summary">
-              <h2>Read this first — plain-language summary</h2>
-              <p>This is the contract between you and <strong><span class="legal-placeholder">[CareDraft LLC]</span></strong> ("we") for use of the CareDraft app ("the App"). The short version:</p>
-              <ul>
-                <li><strong>CareDraft is a personal productivity tool for clinicians.</strong> You — not us — are responsible for whether using it is appropriate for your work, your patients, your employer's rules, and the law that applies to you.</li>
-                <li><strong>CareDraft is intended for post-encounter, de-identified clinician dictation.</strong> Do not record patient interactions or enter patient identifiers. Timestamps reflect draft creation in CareDraft, not encounter date/time or date of service.</li>
-                <li><strong>We are not a HIPAA Business Associate.</strong> We do not sign Business Associate Agreements. Do not use the App with patient information unless you have confirmed that you are permitted to do so.</li>
-                <li><strong>The App's AI generates drafts. They can be wrong.</strong> You must review every detail before signing, sharing, or relying on any AI-generated content.</li>
-                <li><strong>Everything you create is encrypted on your device with your PIN.</strong> If you lose your PIN and your recovery code, your data is permanently gone. We cannot recover it.</li>
-                <li><strong>You agree to resolve disputes by individual arbitration, not in court, and not as part of a class action</strong> — with carve-outs for small-claims court and intellectual property disputes. You may opt out of arbitration within 30 days of first accepting these Terms (see Section 17).</li>
-              </ul>
-              <p>The full text below governs your use of the App. <strong>By installing or using the App, you accept these Terms.</strong></p>
-            </section>
+          <section id="sec-1">
+            <h2>1. Acceptance and parties</h2>
+            <p>These Terms of Use ("<strong>Terms</strong>") form a binding agreement between you and <strong><span class="legal-placeholder">[CareDraft LLC]</span></strong>, located at <span class="legal-placeholder">[Insert Postal Address]</span> ("<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"). They govern your access to and use of the CareDraft mobile application and any related services we provide (collectively, the "<strong>App</strong>").</p>
+            <p>By tapping "I agree," installing the App, or otherwise using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="../privacy/">Privacy Policy</a>. If you do not agree, do not install or use the App.</p>
+            <p>We may update these Terms from time to time. We will indicate the date of the most recent revision at the top of this document. If we make material changes, we will provide additional notice through the App. Your continued use of the App after a change becomes effective constitutes your acceptance of the updated Terms.</p>
+          </section>
+
+          <section id="sec-2">
+            <h2>2. Eligibility</h2>
+            <p>To use the App, you must:</p>
+            <ul>
+              <li>Be at least <strong>18 years old</strong> and capable of forming a binding contract under the laws of your jurisdiction;</li>
+              <li>Be using the App lawfully under all applicable laws, professional licensure rules, employer policies, and patient-privacy obligations;</li>
+              <li>Not be barred from using the App under any applicable law or by a prior termination of these Terms by us;</li>
+              <li>If using the App in connection with your work as a healthcare clinician or professional, hold the licenses and credentials required to perform that work.</li>
+            </ul>
+            <p>You represent and warrant that you meet all of these conditions every time you use the App.</p>
+          </section>
+
+          <section id="sec-3">
+            <h2>3. License grant</h2>
+            <p>Subject to your compliance with these Terms and your payment of any applicable purchase price (Section 8), <span class="legal-placeholder">[CareDraft LLC]</span> grants you a <strong>limited, personal, non-exclusive, non-transferable, non-sublicensable, revocable license</strong> to install and use the App on devices you own or control, solely for your personal use as a clinician or professional, and in accordance with the usage rules of the platform from which you downloaded the App (Apple App Store or Google Play).</p>
+            <p>This is a license, not a sale. <span class="legal-placeholder">[CareDraft LLC]</span> retains all rights, title, and interest in the App and any updates, modifications, or derivative works of it.</p>
+          </section>
+
+          <section id="sec-4">
+            <h2>4. What CareDraft is — and what it is not</h2>
+            <h3>4.1 What CareDraft is</h3>
+            <p>CareDraft is a clinical productivity tool that runs entirely on your device. It captures audio dictations, transcribes them locally, and uses on-device artificial intelligence to draft summaries and structured notes. It is designed to help an individual clinician work more efficiently with their own personal notes.</p>
+            <p>The App is intended for clinician-dictated, post-encounter, de-identified note drafting. It is not intended to record patient interactions or to capture patient identifiers. Timestamps shown in the App reflect when a draft was created in CareDraft and are not intended to represent encounter date, encounter time, or date of service unless you separately add that information.</p>
+
+            <h3>4.2 What CareDraft is <strong>not</strong></h3>
+            <p>You acknowledge and agree that:</p>
+            <ul>
+              <li><strong>The App is not a medical device.</strong> It has not been cleared, approved, or otherwise authorized by the U.S. Food and Drug Administration (FDA) or any other regulatory authority for any medical purpose. It does not diagnose, treat, cure, mitigate, or prevent any disease or condition.</li>
+              <li><strong>The App is not clinical decision support software.</strong> It does not recommend, suggest, or determine diagnoses, treatments, medications, dosages, billing codes, or clinical actions. It drafts text from your dictation; clinical decisions are yours.</li>
+              <li><strong>The App is not a substitute for your clinical judgment.</strong> Nothing the App produces should be relied upon without your independent review and verification.</li>
+              <li><strong>The App is not an electronic health record (EHR) system.</strong> It is a personal productivity tool, not a system of record. You must transfer relevant information to your authoritative clinical record by your own act.</li>
+              <li><strong>We are not a HIPAA Business Associate.</strong> <span class="legal-placeholder">[CareDraft LLC]</span> is not a HIPAA Covered Entity and is not a HIPAA Business Associate as defined at 45 C.F.R. &sect; 160.103. We do not enter Business Associate Agreements. If your use of the App with protected health information would require a Business Associate Agreement under HIPAA or under your employer's policies, <strong>you must not use the App for that purpose</strong>.</li>
+              <li><strong>We are not your healthcare provider, your IT provider, or your compliance officer.</strong> Use of the App does not create a treatment relationship, an IT support relationship, or a compliance-advisory relationship between you and us.</li>
+            </ul>
+          </section>
+
+          <section id="sec-5">
+            <h2>5. AI features — important disclaimers</h2>
+            <h3>5.1 Drafts only</h3>
+            <p>The App uses on-device artificial intelligence ("AI") to draft summaries, structured notes, and other text from your dictations. AI outputs are <strong>drafts</strong>. They are not facts, not records, and not signed clinical notes.</p>
+
+            <h3>5.2 Known risks of AI</h3>
+            <p>AI can — and will, at some rate — produce content that is wrong in ways that look correct. Known risks include:</p>
+            <ul>
+              <li><strong>Hallucinated content</strong> that was not present in your dictation;</li>
+              <li><strong>Misheard words</strong>, especially medication names, dosages, numbers, dates, sides (left/right), and proper nouns;</li>
+              <li><strong>Misattributed details</strong> that move facts between visits, body sites, patients, or providers;</li>
+              <li><strong>Omitted content</strong> from your dictation that the AI does not include in the draft;</li>
+              <li><strong>Confident-sounding errors</strong> that read as if they were correctly captured.</li>
+            </ul>
+
+            <h3>5.3 Your obligation to review</h3>
+            <p><strong>You must review every AI-generated draft against your original dictation before relying on it for any purpose.</strong> That includes — but is not limited to — before signing, finalizing, sharing, exporting, emailing, printing, transcribing into an EHR, billing on the basis of, or making any clinical decision in connection with the draft. <strong>You are solely responsible for the accuracy and content of any note or document that originates from the App.</strong></p>
+
+            <h3>5.4 No warranty of AI accuracy</h3>
+            <p>We make no warranty, express or implied, that any AI output will be accurate, complete, current, free of error, or fit for any clinical purpose. AI features are provided <strong>"as is"</strong> and <strong>"as available."</strong></p>
+          </section>
+
+          <section id="sec-6">
+            <h2>6. Your responsibilities</h2>
+            <p>You are solely responsible for:</p>
+            <ul>
+              <li><strong>Lawful use.</strong> Using the App in compliance with all laws applicable to you, including HIPAA (if applicable), state medical privacy laws, professional licensure rules, controlled-substances laws, and consumer-protection laws.</li>
+              <li><strong>De-identified post-encounter use.</strong> Using the App for clinician-dictated, post-encounter note drafting; not recording patient interactions; and not entering patient identifiers unless you have independently confirmed that your use is permitted and compliant.</li>
+              <li><strong>Employer and institutional policies.</strong> Confirming that your use of the App with patient information is permitted by your employer's policies, your malpractice insurance terms, and any institutional information-security policies that apply to you.</li>
+              <li><strong>Patient rights and notice.</strong> Providing patients with any notice, consent, or authorization required by HIPAA, state medical privacy law, or your professional ethics rules before recording, dictating, or otherwise creating content about them in the App.</li>
+              <li><strong>Accurate review.</strong> Reviewing every AI-generated draft against your dictation before signing or relying on it.</li>
+              <li><strong>Final clinical records.</strong> Transferring relevant information from the App to your authoritative clinical record (e.g., your EHR) as your practice and applicable law require.</li>
+              <li><strong>Device security.</strong> Maintaining the security of the device on which you install the App, including device-level encryption, operating-system updates, device passcode, and physical custody.</li>
+              <li><strong>Credentials.</strong> Protecting your PIN, biometric credentials, and recovery code, and not sharing them with any other person.</li>
+              <li><strong>Account-free use.</strong> Recognizing that the App does not maintain an account with us; loss of access to your device or credentials means loss of access to your data, with no remedy available from us.</li>
+            </ul>
+          </section>
+
+          <section id="sec-7">
+            <h2>7. Security and the risk of data loss</h2>
+            <p>The App encrypts your content on your device using AES-256-GCM with a random data-encryption key. Your PIN is not stored; it is used with PBKDF2-HMAC-SHA512 to unwrap that local encryption key. Optional biometric unlock uses a separate biometric-protected key in your device's hardware-backed secure storage.</p>
+            <p><strong>This means:</strong></p>
+            <ul>
+              <li>We do not have access to your PIN, your recovery code, your encryption key, or any content in the App.</li>
+              <li>We have no technical ability to reset your PIN, restore your data, or recover encrypted content if you lose your credentials.</li>
+              <li><strong>If you lose your PIN and your recovery code, your data is permanently inaccessible.</strong> This is a consequence of the App's privacy-protective design.</li>
+            </ul>
+            <p>By using the App, you acknowledge this design and accept the risk of permanent data loss as inherent to it. You are responsible for safely storing your recovery code outside the App. <strong><span class="legal-placeholder">[CareDraft LLC]</span> is not liable for data loss arising from your loss of credentials, your device loss or damage, your decision to uninstall or reinstall the App, or your decision to reset, restore, or factory-erase your device.</strong></p>
+            <p>You are responsible for transferring information you wish to preserve from the App to a separate system of record on a schedule that suits your work.</p>
+          </section>
+
+          <section id="sec-8">
+            <h2>8. Purchase, refunds, and platforms</h2>
+            <h3>8.1 One-time purchase</h3>
+            <p>The App is offered as a <strong>one-time purchase</strong> through the Apple App Store or Google Play. There is no subscription and no recurring charge from <span class="legal-placeholder">[CareDraft LLC]</span>. The platform you purchased through is the merchant of record for your transaction; we do not store or process your payment information.</p>
+
+            <h3>8.2 Refunds</h3>
+            <p>Refund requests are handled exclusively by Apple or Google according to their then-current policies:</p>
+            <ul>
+              <li><strong>Apple App Store:</strong> Submit a refund request at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</li>
+              <li><strong>Google Play:</strong> Submit a refund request through the Google Play refund process at <a href="https://support.google.com/googleplay" target="_blank" rel="noopener">support.google.com/googleplay</a>.</li>
+            </ul>
+            <p><strong><span class="legal-placeholder">[CareDraft LLC]</span> does not separately issue refunds.</strong> All sales of the App through Apple or Google are subject to the platform's refund policy as in effect at the time of your purchase or request.</p>
+
+            <h3>8.3 Platform terms apply</h3>
+            <p>Your purchase and use of the App through Apple or Google is also subject to Apple's and Google's own terms of service and policies. To the extent those terms apply, they govern your relationship with the platform; these Terms govern your relationship with us.</p>
+          </section>
+
+          <section id="sec-9">
+            <h2>9. Updates and changes to the App</h2>
+            <p>We may release updates to the App from time to time, including bug fixes, security patches, new features, and changes that remove features. Some updates may be required for the App to continue functioning. The platform (Apple or Google) controls how updates are distributed to your device.</p>
+            <p>We may, at our discretion, modify, suspend, or discontinue the App (or any part of it) at any time, with or without notice. We will not be liable to you for any modification, suspension, or discontinuation, except as required by applicable law.</p>
+          </section>
+
+          <section id="sec-10">
+            <h2>10. Intellectual property</h2>
+            <h3>10.1 Our intellectual property</h3>
+            <p>The App, including its source code, object code, designs, names, logos, content, and any documentation, is the property of <span class="legal-placeholder">[CareDraft LLC]</span> or its licensors and is protected by copyright, trademark, trade-secret, and other intellectual-property laws. Nothing in these Terms transfers any intellectual-property rights to you, except the limited license described in Section 3.</p>
+
+            <h3>10.2 Third-party components</h3>
+            <p>The App incorporates third-party open-source and licensed software, including (without limitation) Whisper (OpenAI), Gemma (Google), Expo, and React Native. Your use of those components is subject to their respective licenses, available in the App's About &rarr; Attributions screen.</p>
+
+            <h3>10.3 Your content</h3>
+            <p>You retain all rights, title, and interest in the content you create or input into the App (your dictations, notes, transcripts, summaries, and any patient information). Because the App runs entirely on your device, we do not receive your content and claim no rights to it.</p>
+
+            <h3>10.4 Feedback</h3>
+            <p>If you send us suggestions, feedback, or ideas about the App, you grant us a worldwide, perpetual, irrevocable, royalty-free, sublicensable license to use them without restriction. You are not required to send us feedback.</p>
+          </section>
+
+          <section id="sec-11">
+            <h2>11. Restrictions on your use of the App</h2>
+            <p>You agree that you will not, and will not allow any third party to:</p>
+            <ul>
+              <li>Copy, modify, adapt, translate, or create derivative works based on the App;</li>
+              <li>Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code or underlying ideas of the App, except to the extent applicable law expressly permits and only to the minimum extent necessary;</li>
+              <li>Rent, lease, lend, sell, resell, sublicense, distribute, or otherwise transfer your rights in the App to any third party;</li>
+              <li>Remove, alter, or obscure any proprietary notices in the App;</li>
+              <li>Use the App in a way that violates applicable law, infringes the rights of others, or breaches any obligation you owe to a patient, employer, professional body, or other party;</li>
+              <li>Use the App to create, store, or transmit content that is unlawful, infringing, defamatory, harassing, or hateful;</li>
+              <li>Use the App to develop a competing product or service;</li>
+              <li>Bypass, disable, or interfere with any security, authentication, or access-control feature of the App;</li>
+              <li>Use any automated means (including bots or scrapers) to access or interact with the App.</li>
+            </ul>
+          </section>
+
+          <section id="sec-12">
+            <h2>12. Privacy</h2>
+            <p>Our <a href="../privacy/">Privacy Policy</a> and, for Washington consumers, our <a href="../privacy/washington/">Washington Consumer Health Data Privacy Policy</a>, describe what limited information we collect and how it is handled. By using the App you acknowledge that you have read those policies.</p>
+          </section>
+
+          <section id="sec-13">
+            <h2>13. Disclaimer of warranties</h2>
+            <p><strong>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE," WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND.</strong> TO THE MAXIMUM EXTENT PERMITTED BY LAW, <span class="legal-placeholder">[CareDraft LLC]</span> AND ITS LICENSORS DISCLAIM ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING (WITHOUT LIMITATION) WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ANY WARRANTY ARISING OUT OF COURSE OF DEALING, USAGE, OR TRADE.</p>
+            <p>WITHOUT LIMITING THE GENERAL DISCLAIMER ABOVE:</p>
+            <ul>
+              <li>We do not warrant that the App will be uninterrupted, secure, or free of errors, viruses, or other harmful components.</li>
+              <li>We do not warrant that AI-generated output will be accurate, complete, current, or fit for any clinical purpose.</li>
+              <li>We do not warrant that the App will meet your requirements, your employer's requirements, or the requirements of any regulator or accreditor.</li>
+              <li>We do not warrant that the App is suitable for use with protected health information, sensitive personal information, or any other regulated category of data; you are responsible for that determination.</li>
+            </ul>
+          </section>
+
+          <section id="sec-14">
+            <h2>14. Limitation of liability</h2>
+            <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
+
+            <h3>14.1 Excluded damages</h3>
+            <p>IN NO EVENT WILL <span class="legal-placeholder">[CareDraft LLC]</span> OR ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR LICENSORS BE LIABLE TO YOU FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATED TO THESE TERMS OR THE APP, WHETHER BASED IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR ANY OTHER THEORY, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+
+            <h3>14.2 Liability cap</h3>
+            <p>OUR TOTAL CUMULATIVE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS OR THE APP WILL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID FOR THE APP IN THE TWELVE (12) MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM, OR (B) FIFTY U.S. DOLLARS (USD $50.00).</p>
+
+            <h3>14.3 Statutory carve-outs</h3>
+            <p>Nothing in these Terms excludes or limits our liability for:</p>
+            <ul>
+              <li>Death or personal injury caused by our gross negligence or willful misconduct;</li>
+              <li>Fraud or fraudulent misrepresentation;</li>
+              <li>Any other liability that cannot be excluded or limited under applicable law.</li>
+            </ul>
+
+            <h3>14.4 Allocation of risk</h3>
+            <p>You acknowledge that the limits in this Section 14 are an essential element of the bargain between you and us, that the purchase price of the App reflects this allocation of risk, and that we would not provide the App on these terms without these limits.</p>
+          </section>
+
+          <section id="sec-15">
+            <h2>15. Indemnification</h2>
+            <p>You agree to defend, indemnify, and hold harmless <span class="legal-placeholder">[CareDraft LLC]</span> and its officers, directors, employees, agents, and licensors from and against any claim, demand, loss, liability, damage, cost, or expense (including reasonable attorneys' fees) arising out of or related to:</p>
+            <ul>
+              <li>Your use or misuse of the App;</li>
+              <li>Your violation of these Terms;</li>
+              <li>Your violation of any law or the rights of any third party (including any patient, employer, professional body, or licensor);</li>
+              <li>Any content you create, store, share, or export using the App;</li>
+              <li>Any decision you make, or fail to make, in reliance on AI-generated output of the App;</li>
+              <li>Your failure to obtain any consent, authorization, or Business Associate Agreement that your use of the App may require.</li>
+            </ul>
+          </section>
+
+          <section id="sec-16">
+            <h2>16. Termination</h2>
+            <p>These Terms remain in effect until terminated. You may terminate by uninstalling the App. We may terminate or suspend your license at any time, with or without notice, if we reasonably believe you have violated these Terms or applicable law, or if continued provision of the App to you would expose us to legal or reputational risk. On termination, your license to use the App ends and you must uninstall it.</p>
+            <p>Sections 4 (What CareDraft is — and is not), 5 (AI Disclaimers), 6 (Your Responsibilities), 7 (Security and Data Loss), 10 (Intellectual Property), 13 (Disclaimer of Warranties), 14 (Limitation of Liability), 15 (Indemnification), 17 (Arbitration), 18 (Governing Law), and 21 (Miscellaneous) survive termination.</p>
+          </section>
+
+          <section id="sec-17">
+            <h2>17. Binding individual arbitration — class action waiver</h2>
+            <p>By accepting these Terms, you agree that disputes between you and us will be resolved by individual arbitration rather than in court, with limited exceptions. You may opt out of this arbitration agreement within 30 days of first accepting these Terms (see Section 17.6).</p>
+
+            <h3>17.1 Scope</h3>
+            <p>You and <span class="legal-placeholder">[CareDraft LLC]</span> each agree that any dispute, claim, or controversy arising out of or relating to these Terms, the App, our Privacy Policy, or our relationship with you ("<strong>Dispute</strong>") will be resolved exclusively through final and binding individual arbitration, except as set out in Sections 17.2 and 17.6. This includes disputes arising before these Terms came into effect and after they are terminated.</p>
+
+            <h3>17.2 Exceptions</h3>
+            <p>The following are not subject to arbitration:</p>
+            <ul>
+              <li>Either party may bring an individual action in <strong>small-claims court</strong> in the county where you reside, provided the claim qualifies for small-claims jurisdiction.</li>
+              <li>Either party may seek injunctive or other equitable relief in a court of competent jurisdiction to protect its <strong>intellectual-property rights</strong>.</li>
+              <li>Either party may seek a <strong>public-injunctive remedy</strong> to the extent applicable law requires that such relief remain available in court notwithstanding an arbitration agreement.</li>
+              <li>This arbitration agreement does not apply to any dispute that applicable law does not permit to be arbitrated.</li>
+            </ul>
+
+            <h3>17.3 Arbitration rules and forum</h3>
+            <p>Arbitration will be administered by the <strong>American Arbitration Association</strong> ("AAA") under its <strong>Consumer Arbitration Rules</strong> in effect at the time the arbitration is commenced, as modified by these Terms. The AAA Consumer Arbitration Rules are available at <a href="https://www.adr.org" target="_blank" rel="noopener">adr.org</a>. One arbitrator will preside. The arbitration will be conducted in <span class="legal-placeholder">[Insert Company State]</span> or, at your election, in the county where you reside, or by telephone or videoconference. The arbitrator's decision will be in writing and will be final and binding.</p>
+
+            <h3>17.4 Fees and costs</h3>
+            <p>Filing, administrative, and arbitrator fees will be allocated according to the AAA Consumer Arbitration Rules. If those rules require us to pay a portion of the fees, we will. If you are unable to afford the filing fee and qualify for a waiver under the AAA rules, you may request a waiver. Each party bears its own attorneys' fees and costs, except to the extent applicable law or the arbitrator's award requires otherwise.</p>
+
+            <h3>17.5 Class action waiver</h3>
+            <p><strong>YOU AND <span class="legal-placeholder">[CareDraft LLC]</span> EACH AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, REPRESENTATIVE, OR PRIVATE-ATTORNEY-GENERAL PROCEEDING.</strong> Unless both you and we agree, no arbitrator or court may consolidate more than one person's claims or preside over any form of representative or class proceeding. If a court decides that this class-action waiver is unenforceable as to any claim, that claim (and only that claim) will be severed from the arbitration and may proceed in court; the remaining claims will be arbitrated.</p>
+
+            <h3>17.6 Right to opt out</h3>
+            <p>You may opt out of this arbitration agreement (Section 17) by sending a written notice to <strong>support@caredraft.app</strong> within <strong>30 days</strong> after first accepting these Terms. The notice must include your name, the email address associated with your App purchase, and a clear statement that you wish to opt out of arbitration. Opting out of arbitration will not affect any other part of these Terms. Opting out does not retroactively apply to an arbitration already commenced.</p>
+
+            <h3>17.7 Mass arbitration</h3>
+            <p>If at any time 25 or more substantially similar Demands for Arbitration are filed by or on behalf of claimants represented by the same or coordinated counsel, those Demands will be administered as a single mass-arbitration proceeding under the AAA's <strong>Mass Arbitration Supplementary Rules</strong> then in effect, subject to bellwether procedures the parties and the AAA jointly establish.</p>
+
+            <h3>17.8 Severability</h3>
+            <p>If any portion of this Section 17 is found unenforceable, that portion will be severed and the remaining portions will continue to apply. If Section 17.5 (class-action waiver) is found unenforceable in its entirety, then the entirety of Section 17 will be unenforceable.</p>
+          </section>
+
+          <section id="sec-18">
+            <h2>18. Governing law and jurisdiction</h2>
+            <p>These Terms and any Dispute are governed by the laws of the <strong>State of <span class="legal-placeholder">[Insert Company State]</span></strong>, without regard to its conflict-of-laws principles, and by applicable U.S. federal law (including the Federal Arbitration Act, which governs Section 17). For any Dispute not subject to arbitration under Section 17, you and we consent to the exclusive jurisdiction of the state and federal courts located in <span class="legal-placeholder">[Insert Company State]</span>, except as Section 17.2 (small-claims; intellectual property) provides otherwise.</p>
+          </section>
+
+          <section id="sec-19">
+            <h2>19. Apple-specific terms</h2>
+            <p>If you obtained the App from the Apple App Store, the following terms apply in addition to these Terms. In the event of any conflict between these Apple-specific terms and the rest of these Terms with respect to the App on iOS, these Apple-specific terms control.</p>
+            <ul>
+              <li><strong>Acknowledgement.</strong> You acknowledge that these Terms are between you and <span class="legal-placeholder">[CareDraft LLC]</span>, not with Apple. Apple is not responsible for the App or its content.</li>
+              <li><strong>Scope of license.</strong> Your license is non-transferable, limited to use of the App on Apple-branded products you own or control, and as permitted by the Usage Rules in the Apple Media Services Terms and Conditions.</li>
+              <li><strong>Maintenance and support.</strong> <span class="legal-placeholder">[CareDraft LLC]</span> is solely responsible for providing any maintenance or support services with respect to the App, as specified in these Terms or as required by applicable law. Apple has no obligation to provide maintenance or support.</li>
+              <li><strong>Warranty.</strong> <span class="legal-placeholder">[CareDraft LLC]</span> is solely responsible for any product warranties, whether express or implied by law, to the extent not effectively disclaimed. If the App fails to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price of the App to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App.</li>
+              <li><strong>Product claims.</strong> <span class="legal-placeholder">[CareDraft LLC]</span>, not Apple, is responsible for addressing claims by you or any third party relating to the App or your possession or use of the App, including product liability claims, compliance failures, and intellectual property claims.</li>
+              <li><strong>Intellectual-property infringement.</strong> In the event of any third-party claim that the App or your use of it infringes that third party's intellectual-property rights, <span class="legal-placeholder">[CareDraft LLC]</span>, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of that claim.</li>
+              <li><strong>Legal compliance.</strong> You represent that you are not located in a country that is subject to a U.S. Government embargo or that has been designated by the U.S. Government as a "terrorist supporting" country, and that you are not listed on any U.S. Government list of prohibited or restricted parties.</li>
+              <li><strong>Third-party beneficiary.</strong> You and <span class="legal-placeholder">[CareDraft LLC]</span> acknowledge that <strong>Apple and Apple's subsidiaries are third-party beneficiaries of these Terms</strong>, and that upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary.</li>
+            </ul>
+          </section>
+
+          <section id="sec-20">
+            <h2>20. Google Play-specific terms</h2>
+            <p>If you obtained the App from Google Play, your purchase and use of the App is also subject to the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>. In the event of any conflict between the Google Play Terms of Service and these Terms with respect to the App on Android, the Google Play Terms of Service control to the extent they cover the same subject matter.</p>
+          </section>
+
+          <section id="sec-21">
+            <h2>21. Miscellaneous</h2>
+            <h3>21.1 Entire agreement</h3>
+            <p>These Terms, together with our <a href="../privacy/">Privacy Policy</a> and (for Washington consumers) our <a href="../privacy/washington/">Washington Consumer Health Data Privacy Policy</a>, constitute the entire agreement between you and <span class="legal-placeholder">[CareDraft LLC]</span> regarding the App and supersede any prior agreements between you and us regarding the App.</p>
+
+            <h3>21.2 Severability</h3>
+            <p>If any provision of these Terms is held unenforceable, that provision will be enforced to the maximum extent permitted by law, and the remaining provisions will continue in full force and effect.</p>
+
+            <h3>21.3 No waiver</h3>
+            <p>Our failure to enforce any right or provision of these Terms will not be a waiver of that right or provision.</p>
+
+            <h3>21.4 Assignment</h3>
+            <p>You may not assign or transfer these Terms or any of your rights or obligations under them without our prior written consent. We may assign these Terms without restriction, including in connection with a merger, acquisition, financing, reorganization, or sale of assets.</p>
+
+            <h3>21.5 Force majeure</h3>
+            <p>We will not be liable for any failure or delay in performance caused by circumstances beyond our reasonable control, including natural disasters, war, civil unrest, government action, labor disputes, internet or telecommunications failures, and acts or failures of third-party providers.</p>
+
+            <h3>21.6 Headings and interpretation</h3>
+            <p>Section headings are for convenience only and do not affect interpretation. The words "including," "such as," and "for example" are not limiting.</p>
+
+            <h3>21.7 Notices</h3>
+            <p>We may provide notice to you through the App, by email (if you have provided one), or by posting on our website. You may provide notice to us at <strong>support@caredraft.app</strong>.</p>
+
+            <h3>21.8 Relationship</h3>
+            <p>Nothing in these Terms creates an agency, partnership, joint venture, employment, or franchise relationship between you and us.</p>
+
+            <h3>21.9 U.S. Government end users</h3>
+            <p>The App is "commercial computer software" and "commercial computer software documentation" as defined at 48 C.F.R. &sect; 2.101. If you are a U.S. Government end user, your rights are limited to those granted to all other end users under these Terms.</p>
+
+            <h3>21.10 Export controls</h3>
+            <p>You agree to comply with all U.S. and other applicable export control and trade sanctions laws and regulations in your use of the App.</p>
+          </section>
+
+          <section id="sec-22">
+            <h2>22. Contact us</h2>
+            <p>For questions about these Terms or the App:</p>
+            <p>
+              <strong><span class="legal-placeholder">[CareDraft LLC]</span></strong><br>
+              <span class="legal-placeholder">[Insert Postal Address]</span><br>
+              Email: <a href="mailto:support@caredraft.app">support@caredraft.app</a>
+            </p>
 
             <hr>
+            <p class="legal-fine">These Terms were prepared with assistance from an AI legal-workflow tool and reviewed by qualified counsel before publication. They are not a substitute for individualized legal advice.</p>
+          </section>
 
-            <section id="sec-1">
-              <h2>1. Acceptance and parties</h2>
-              <p>These Terms of Use ("<strong>Terms</strong>") form a binding agreement between you and <strong><span class="legal-placeholder">[CareDraft LLC]</span></strong>, located at <span class="legal-placeholder">[Insert Postal Address]</span> ("<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"). They govern your access to and use of the CareDraft mobile application and any related services we provide (collectively, the "<strong>App</strong>").</p>
-              <p>By tapping "I agree," installing the App, or otherwise using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="../privacy/">Privacy Policy</a>. If you do not agree, do not install or use the App.</p>
-              <p>We may update these Terms from time to time. We will indicate the date of the most recent revision at the top of this document. If we make material changes, we will provide additional notice through the App. Your continued use of the App after a change becomes effective constitutes your acceptance of the updated Terms.</p>
-            </section>
-
-            <section id="sec-2">
-              <h2>2. Eligibility</h2>
-              <p>To use the App, you must:</p>
-              <ul>
-                <li>Be at least <strong>18 years old</strong> and capable of forming a binding contract under the laws of your jurisdiction;</li>
-                <li>Be using the App lawfully under all applicable laws, professional licensure rules, employer policies, and patient-privacy obligations;</li>
-                <li>Not be barred from using the App under any applicable law or by a prior termination of these Terms by us;</li>
-                <li>If using the App in connection with your work as a healthcare clinician or professional, hold the licenses and credentials required to perform that work.</li>
-              </ul>
-              <p>You represent and warrant that you meet all of these conditions every time you use the App.</p>
-            </section>
-
-            <section id="sec-3">
-              <h2>3. License grant</h2>
-              <p>Subject to your compliance with these Terms and your payment of any applicable purchase price (Section 8), <span class="legal-placeholder">[CareDraft LLC]</span> grants you a <strong>limited, personal, non-exclusive, non-transferable, non-sublicensable, revocable license</strong> to install and use the App on devices you own or control, solely for your personal use as a clinician or professional, and in accordance with the usage rules of the platform from which you downloaded the App (Apple App Store or Google Play).</p>
-              <p>This is a license, not a sale. <span class="legal-placeholder">[CareDraft LLC]</span> retains all rights, title, and interest in the App and any updates, modifications, or derivative works of it.</p>
-            </section>
-
-            <section id="sec-4">
-              <h2>4. What CareDraft is — and what it is not</h2>
-              <h3>4.1 What CareDraft is</h3>
-              <p>CareDraft is a clinical productivity tool that runs entirely on your device. It captures audio dictations, transcribes them locally, and uses on-device artificial intelligence to draft summaries and structured notes. It is designed to help an individual clinician work more efficiently with their own personal notes.</p>
-              <p>The App is intended for clinician-dictated, post-encounter, de-identified note drafting. It is not intended to record patient interactions or to capture patient identifiers. Timestamps shown in the App reflect when a draft was created in CareDraft and are not intended to represent encounter date, encounter time, or date of service unless you separately add that information.</p>
-
-              <h3>4.2 What CareDraft is <strong>not</strong></h3>
-              <p>You acknowledge and agree that:</p>
-              <ul>
-                <li><strong>The App is not a medical device.</strong> It has not been cleared, approved, or otherwise authorized by the U.S. Food and Drug Administration (FDA) or any other regulatory authority for any medical purpose. It does not diagnose, treat, cure, mitigate, or prevent any disease or condition.</li>
-                <li><strong>The App is not clinical decision support software.</strong> It does not recommend, suggest, or determine diagnoses, treatments, medications, dosages, billing codes, or clinical actions. It drafts text from your dictation; clinical decisions are yours.</li>
-                <li><strong>The App is not a substitute for your clinical judgment.</strong> Nothing the App produces should be relied upon without your independent review and verification.</li>
-                <li><strong>The App is not an electronic health record (EHR) system.</strong> It is a personal productivity tool, not a system of record. You must transfer relevant information to your authoritative clinical record by your own act.</li>
-                <li><strong>We are not a HIPAA Business Associate.</strong> <span class="legal-placeholder">[CareDraft LLC]</span> is not a HIPAA Covered Entity and is not a HIPAA Business Associate as defined at 45 C.F.R. &sect; 160.103. We do not enter Business Associate Agreements. If your use of the App with protected health information would require a Business Associate Agreement under HIPAA or under your employer's policies, <strong>you must not use the App for that purpose</strong>.</li>
-                <li><strong>We are not your healthcare provider, your IT provider, or your compliance officer.</strong> Use of the App does not create a treatment relationship, an IT support relationship, or a compliance-advisory relationship between you and us.</li>
-              </ul>
-            </section>
-
-            <section id="sec-5">
-              <h2>5. AI features — important disclaimers</h2>
-              <h3>5.1 Drafts only</h3>
-              <p>The App uses on-device artificial intelligence ("AI") to draft summaries, structured notes, and other text from your dictations. AI outputs are <strong>drafts</strong>. They are not facts, not records, and not signed clinical notes.</p>
-
-              <h3>5.2 Known risks of AI</h3>
-              <p>AI can — and will, at some rate — produce content that is wrong in ways that look correct. Known risks include:</p>
-              <ul>
-                <li><strong>Hallucinated content</strong> that was not present in your dictation;</li>
-                <li><strong>Misheard words</strong>, especially medication names, dosages, numbers, dates, sides (left/right), and proper nouns;</li>
-                <li><strong>Misattributed details</strong> that move facts between visits, body sites, patients, or providers;</li>
-                <li><strong>Omitted content</strong> from your dictation that the AI does not include in the draft;</li>
-                <li><strong>Confident-sounding errors</strong> that read as if they were correctly captured.</li>
-              </ul>
-
-              <h3>5.3 Your obligation to review</h3>
-              <p><strong>You must review every AI-generated draft against your original dictation before relying on it for any purpose.</strong> That includes — but is not limited to — before signing, finalizing, sharing, exporting, emailing, printing, transcribing into an EHR, billing on the basis of, or making any clinical decision in connection with the draft. <strong>You are solely responsible for the accuracy and content of any note or document that originates from the App.</strong></p>
-
-              <h3>5.4 No warranty of AI accuracy</h3>
-              <p>We make no warranty, express or implied, that any AI output will be accurate, complete, current, free of error, or fit for any clinical purpose. AI features are provided <strong>"as is"</strong> and <strong>"as available."</strong></p>
-            </section>
-
-            <section id="sec-6">
-              <h2>6. Your responsibilities</h2>
-              <p>You are solely responsible for:</p>
-              <ul>
-                <li><strong>Lawful use.</strong> Using the App in compliance with all laws applicable to you, including HIPAA (if applicable), state medical privacy laws, professional licensure rules, controlled-substances laws, and consumer-protection laws.</li>
-                <li><strong>De-identified post-encounter use.</strong> Using the App for clinician-dictated, post-encounter note drafting; not recording patient interactions; and not entering patient identifiers unless you have independently confirmed that your use is permitted and compliant.</li>
-                <li><strong>Employer and institutional policies.</strong> Confirming that your use of the App with patient information is permitted by your employer's policies, your malpractice insurance terms, and any institutional information-security policies that apply to you.</li>
-                <li><strong>Patient rights and notice.</strong> Providing patients with any notice, consent, or authorization required by HIPAA, state medical privacy law, or your professional ethics rules before recording, dictating, or otherwise creating content about them in the App.</li>
-                <li><strong>Accurate review.</strong> Reviewing every AI-generated draft against your dictation before signing or relying on it.</li>
-                <li><strong>Final clinical records.</strong> Transferring relevant information from the App to your authoritative clinical record (e.g., your EHR) as your practice and applicable law require.</li>
-                <li><strong>Device security.</strong> Maintaining the security of the device on which you install the App, including device-level encryption, operating-system updates, device passcode, and physical custody.</li>
-                <li><strong>Credentials.</strong> Protecting your PIN, biometric credentials, and recovery code, and not sharing them with any other person.</li>
-                <li><strong>Account-free use.</strong> Recognizing that the App does not maintain an account with us; loss of access to your device or credentials means loss of access to your data, with no remedy available from us.</li>
-              </ul>
-            </section>
-
-            <section id="sec-7">
-              <h2>7. Security and the risk of data loss</h2>
-              <p>The App encrypts your content on your device using AES-256-GCM with a random data-encryption key. Your PIN is not stored; it is used with PBKDF2-HMAC-SHA512 to unwrap that local encryption key. Optional biometric unlock uses a separate biometric-protected key in your device's hardware-backed secure storage.</p>
-              <p><strong>This means:</strong></p>
-              <ul>
-                <li>We do not have access to your PIN, your recovery code, your encryption key, or any content in the App.</li>
-                <li>We have no technical ability to reset your PIN, restore your data, or recover encrypted content if you lose your credentials.</li>
-                <li><strong>If you lose your PIN and your recovery code, your data is permanently inaccessible.</strong> This is a consequence of the App's privacy-protective design.</li>
-              </ul>
-              <p>By using the App, you acknowledge this design and accept the risk of permanent data loss as inherent to it. You are responsible for safely storing your recovery code outside the App. <strong><span class="legal-placeholder">[CareDraft LLC]</span> is not liable for data loss arising from your loss of credentials, your device loss or damage, your decision to uninstall or reinstall the App, or your decision to reset, restore, or factory-erase your device.</strong></p>
-              <p>You are responsible for transferring information you wish to preserve from the App to a separate system of record on a schedule that suits your work.</p>
-            </section>
-
-            <section id="sec-8">
-              <h2>8. Purchase, refunds, and platforms</h2>
-              <h3>8.1 One-time purchase</h3>
-              <p>The App is offered as a <strong>one-time purchase</strong> through the Apple App Store or Google Play. There is no subscription and no recurring charge from <span class="legal-placeholder">[CareDraft LLC]</span>. The platform you purchased through is the merchant of record for your transaction; we do not store or process your payment information.</p>
-
-              <h3>8.2 Refunds</h3>
-              <p>Refund requests are handled exclusively by Apple or Google according to their then-current policies:</p>
-              <ul>
-                <li><strong>Apple App Store:</strong> Submit a refund request at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</li>
-                <li><strong>Google Play:</strong> Submit a refund request through the Google Play refund process at <a href="https://support.google.com/googleplay" target="_blank" rel="noopener">support.google.com/googleplay</a>.</li>
-              </ul>
-              <p><strong><span class="legal-placeholder">[CareDraft LLC]</span> does not separately issue refunds.</strong> All sales of the App through Apple or Google are subject to the platform's refund policy as in effect at the time of your purchase or request.</p>
-
-              <h3>8.3 Platform terms apply</h3>
-              <p>Your purchase and use of the App through Apple or Google is also subject to Apple's and Google's own terms of service and policies. To the extent those terms apply, they govern your relationship with the platform; these Terms govern your relationship with us.</p>
-            </section>
-
-            <section id="sec-9">
-              <h2>9. Updates and changes to the App</h2>
-              <p>We may release updates to the App from time to time, including bug fixes, security patches, new features, and changes that remove features. Some updates may be required for the App to continue functioning. The platform (Apple or Google) controls how updates are distributed to your device.</p>
-              <p>We may, at our discretion, modify, suspend, or discontinue the App (or any part of it) at any time, with or without notice. We will not be liable to you for any modification, suspension, or discontinuation, except as required by applicable law.</p>
-            </section>
-
-            <section id="sec-10">
-              <h2>10. Intellectual property</h2>
-              <h3>10.1 Our intellectual property</h3>
-              <p>The App, including its source code, object code, designs, names, logos, content, and any documentation, is the property of <span class="legal-placeholder">[CareDraft LLC]</span> or its licensors and is protected by copyright, trademark, trade-secret, and other intellectual-property laws. Nothing in these Terms transfers any intellectual-property rights to you, except the limited license described in Section 3.</p>
-
-              <h3>10.2 Third-party components</h3>
-              <p>The App incorporates third-party open-source and licensed software, including (without limitation) Whisper (OpenAI), Gemma (Google), Expo, and React Native. Your use of those components is subject to their respective licenses, available in the App's About &rarr; Attributions screen.</p>
-
-              <h3>10.3 Your content</h3>
-              <p>You retain all rights, title, and interest in the content you create or input into the App (your dictations, notes, transcripts, summaries, and any patient information). Because the App runs entirely on your device, we do not receive your content and claim no rights to it.</p>
-
-              <h3>10.4 Feedback</h3>
-              <p>If you send us suggestions, feedback, or ideas about the App, you grant us a worldwide, perpetual, irrevocable, royalty-free, sublicensable license to use them without restriction. You are not required to send us feedback.</p>
-            </section>
-
-            <section id="sec-11">
-              <h2>11. Restrictions on your use of the App</h2>
-              <p>You agree that you will not, and will not allow any third party to:</p>
-              <ul>
-                <li>Copy, modify, adapt, translate, or create derivative works based on the App;</li>
-                <li>Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code or underlying ideas of the App, except to the extent applicable law expressly permits and only to the minimum extent necessary;</li>
-                <li>Rent, lease, lend, sell, resell, sublicense, distribute, or otherwise transfer your rights in the App to any third party;</li>
-                <li>Remove, alter, or obscure any proprietary notices in the App;</li>
-                <li>Use the App in a way that violates applicable law, infringes the rights of others, or breaches any obligation you owe to a patient, employer, professional body, or other party;</li>
-                <li>Use the App to create, store, or transmit content that is unlawful, infringing, defamatory, harassing, or hateful;</li>
-                <li>Use the App to develop a competing product or service;</li>
-                <li>Bypass, disable, or interfere with any security, authentication, or access-control feature of the App;</li>
-                <li>Use any automated means (including bots or scrapers) to access or interact with the App.</li>
-              </ul>
-            </section>
-
-            <section id="sec-12">
-              <h2>12. Privacy</h2>
-              <p>Our <a href="../privacy/">Privacy Policy</a> and, for Washington consumers, our <a href="../privacy/washington/">Washington Consumer Health Data Privacy Policy</a>, describe what limited information we collect and how it is handled. By using the App you acknowledge that you have read those policies.</p>
-            </section>
-
-            <section id="sec-13">
-              <h2>13. Disclaimer of warranties</h2>
-              <p><strong>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE," WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND.</strong> TO THE MAXIMUM EXTENT PERMITTED BY LAW, <span class="legal-placeholder">[CareDraft LLC]</span> AND ITS LICENSORS DISCLAIM ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING (WITHOUT LIMITATION) WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ANY WARRANTY ARISING OUT OF COURSE OF DEALING, USAGE, OR TRADE.</p>
-              <p>WITHOUT LIMITING THE GENERAL DISCLAIMER ABOVE:</p>
-              <ul>
-                <li>We do not warrant that the App will be uninterrupted, secure, or free of errors, viruses, or other harmful components.</li>
-                <li>We do not warrant that AI-generated output will be accurate, complete, current, or fit for any clinical purpose.</li>
-                <li>We do not warrant that the App will meet your requirements, your employer's requirements, or the requirements of any regulator or accreditor.</li>
-                <li>We do not warrant that the App is suitable for use with protected health information, sensitive personal information, or any other regulated category of data; you are responsible for that determination.</li>
-              </ul>
-            </section>
-
-            <section id="sec-14">
-              <h2>14. Limitation of liability</h2>
-              <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
-
-              <h3>14.1 Excluded damages</h3>
-              <p>IN NO EVENT WILL <span class="legal-placeholder">[CareDraft LLC]</span> OR ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR LICENSORS BE LIABLE TO YOU FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATED TO THESE TERMS OR THE APP, WHETHER BASED IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR ANY OTHER THEORY, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
-
-              <h3>14.2 Liability cap</h3>
-              <p>OUR TOTAL CUMULATIVE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS OR THE APP WILL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID FOR THE APP IN THE TWELVE (12) MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM, OR (B) FIFTY U.S. DOLLARS (USD $50.00).</p>
-
-              <h3>14.3 Statutory carve-outs</h3>
-              <p>Nothing in these Terms excludes or limits our liability for:</p>
-              <ul>
-                <li>Death or personal injury caused by our gross negligence or willful misconduct;</li>
-                <li>Fraud or fraudulent misrepresentation;</li>
-                <li>Any other liability that cannot be excluded or limited under applicable law.</li>
-              </ul>
-
-              <h3>14.4 Allocation of risk</h3>
-              <p>You acknowledge that the limits in this Section 14 are an essential element of the bargain between you and us, that the purchase price of the App reflects this allocation of risk, and that we would not provide the App on these terms without these limits.</p>
-            </section>
-
-            <section id="sec-15">
-              <h2>15. Indemnification</h2>
-              <p>You agree to defend, indemnify, and hold harmless <span class="legal-placeholder">[CareDraft LLC]</span> and its officers, directors, employees, agents, and licensors from and against any claim, demand, loss, liability, damage, cost, or expense (including reasonable attorneys' fees) arising out of or related to:</p>
-              <ul>
-                <li>Your use or misuse of the App;</li>
-                <li>Your violation of these Terms;</li>
-                <li>Your violation of any law or the rights of any third party (including any patient, employer, professional body, or licensor);</li>
-                <li>Any content you create, store, share, or export using the App;</li>
-                <li>Any decision you make, or fail to make, in reliance on AI-generated output of the App;</li>
-                <li>Your failure to obtain any consent, authorization, or Business Associate Agreement that your use of the App may require.</li>
-              </ul>
-            </section>
-
-            <section id="sec-16">
-              <h2>16. Termination</h2>
-              <p>These Terms remain in effect until terminated. You may terminate by uninstalling the App. We may terminate or suspend your license at any time, with or without notice, if we reasonably believe you have violated these Terms or applicable law, or if continued provision of the App to you would expose us to legal or reputational risk. On termination, your license to use the App ends and you must uninstall it.</p>
-              <p>Sections 4 (What CareDraft is — and is not), 5 (AI Disclaimers), 6 (Your Responsibilities), 7 (Security and Data Loss), 10 (Intellectual Property), 13 (Disclaimer of Warranties), 14 (Limitation of Liability), 15 (Indemnification), 17 (Arbitration), 18 (Governing Law), and 21 (Miscellaneous) survive termination.</p>
-            </section>
-
-            <section id="sec-17">
-              <h2>17. Binding individual arbitration — class action waiver</h2>
-              <p>By accepting these Terms, you agree that disputes between you and us will be resolved by individual arbitration rather than in court, with limited exceptions. You may opt out of this arbitration agreement within 30 days of first accepting these Terms (see Section 17.6).</p>
-
-              <h3>17.1 Scope</h3>
-              <p>You and <span class="legal-placeholder">[CareDraft LLC]</span> each agree that any dispute, claim, or controversy arising out of or relating to these Terms, the App, our Privacy Policy, or our relationship with you ("<strong>Dispute</strong>") will be resolved exclusively through final and binding individual arbitration, except as set out in Sections 17.2 and 17.6. This includes disputes arising before these Terms came into effect and after they are terminated.</p>
-
-              <h3>17.2 Exceptions</h3>
-              <p>The following are not subject to arbitration:</p>
-              <ul>
-                <li>Either party may bring an individual action in <strong>small-claims court</strong> in the county where you reside, provided the claim qualifies for small-claims jurisdiction.</li>
-                <li>Either party may seek injunctive or other equitable relief in a court of competent jurisdiction to protect its <strong>intellectual-property rights</strong>.</li>
-                <li>Either party may seek a <strong>public-injunctive remedy</strong> to the extent applicable law requires that such relief remain available in court notwithstanding an arbitration agreement.</li>
-                <li>This arbitration agreement does not apply to any dispute that applicable law does not permit to be arbitrated.</li>
-              </ul>
-
-              <h3>17.3 Arbitration rules and forum</h3>
-              <p>Arbitration will be administered by the <strong>American Arbitration Association</strong> ("AAA") under its <strong>Consumer Arbitration Rules</strong> in effect at the time the arbitration is commenced, as modified by these Terms. The AAA Consumer Arbitration Rules are available at <a href="https://www.adr.org" target="_blank" rel="noopener">adr.org</a>. One arbitrator will preside. The arbitration will be conducted in <span class="legal-placeholder">[Insert Company State]</span> or, at your election, in the county where you reside, or by telephone or videoconference. The arbitrator's decision will be in writing and will be final and binding.</p>
-
-              <h3>17.4 Fees and costs</h3>
-              <p>Filing, administrative, and arbitrator fees will be allocated according to the AAA Consumer Arbitration Rules. If those rules require us to pay a portion of the fees, we will. If you are unable to afford the filing fee and qualify for a waiver under the AAA rules, you may request a waiver. Each party bears its own attorneys' fees and costs, except to the extent applicable law or the arbitrator's award requires otherwise.</p>
-
-              <h3>17.5 Class action waiver</h3>
-              <p><strong>YOU AND <span class="legal-placeholder">[CareDraft LLC]</span> EACH AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, REPRESENTATIVE, OR PRIVATE-ATTORNEY-GENERAL PROCEEDING.</strong> Unless both you and we agree, no arbitrator or court may consolidate more than one person's claims or preside over any form of representative or class proceeding. If a court decides that this class-action waiver is unenforceable as to any claim, that claim (and only that claim) will be severed from the arbitration and may proceed in court; the remaining claims will be arbitrated.</p>
-
-              <h3>17.6 Right to opt out</h3>
-              <p>You may opt out of this arbitration agreement (Section 17) by sending a written notice to <strong>support@caredraft.app</strong> within <strong>30 days</strong> after first accepting these Terms. The notice must include your name, the email address associated with your App purchase, and a clear statement that you wish to opt out of arbitration. Opting out of arbitration will not affect any other part of these Terms. Opting out does not retroactively apply to an arbitration already commenced.</p>
-
-              <h3>17.7 Mass arbitration</h3>
-              <p>If at any time 25 or more substantially similar Demands for Arbitration are filed by or on behalf of claimants represented by the same or coordinated counsel, those Demands will be administered as a single mass-arbitration proceeding under the AAA's <strong>Mass Arbitration Supplementary Rules</strong> then in effect, subject to bellwether procedures the parties and the AAA jointly establish.</p>
-
-              <h3>17.8 Severability</h3>
-              <p>If any portion of this Section 17 is found unenforceable, that portion will be severed and the remaining portions will continue to apply. If Section 17.5 (class-action waiver) is found unenforceable in its entirety, then the entirety of Section 17 will be unenforceable.</p>
-            </section>
-
-            <section id="sec-18">
-              <h2>18. Governing law and jurisdiction</h2>
-              <p>These Terms and any Dispute are governed by the laws of the <strong>State of <span class="legal-placeholder">[Insert Company State]</span></strong>, without regard to its conflict-of-laws principles, and by applicable U.S. federal law (including the Federal Arbitration Act, which governs Section 17). For any Dispute not subject to arbitration under Section 17, you and we consent to the exclusive jurisdiction of the state and federal courts located in <span class="legal-placeholder">[Insert Company State]</span>, except as Section 17.2 (small-claims; intellectual property) provides otherwise.</p>
-            </section>
-
-            <section id="sec-19">
-              <h2>19. Apple-specific terms</h2>
-              <p>If you obtained the App from the Apple App Store, the following terms apply in addition to these Terms. In the event of any conflict between these Apple-specific terms and the rest of these Terms with respect to the App on iOS, these Apple-specific terms control.</p>
-              <ul>
-                <li><strong>Acknowledgement.</strong> You acknowledge that these Terms are between you and <span class="legal-placeholder">[CareDraft LLC]</span>, not with Apple. Apple is not responsible for the App or its content.</li>
-                <li><strong>Scope of license.</strong> Your license is non-transferable, limited to use of the App on Apple-branded products you own or control, and as permitted by the Usage Rules in the Apple Media Services Terms and Conditions.</li>
-                <li><strong>Maintenance and support.</strong> <span class="legal-placeholder">[CareDraft LLC]</span> is solely responsible for providing any maintenance or support services with respect to the App, as specified in these Terms or as required by applicable law. Apple has no obligation to provide maintenance or support.</li>
-                <li><strong>Warranty.</strong> <span class="legal-placeholder">[CareDraft LLC]</span> is solely responsible for any product warranties, whether express or implied by law, to the extent not effectively disclaimed. If the App fails to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price of the App to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App.</li>
-                <li><strong>Product claims.</strong> <span class="legal-placeholder">[CareDraft LLC]</span>, not Apple, is responsible for addressing claims by you or any third party relating to the App or your possession or use of the App, including product liability claims, compliance failures, and intellectual property claims.</li>
-                <li><strong>Intellectual-property infringement.</strong> In the event of any third-party claim that the App or your use of it infringes that third party's intellectual-property rights, <span class="legal-placeholder">[CareDraft LLC]</span>, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of that claim.</li>
-                <li><strong>Legal compliance.</strong> You represent that you are not located in a country that is subject to a U.S. Government embargo or that has been designated by the U.S. Government as a "terrorist supporting" country, and that you are not listed on any U.S. Government list of prohibited or restricted parties.</li>
-                <li><strong>Third-party beneficiary.</strong> You and <span class="legal-placeholder">[CareDraft LLC]</span> acknowledge that <strong>Apple and Apple's subsidiaries are third-party beneficiaries of these Terms</strong>, and that upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary.</li>
-              </ul>
-            </section>
-
-            <section id="sec-20">
-              <h2>20. Google Play-specific terms</h2>
-              <p>If you obtained the App from Google Play, your purchase and use of the App is also subject to the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>. In the event of any conflict between the Google Play Terms of Service and these Terms with respect to the App on Android, the Google Play Terms of Service control to the extent they cover the same subject matter.</p>
-            </section>
-
-            <section id="sec-21">
-              <h2>21. Miscellaneous</h2>
-              <h3>21.1 Entire agreement</h3>
-              <p>These Terms, together with our <a href="../privacy/">Privacy Policy</a> and (for Washington consumers) our <a href="../privacy/washington/">Washington Consumer Health Data Privacy Policy</a>, constitute the entire agreement between you and <span class="legal-placeholder">[CareDraft LLC]</span> regarding the App and supersede any prior agreements between you and us regarding the App.</p>
-
-              <h3>21.2 Severability</h3>
-              <p>If any provision of these Terms is held unenforceable, that provision will be enforced to the maximum extent permitted by law, and the remaining provisions will continue in full force and effect.</p>
-
-              <h3>21.3 No waiver</h3>
-              <p>Our failure to enforce any right or provision of these Terms will not be a waiver of that right or provision.</p>
-
-              <h3>21.4 Assignment</h3>
-              <p>You may not assign or transfer these Terms or any of your rights or obligations under them without our prior written consent. We may assign these Terms without restriction, including in connection with a merger, acquisition, financing, reorganization, or sale of assets.</p>
-
-              <h3>21.5 Force majeure</h3>
-              <p>We will not be liable for any failure or delay in performance caused by circumstances beyond our reasonable control, including natural disasters, war, civil unrest, government action, labor disputes, internet or telecommunications failures, and acts or failures of third-party providers.</p>
-
-              <h3>21.6 Headings and interpretation</h3>
-              <p>Section headings are for convenience only and do not affect interpretation. The words "including," "such as," and "for example" are not limiting.</p>
-
-              <h3>21.7 Notices</h3>
-              <p>We may provide notice to you through the App, by email (if you have provided one), or by posting on our website. You may provide notice to us at <strong>support@caredraft.app</strong>.</p>
-
-              <h3>21.8 Relationship</h3>
-              <p>Nothing in these Terms creates an agency, partnership, joint venture, employment, or franchise relationship between you and us.</p>
-
-              <h3>21.9 U.S. Government end users</h3>
-              <p>The App is "commercial computer software" and "commercial computer software documentation" as defined at 48 C.F.R. &sect; 2.101. If you are a U.S. Government end user, your rights are limited to those granted to all other end users under these Terms.</p>
-
-              <h3>21.10 Export controls</h3>
-              <p>You agree to comply with all U.S. and other applicable export control and trade sanctions laws and regulations in your use of the App.</p>
-            </section>
-
-            <section id="sec-22">
-              <h2>22. Contact us</h2>
-              <p>For questions about these Terms or the App:</p>
-              <p>
-                <strong><span class="legal-placeholder">[CareDraft LLC]</span></strong><br>
-                <span class="legal-placeholder">[Insert Postal Address]</span><br>
-                Email: <a href="mailto:support@caredraft.app">support@caredraft.app</a>
-              </p>
-
-              <hr>
-              <p style="font-size: 13px; color: var(--text-muted); font-style: italic;">
-                *These Terms were prepared with assistance from an AI legal-workflow tool and reviewed by qualified counsel before publication. They are not a substitute for individualized legal advice.*
-              </p>
-            </section>
-
-          </article>
-        </div>
+        </article>
       </div>
-    </main>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <a class="footer-logo" href="../">
-          <img src="../assets/icon.png" alt="CareDraft icon">
+  </main>
+
+  <!-- ───────────────────────── Footer ───────────────────────── -->
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../">
+          <img src="../assets/caredraft-login-mark.png" alt="" width="26" height="26">
           <span>CareDraft</span>
         </a>
-        <div class="footer-links">
-          <a href="../">Home</a>
-          <a href="../privacy/">Privacy Policy</a>
-          <a href="../privacy/washington/">Washington Notice</a>
-          <a href="mailto:support@caredraft.app">Contact Us</a>
-        </div>
-        <div class="footer-copy">
-          <p>&copy; 2026 CareDraft LLC. All rights reserved. Draft policies pending final attorney review.</p>
-        </div>
+        <p>AI drafts. You decide.</p>
       </div>
-    </footer>
+      <nav class="footer-links" aria-label="Legal">
+        <a href="../">Home</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../privacy/washington/">Washington Health Data Notice</a>
+        <a href="./" aria-current="page">Terms of Use</a>
+      </nav>
+      <p class="footer-fine">
+        On-device drafting powered by Gemma (Google), running locally. Speech
+        recognition runs on-device. CareDraft generates drafts, not final clinical
+        documentation — review every note before you rely on it.
+      </p>
+      <p class="footer-copy">© <span id="year">2026</span> CareDraft</p>
+    </div>
+  </footer>
 
-    <!-- INTERACTIVE SCRIPTS -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Theme Toggle Functionality
-        const themeToggleBtn = document.getElementById('themeToggle');
-        const mobileThemeToggleBtn = document.getElementById('mobileThemeToggle');
+  <script>
+    (function () {
+      var toc = document.getElementById('toc');
+      var links = toc ? Array.prototype.slice.call(toc.querySelectorAll('a')) : [];
+      var mobile = window.matchMedia('(max-width: 980px)');
 
-        const toggleTheme = () => {
-          const isDark = document.documentElement.classList.toggle('dark-theme');
-          if (isDark) {
-            document.documentElement.classList.remove('light-theme');
-            localStorage.setItem('theme', 'dark');
-          } else {
-            document.documentElement.classList.add('light-theme');
-            localStorage.setItem('theme', 'light');
-          }
-          document.documentElement.classList.add('theme-transitioning');
-          setTimeout(() => {
-            document.documentElement.classList.remove('theme-transitioning');
-          }, 300);
-        };
+      // Sidebar on desktop, collapsible "On this page" on mobile.
+      function syncToc() {
+        if (!toc) return;
+        if (mobile.matches) { toc.removeAttribute('open'); }
+        else { toc.setAttribute('open', ''); }
+      }
+      syncToc();
+      if (mobile.addEventListener) { mobile.addEventListener('change', syncToc); }
+      else { mobile.addListener(syncToc); }
 
-        if (themeToggleBtn) {
-          themeToggleBtn.addEventListener('click', toggleTheme);
-        }
-        if (mobileThemeToggleBtn) {
-          mobileThemeToggleBtn.addEventListener('click', toggleTheme);
-        }
-
-        // Mobile Menu Functionality
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
-
-        function openMobileMenu() {
-          mobileMenu.classList.add('active');
-          mobileMenuToggle.setAttribute('aria-expanded', 'true');
-          mobileMenu.setAttribute('aria-hidden', 'false');
-          document.body.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-          mobileMenu.classList.remove('active');
-          mobileMenuToggle.setAttribute('aria-expanded', 'false');
-          mobileMenu.setAttribute('aria-hidden', 'true');
-          document.body.style.overflow = '';
-        }
-
-        if (mobileMenuToggle) {
-          mobileMenuToggle.addEventListener('click', openMobileMenu);
-        }
-        if (mobileMenuClose) {
-          mobileMenuClose.addEventListener('click', closeMobileMenu);
-        }
-        if (mobileMenu) {
-          mobileMenu.addEventListener('click', (e) => {
-            if (e.target.classList.contains('mobile-menu-backdrop')) {
-              closeMobileMenu();
-            }
-          });
-        }
-        mobileMenuLinks.forEach(link => {
-          link.addEventListener('click', closeMobileMenu);
-        });
-
-        // Scroll Spy Functionality for Sidebar
-        const sections = document.querySelectorAll('article.legal-content-box section');
-        const tocItems = document.querySelectorAll('#tocList li');
-
-        const observerOptions = {
-          root: null,
-          rootMargin: '-20% 0px -60% 0px',
-          threshold: 0
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const activeId = entry.target.getAttribute('id');
-
-              tocItems.forEach(item => {
-                const link = item.querySelector('a');
-                if (link && link.getAttribute('href') === `#${activeId}`) {
-                  item.classList.add('active');
-                } else {
-                  item.classList.remove('active');
-                }
-              });
-            }
-          });
-        }, observerOptions);
-
-        sections.forEach(section => {
-          observer.observe(section);
+      links.forEach(function (a) {
+        a.addEventListener('click', function () {
+          if (mobile.matches) { toc.removeAttribute('open'); }
         });
       });
-    </script>
-  </body>
+
+      // Highlight the section currently in view.
+      if ('IntersectionObserver' in window) {
+        var sections = document.querySelectorAll('.legal-body section[id]');
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            var id = e.target.id;
+            links.forEach(function (a) {
+              a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+            });
+          });
+        }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+        sections.forEach(function (s) { io.observe(s); });
+      }
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
 </html>
