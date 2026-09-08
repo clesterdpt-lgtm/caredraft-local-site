@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareDraft — The AI scribe that never phones home</title>
-  <meta name="description" content="CareDraft drafts home-health visit notes with AI that runs entirely on your phone's own hardware. Works in airplane mode. No cloud servers, no subscription, no signal required.">
+  <title>CareDraft — Draft home-health notes, even offline</title>
+  <meta name="description" content="Turn your visit recap into a clear clinical draft with AI built for home health. Draft notes on your phone without Wi-Fi or cell service after setup.">
 
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="canonical" href="https://caredraft.app/">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://caredraft.app/">
-  <meta property="og:title" content="CareDraft — The AI scribe that never phones home">
-  <meta property="og:description" content="On-device AI note drafting for home health. Works in airplane mode. No cloud, no subscription.">
+  <meta property="og:title" content="CareDraft — Draft home-health notes, even offline">
+  <meta property="og:description" content="AI built for home health. Turn your visit recap into an organized note and keep drafting without internet after setup. You review every draft.">
   <meta property="og:image" content="https://caredraft.app/assets/icon.png">
   <meta name="twitter:card" content="summary">
 
@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260612a">
+  <link rel="stylesheet" href="styles.css?v=20260908b">
 
   <script>
     // Redirect old GitHub Pages host to the custom domain.
@@ -41,12 +41,13 @@
     "name": "CareDraft",
     "operatingSystem": "Android",
     "applicationCategory": "MedicalApplication",
-    "description": "On-device AI note drafting for home health clinicians. All transcription and drafting runs locally on the phone — no cloud AI, no subscription.",
+    "description": "On-device AI note drafting for home health clinicians. Custom CareDraft models draft notes on the phone. Dictation uses the device speech service; offline availability depends on device configuration.",
     "url": "https://caredraft.app/"
   }
   </script>
 </head>
-<body>
+<body class="home">
+  <a class="skip-link" href="#top">Skip to content</a>
 
   <!-- ───────────────────────── Nav ───────────────────────── -->
   <header class="topbar">
@@ -55,54 +56,58 @@
         <img src="assets/caredraft-login-mark.png" alt="" width="30" height="30">
         <span>CareDraft</span>
       </a>
-      <nav class="topnav" aria-label="Primary">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu <span aria-hidden="true">+</span></button>
+      <nav class="topnav" id="primary-nav" aria-label="Primary">
+        <a href="#caredraft-ai">CareDraft AI</a>
         <a href="#how">How it works</a>
         <a href="#toolkit">Toolkit</a>
         <a href="#cost">Cost</a>
         <a href="#security">Security</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-primary btn-sm" href="#get">Get the app</a>
+      <a class="btn btn-primary btn-sm" href="#get">Availability <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
 
     <!-- ───────────────────────── Hero ───────────────────────── -->
     <section class="hero">
       <div class="shell hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">For home health clinicians</p>
-          <h1>The AI scribe that <em>never phones home.</em></h1>
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Built for home health. Built around you.</p>
+          <h1>Draft your notes.<br><em>Even offline.</em></h1>
           <p class="lede">
-            CareDraft turns your post-visit dictation into a polished clinical note
-            using AI that runs entirely on your phone's own hardware.
-            No cloud servers. No subscription meter. No signal required.
+            <strong>CareDraft AI</strong> turns your visit recap into a clear, organized
+            draft using AI built for home health. It works right on your phone,
+            so you can keep drafting without Wi-Fi or cell service.
           </p>
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="#get">Get CareDraft</a>
+            <a class="btn btn-primary" href="#note-examples">See a sample note <span aria-hidden="true">↗</span></a>
             <a class="btn btn-ghost" href="#how">See how it works</a>
           </div>
           <ul class="hero-chips" aria-label="Key facts">
             <li>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 14.6v-2.2l-8-4.5V3.5a1.5 1.5 0 0 0-3 0v4.4l-8 4.5v2.2l8-2.5v4.9l-2.2 1.6v1.7l3.7-1.1 3.7 1.1v-1.7L13 17.5v-4.9l8 2z"/></svg>
-              Works in airplane mode
+              No internet needed to draft
             </li>
             <li>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z"/></svg>
               Encrypted on your device
             </li>
             <li>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10S2 17.5 2 12zm5.3-3.3 9.9 9.9-1.4 1.4-9.9-9.9 1.4-1.4z"/></svg>
-              Zero notes sent to servers
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+              AI built for home health
             </li>
           </ul>
+          <p class="offline-setup">After one-time setup. Offline voice dictation depends on your phone’s speech settings.</p>
+          <p class="hero-availability">Android field testing · Google Play release planned</p>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
           <div class="float-pill float-pill-top">
             <svg viewBox="0 0 24 24"><path d="M21 14.6v-2.2l-8-4.5V3.5a1.5 1.5 0 0 0-3 0v4.4l-8 4.5v2.2l8-2.5v4.9l-2.2 1.6v1.7l3.7-1.1 3.7 1.1v-1.7L13 17.5v-4.9l8 2z"/></svg>
-            Airplane mode: on
+            AI ready · no internet needed
           </div>
           <div class="phone">
             <div class="phone-screen">
@@ -123,94 +128,92 @@
                   <span class="note-chip">Routine Visit</span>
                   <span class="note-date">Draft · today</span>
                 </div>
-                <div class="ai-banner">AI draft — verify before signing</div>
-                <p class="mock-label">Subjective</p>
-                <div class="skel" style="width: 92%"></div>
-                <div class="skel" style="width: 78%"></div>
-                <p class="mock-label">Objective</p>
-                <p class="typed-line"><span id="typed"></span><span class="caret"></span></p>
-                <div class="skel" style="width: 85%"></div>
-                <div class="skel" style="width: 60%"></div>
-                <p class="mock-label">Assessment</p>
-                <div class="skel" style="width: 88%"></div>
-                <div class="skel" style="width: 72%"></div>
+                <div class="ai-banner">Draft — verify before signing</div>
+                <p class="mock-label">Draft preview</p>
+                <p class="mock-text">The patient reports improved ease with chair transfers but continues to feel unsteady when turning. Skilled physical therapy focused on gait and transfer training. During ambulation with a rolling walker, the patient required contact guard assistance and demonstrated improved foot clearance following cueing. Sit-to-stand practice was completed with reduced reliance on upper-extremity push-off.</p>
               </div>
               <div class="phone-dock">
                 <div class="mic-button">
                   <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1A7 7 0 0 0 19 11h-2z"/></svg>
                 </div>
-                <span class="dock-note">0.0 KB sent · on-device</span>
+                <span class="dock-note">Drafted on this device</span>
               </div>
             </div>
           </div>
           <div class="float-pill float-pill-bottom">
             <svg viewBox="0 0 24 24"><path d="M9 3h6v2h3a1 1 0 0 1 1 1v3h2v6h-2v3a1 1 0 0 1-1 1h-3v2H9v-2H6a1 1 0 0 1-1-1v-3H3V9h2V6a1 1 0 0 1 1-1h3V3zm-1 6v6h8V9H8z"/></svg>
-            Gemma AI · running locally
+            CareDraft AI · made for home health
           </div>
+          <p class="visual-caption">Illustrative draft preview</p>
         </div>
       </div>
     </section>
 
-    <!-- ───────────────────────── Pillars ───────────────────────── -->
-    <section class="pillars">
-      <div class="shell">
-        <div class="pillar-grid">
-          <article class="pillar reveal">
-            <h3>Offline by design</h3>
-            <p>
-              The speech recognition and the language model live in your phone's storage
-              and run on its chip. Basement apartments, rural routes, parking-garage
-              charting — a dead zone changes nothing.
-            </p>
-          </article>
-          <article class="pillar reveal">
-            <h3>Own your scribe</h3>
-            <p>
-              Cloud scribes rent you intelligence by the month. CareDraft does its
-              thinking on hardware you already own — no subscription, no per-note
-              metering, no price hikes on something you depend on.
-            </p>
-          </article>
-          <article class="pillar reveal">
-            <h3>Private by architecture</h3>
-            <p>
-              Dictation is transcribed and drafted without leaving the device, then
-              encrypted at rest. There is no server copy to breach, sell, or subpoena —
-              we couldn't read your notes if we wanted to.
-            </p>
-          </article>
-        </div>
+    <section class="pillars" aria-label="CareDraft at a glance">
+      <div class="shell pillar-grid">
+        <article class="pillar"><span class="pillar-index">01 / PURPOSE</span><h2>Made for home health.</h2><p>AI built around your visit notes, your discipline, and the details you document.</p></article>
+        <article class="pillar"><span class="pillar-index">02 / OFFLINE</span><h2>Works where you work.</h2><p>Rural routes. Weak reception. Airplane mode. After setup, your AI can still draft.</p></article>
+        <article class="pillar"><span class="pillar-index">03 / CONTROL</span><h2>You make the final call.</h2><p>Review and edit every draft before sharing it with your clinical workflow.</p></article>
       </div>
     </section>
 
-    <!-- ───────────────────────── Data path ───────────────────────── -->
-    <section class="datapath" id="datapath">
+    <section class="model-section" id="caredraft-ai" aria-labelledby="model-title">
       <div class="shell">
-        <p class="kicker">Follow the dictation</p>
-        <h2>Where does your voice go after you stop talking?</h2>
-        <div class="path-grid">
-          <article class="path-card path-cloud reveal">
-            <h3>A typical cloud AI scribe</h3>
-            <ol class="path-steps">
-              <li><span class="path-dot"></span>Your dictation is recorded on the phone</li>
-              <li><span class="path-dot"></span>Uploaded over the network</li>
-              <li><span class="path-dot"></span>Processed in a data center</li>
-              <li><span class="path-dot"></span>Often relayed to a third-party AI provider</li>
-              <li><span class="path-dot"></span>The note — and your audio — now live on servers you'll never see</li>
-            </ol>
-            <p class="path-foot">Every hop is a place your patient's story can leak, be retained, or be repurposed.</p>
-          </article>
-          <article class="path-card path-local reveal">
-            <h3>CareDraft</h3>
-            <ol class="path-steps">
-              <li><span class="path-dot"></span>Your dictation is captured by the mic</li>
-              <li><span class="path-dot"></span>Transcribed by an on-device speech model</li>
-              <li><span class="path-dot"></span>Drafted into a note by Gemma, running on the phone's chip</li>
-              <li><span class="path-dot"></span>Encrypted with AES-256 and stored locally</li>
-            </ol>
-            <p class="path-foot path-foot-strong">The entire pipeline, inside the bezel. Bytes sent to the cloud: zero.</p>
-          </article>
+        <div class="model-heading">
+          <p class="kicker kicker-light">Meet CareDraft AI</p>
+          <span class="model-status"><span aria-hidden="true"></span> Built for home health. Works offline.</span>
         </div>
+        <div class="model-grid">
+          <div class="model-copy">
+            <h2 id="model-title">Made for the way<br><em>you document.</em></h2>
+            <p class="section-lede">Tell CareDraft what happened during the visit. It helps organize the details into a clinical draft — the care you provided, the patient's response, and the next steps you describe.</p>
+            <dl class="model-benefits">
+              <div><dt>Built for your discipline</dt><dd>Designed for physical therapy, occupational therapy, speech therapy, and skilled nursing notes.</dd></div>
+              <div><dt>Your details, organized</dt><dd>Use a single summary or the sections in your own note template. See fuller examples below.</dd></div>
+              <div><dt>You make it final</dt><dd>Check the facts, make edits, and decide what to keep. Every note starts as a draft for your review.</dd></div>
+            </dl>
+          </div>
+          <aside class="offline-panel" aria-labelledby="offline-title">
+            <span class="offline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 14.6v-2.2l-8-4.5V3.5a1.5 1.5 0 0 0-3 0v4.4l-8 4.5v2.2l8-2.5v4.9l-2.2 1.6v1.7l3.7-1.1 3.7 1.1v-1.7L13 17.5v-4.9l8 2z"/></svg></span>
+            <p class="kicker kicker-light">No Wi-Fi. No cell service.</p>
+            <h3 id="offline-title">Your AI still works.</h3>
+            <p>Once setup is complete, CareDraft's drafting AI lives on your phone. Turn your visit recap into a note on a rural route, in a building with weak reception, or in airplane mode.</p>
+            <ul><li>Draft from typed notes without internet</li><li>Review and edit your saved notes offline</li><li>No internet connection needed for the AI to write</li></ul>
+            <p class="offline-detail">Want to dictate offline, too? Your phone needs offline speech recognition enabled. You can always type your recap instead. <a href="#faq">More about offline use</a></p>
+          </aside>
+        </div>
+        <div class="draft-demo" id="note-examples" aria-labelledby="demo-title">
+          <div class="demo-top">
+            <div><p class="demo-eyebrow">A few words from you. A readable draft.</p><h3 id="demo-title">From shorthand to a clinical note.</h3></div>
+            <span class="demo-mark" aria-hidden="true">✦</span>
+          </div>
+          <div class="demo-options" role="group" aria-label="Choose an illustrative note example">
+            <button type="button" data-example="pt" aria-pressed="true">Physical therapy</button>
+            <button type="button" data-example="ot" aria-pressed="false">Occupational therapy</button>
+            <button type="button" data-example="slp" aria-pressed="false">Speech therapy</button>
+            <button type="button" data-example="sn" aria-pressed="false">Nursing</button>
+          </div>
+          <div class="demo-content" aria-live="polite" aria-atomic="true">
+            <div class="demo-input">
+              <p class="demo-label">01 / Your quick recap</p>
+              <p id="demo-transcript">“PT f/u. Pt reports easier chair transfers, still unsteady with turns. Gait w RW, CGA; better foot clearance after cues. Practiced sit-to-stand, less UE push-off. Continue skilled gait/balance work per POC.”</p>
+              <p class="demo-input-caption">Recap the visit in your own words. CareDraft helps turn your shorthand into a readable narrative.</p>
+
+            </div>
+            <div class="demo-output">
+              <div class="demo-note-header"><p class="demo-label">02 / Your note, organized</p><span class="review-label">Draft for review</span></div>
+              <p id="demo-note-title">Physical therapy · routine visit</p>
+              <p id="demo-note">The patient reports improved ease with chair transfers but continues to feel unsteady when turning. Skilled physical therapy focused on gait and transfer training. During ambulation with a rolling walker, the patient required contact guard assistance and demonstrated improved foot clearance following cueing. Sit-to-stand practice was completed with reduced reliance on upper-extremity push-off. Ongoing difficulty with turning and the need for cueing and guarding support continued skilled intervention for safe mobility. Gait and balance training will continue in accordance with the established plan of care.</p>
+              <p id="demo-kind">Illustrative draft</p>
+            </div>
+          </div>
+          <p class="demo-fine">Illustrative examples of the note style, not actual model output. Results vary with your recap. Review every draft against the details you provided.</p>
+        </div>
+        <div class="model-editions">
+          <article><div class="edition-title"><h3>CareDraft E2B</h3><span>Recommended starting point</span></div><p>Our compact custom model. About a 3.4 GB download, with 8 GB phone RAM minimum and 12 GB comfortable.</p></article>
+          <article><div class="edition-title"><h3>CareDraft E4B</h3><span>For higher-memory phones</span></div><p>The same focused training on a larger base model. About a 5.3 GB download; 12 GB phone RAM recommended.</p></article>
+        </div>
+        <p class="model-foot">Download once during setup. Speed and fit depend on your device, available memory, and note length. <a href="#faq">Explore the FAQs <span aria-hidden="true">↗</span></a></p>
       </div>
     </section>
 
@@ -218,24 +221,24 @@
     <section class="how" id="how">
       <div class="shell">
         <p class="kicker">How it works</p>
-        <h2>Dictate on the doorstep. Done before you're in drive.</h2>
+        <h2>From the visit to a draft you can use.</h2>
         <div class="steps-grid">
           <article class="step reveal">
             <span class="step-num">1</span>
             <h3>Dictate</h3>
             <p>
-              Tap the mic after the visit and talk the way you chart. On-device speech
-              recognition is tuned with home-health vocabulary — gait belts, contact
-              guard, supine-to-sit and all.
+              Capture a de-identified recap after the visit. Dictate using your
+              phone's speech service, or type your notes. Offline dictation depends
+              on the device and its speech settings.
             </p>
           </article>
           <article class="step reveal">
             <span class="step-num">2</span>
             <h3>Draft</h3>
             <p>
-              A multi-billion-parameter Gemma model rewrites your dictation into clean
-              clinical prose — as a single summary, or section-by-section in your own
-              note template.
+              CareDraft AI turns your recap into a draft on
+              your phone — as a single summary or section by section in your
+              own note template.
             </p>
           </article>
           <article class="step reveal">
@@ -265,19 +268,18 @@
         <p class="kicker">The visit toolkit</p>
         <h2>More than a note drafter.</h2>
         <p class="section-lede">
-          Notes are the headline act, but CareDraft carries the rest of the
-          visit bag too — exercise programs, med lists, teaching materials,
-          routing, and mileage. Your records stay encrypted on your phone,
-          same as your notes.
+          Build exercise programs, review medication lists, and organize your
+          route in the same place you draft your notes. A practical toolkit
+          for the work around every visit.
         </p>
 
         <!-- HEP builder -->
-        <div class="feature-row reveal" style="--tool-accent:#d97706">
+        <div class="feature-row reveal" style="--tool-accent:#a65008">
           <div class="feature-copy">
-            <span class="feature-tag">HEP builder</span>
+            <span class="feature-tag">Home exercise programs</span>
             <h3>Exercise programs patients can actually follow.</h3>
             <p>
-              Build a home exercise program in a couple of taps from a searchable
+              Build a home exercise program from a searchable
               library of illustrated exercises — each with step-by-step
               instructions written for patients, not therapists.
             </p>
@@ -327,16 +329,16 @@
         <div class="feature-row reveal" style="--tool-accent:#7c3aed">
           <div class="feature-copy">
             <span class="feature-tag">Medication manager</span>
-            <h3>Med lists without the typing.</h3>
+            <h3>Take a photo. Build your med list.</h3>
             <p>
-              Point your camera at a medication list or a row of bottles and
-              CareDraft reads it, cleans it up, and turns it into a structured
-              med list — name, dose, frequency, route. The text recognition runs
-              on your phone, like everything else.
+              Take a picture of a printed medication list or choose a photo
+              you already have. CareDraft reads the words in the picture and
+              fills in medication details for you to check and edit.
+              The photo is read right on your phone.
             </p>
             <ul class="feature-points">
-              <li>Camera import with on-device OCR — review every extracted med before it's added</li>
-              <li>Field-by-field dictation tuned for drug names and doses</li>
+              <li>Turn a photo into a medication list you can edit</li>
+              <li>Check each medication name, dose, and instruction before adding it</li>
               <li>Save dated snapshots, so reconciliation has a paper trail</li>
               <li>Search your medication history instantly</li>
             </ul>
@@ -349,7 +351,7 @@
               </div>
               <div class="scan-banner">
                 <svg viewBox="0 0 24 24"><path d="M4 4h4V2H2v6h2V4zm16 0v4h2V2h-6v2h4zM4 20v-4H2v6h6v-2H4zm16 0h-4v2h6v-6h-2v4zM7 9h10v2H7V9zm0 4h10v2H7v-2z"/></svg>
-                Scanned from photo — 3 medications found, review to add
+                Read from your photo — check 3 medications before adding
               </div>
               <div class="med-row">
                 <div><p class="med-name">Lisinopril</p><p class="med-dose">10 mg · once daily · oral</p></div>
@@ -371,53 +373,7 @@
           </div>
         </div>
 
-        <!-- Patient education -->
-        <div class="feature-row reveal" style="--tool-accent:#15803d">
-          <div class="feature-copy">
-            <span class="feature-tag">Patient education</span>
-            <h3>Teaching materials, ready before you ring the doorbell.</h3>
-            <p>
-              A built-in library of plain-language education modules — CHF, COPD,
-              diabetes, fall prevention, wound care, blood thinner safety, and
-              more. Combine modules into a packet for the visit and document the
-              teaching in one step.
-            </p>
-            <ul class="feature-points">
-              <li>15+ condition modules, each with key points, red flags, and "when to call 911"</li>
-              <li>Build reusable packets for common patient types</li>
-              <li>Write custom modules for anything the library doesn't cover</li>
-              <li>Export patient-facing handouts and a documentation summary for your note</li>
-            </ul>
-          </div>
-          <div class="feature-shot">
-            <div class="mini-app">
-              <div class="mini-head">
-                <span class="mini-title">Education packet</span>
-                <span class="mini-chip">2 modules</span>
-              </div>
-              <div class="edu-chips">
-                <span class="edu-chip edu-chip-on">CHF ✓</span>
-                <span class="edu-chip edu-chip-on">Fall Prevention ✓</span>
-                <span class="edu-chip">COPD</span>
-                <span class="edu-chip">Diabetes</span>
-              </div>
-              <div class="edu-card">
-                <p class="edu-title">Congestive Heart Failure</p>
-                <p class="edu-label">Key points</p>
-                <div class="skel" style="width: 90%"></div>
-                <div class="skel" style="width: 76%"></div>
-                <div class="skel" style="width: 84%"></div>
-                <p class="edu-label edu-label-alert">When to call your doctor or 911</p>
-                <div class="skel" style="width: 82%"></div>
-                <div class="skel" style="width: 64%"></div>
-              </div>
-              <div class="mini-actions">
-                <span class="mini-btn mini-btn-ghost">Save packet</span>
-                <span class="mini-btn">Export handout</span>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
         <!-- Visit Router -->
         <div class="feature-row reveal" id="visit-router" style="--tool-accent:#0e7490">
@@ -437,9 +393,9 @@
               <li>One tap logs the day's mileage to Vehicle Tracking</li>
             </ul>
             <p class="feature-fine">
-              Route details stay in the encrypted local draft until you choose
-              to open the route in your maps app, where Apple or Google handles
-              the navigation handoff.
+              Saved routes are encrypted locally. Address suggestions send the typed
+              search and approximate area to Photon (Komoot); turn suggestions off
+              for manual offline entry. Opening a route shares it with your maps app.
             </p>
           </div>
           <div class="feature-shot">
@@ -474,102 +430,18 @@
           </div>
         </div>
 
-        <!-- Vehicle tracking -->
-        <div class="feature-row reveal" style="--tool-accent:#dc2626">
-          <div class="feature-copy">
-            <span class="feature-tag">Vehicle tracking</span>
-            <h3>Every reimbursable mile, accounted for.</h3>
-            <p>
-              Log trips between visits, capture vehicle expenses, and pull a
-              clean monthly report at tax time — without installing a mileage
-              app that tracks your location and sells the breadcrumbs.
-            </p>
-            <ul class="feature-points">
-              <li>Trip breakdowns per day, with "duplicate last trip" and "add return trip" shortcuts</li>
-              <li>Monthly totals and per-month browsing</li>
-              <li>Vehicle expenses too — fill-ups, oil changes, repairs</li>
-              <li>Export a monthly report for reimbursement or taxes</li>
-            </ul>
-          </div>
-          <div class="feature-shot">
-            <div class="mini-app">
-              <div class="mini-head">
-                <span class="mini-title">June</span>
-                <span class="mini-chip">412.6 mi total</span>
-              </div>
-              <div class="trip-row"><span class="trip-route">Home → Oakwood Dr</span><span class="trip-miles">8.2 mi</span></div>
-              <div class="trip-row"><span class="trip-route">Oakwood → Maple Court</span><span class="trip-miles">5.1 mi</span></div>
-              <div class="trip-row"><span class="trip-route">Maple Court → Home</span><span class="trip-miles">9.6 mi</span></div>
-              <div class="trip-row trip-row-expense"><span class="trip-route">Fill-up</span><span class="trip-miles">$46.75</span></div>
-              <div class="mini-actions">
-                <span class="mini-btn mini-btn-ghost">Add return trip</span>
-                <span class="mini-btn">Export report</span>
-              </div>
-            </div>
-          </div>
+        <div class="tool-extras">
+          <article><span class="feature-tag">Patient education</span><h3>Leave something useful behind.</h3><p>Combine plain-language education modules into reusable packets, then export patient handouts and a teaching summary for your note.</p></article>
+          <article><span class="feature-tag">Vehicle tracking</span><h3>Keep the miles with the visits.</h3><p>Log trips and vehicle expenses, see monthly totals, and export a report for reimbursement or tax preparation.</p></article>
         </div>
 
       </div>
     </section>
 
-    <!-- ───────────────────────── Cost ───────────────────────── -->
     <section class="cost" id="cost">
-      <div class="shell">
-        <p class="kicker">The subscription math</p>
-        <h2>Intelligence you own, not rent.</h2>
-        <p class="section-lede">
-          Cloud AI scribes commonly bill $100–$300 per clinician, per month —
-          forever — because every note you draft costs them server time.
-          CareDraft's AI runs on a chip you already bought.
-        </p>
-        <div class="cost-cards">
-          <div class="cost-card reveal">
-            <p class="cost-figure">$1,200–3,600<span>/yr</span></p>
-            <p class="cost-caption">Typical cloud AI scribe subscription, billed as long as you use it</p>
-          </div>
-          <div class="cost-card cost-card-accent reveal">
-            <p class="cost-figure">$0<span>/mo</span></p>
-            <p class="cost-caption">CareDraft's recurring AI fee — your phone does the work, free</p>
-          </div>
-        </div>
-        <div class="compare-wrap reveal">
-          <table class="compare">
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col">Cloud AI scribe</th>
-                <th scope="col" class="compare-hl">CareDraft</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Where the AI runs</th>
-                <td>Vendor's data center</td>
-                <td class="compare-hl">Your phone's hardware</td>
-              </tr>
-              <tr>
-                <th scope="row">Works with no signal</th>
-                <td><span class="no">No</span></td>
-                <td class="compare-hl"><span class="yes">Yes — fully</span></td>
-              </tr>
-              <tr>
-                <th scope="row">Recurring AI fee</th>
-                <td>Monthly, per clinician</td>
-                <td class="compare-hl"><span class="yes">None</span></td>
-              </tr>
-              <tr>
-                <th scope="row">Your audio leaves the device</th>
-                <td><span class="no">Yes, by design</span></td>
-                <td class="compare-hl"><span class="yes">Never</span></td>
-              </tr>
-              <tr>
-                <th scope="row">Keeps working if the vendor disappears</th>
-                <td><span class="no">No</span></td>
-                <td class="compare-hl"><span class="yes">Yes — it's on your phone</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="shell ownership-grid">
+        <div><p class="kicker">AI without a monthly meter</p><h2>Your phone does the work.</h2><p class="section-lede">CareDraft runs its drafting models on hardware you already own. No recurring AI subscription and no per-note AI charges.</p><a class="text-link" href="#get">Check app availability <span aria-hidden="true">↗</span></a></div>
+        <div class="ownership-details"><div><strong>$0<span> / month</span></strong><p>Recurring AI fee</p></div><ul><li>Download your model during setup</li><li>Draft locally without a cloud AI connection</li><li>Keep the visit toolkit in one app</li></ul><p class="ownership-fine">Refers to recurring AI fees. App availability is listed below.</p></div>
       </div>
     </section>
 
@@ -577,11 +449,11 @@
     <section class="security" id="security">
       <div class="shell">
         <p class="kicker kicker-light">Security</p>
-        <h2>Protection that doesn't ask for trust.</h2>
+        <h2>Your work deserves thoughtful protection.</h2>
         <p class="section-lede section-lede-light">
-          Most apps ask you to trust their privacy policy. CareDraft is built so
-          there's nothing to trust us <em>with</em> — and what stays on your phone
-          is locked down like it matters. Because it does.
+          CareDraft's note-drafting AI runs on your device, and saved records are
+          encrypted locally. Clear boundaries help you understand what stays
+          on your phone and what happens when you choose connected tools.
         </p>
         <div class="sec-grid">
           <article class="sec-card reveal">
@@ -590,7 +462,7 @@
           </article>
           <article class="sec-card reveal">
             <h3>Hardened key derivation</h3>
-            <p>Your PIN becomes a key via PBKDF2-HMAC-SHA512 at 210,000 iterations — the current OWASP-recommended work factor.</p>
+            <p>Your PIN protects the encryption key through PBKDF2-HMAC-SHA512 key derivation.</p>
           </article>
           <article class="sec-card reveal">
             <h3>Biometric unlock</h3>
@@ -602,11 +474,11 @@
           </article>
           <article class="sec-card reveal">
             <h3>No accounts, no telemetry</h3>
-            <p>No sign-up, no clinical analytics, no usage profiles. The app's only network calls are update checks and the one-time model download.</p>
+            <p>No account for note drafting, no advertising trackers, and no usage analytics. CareDraft does not operate a clinical-content backend.</p>
           </article>
           <article class="sec-card reveal">
-            <h3>Cryptographic erase</h3>
-            <p>"Delete all data" destroys the encryption keys — everything becomes unreadable instantly, even forensically.</p>
+            <h3>Clear connection boundaries</h3>
+            <p>Model downloads and address suggestions use the network. Your speech provider may process dictation online; exports and navigation go where you choose.</p>
           </article>
         </div>
       </div>
@@ -616,7 +488,7 @@
     <section class="limits" id="limits">
       <div class="shell">
         <p class="kicker">Plain talk</p>
-        <h2>The fine print, in large print.</h2>
+        <h2>A few things to know before you start.</h2>
         <div class="limit-grid">
           <article class="limit reveal">
             <h3>AI drafts need your eyes</h3>
@@ -629,15 +501,15 @@
           <article class="limit reveal">
             <h3>Built for de-identified drafting</h3>
             <p>
-              CareDraft is a personal drafting tool for post-encounter, de-identified
-              notes. Don't record patient interactions or enter identifiers. We are
-              not a HIPAA Business Associate — by design, we never touch your data.
+              CareDraft is a personal drafting tool for de-identified, post-encounter
+              notes. Avoid patient identifiers, and follow your organization's
+              documentation, privacy, and device policies.
             </p>
           </article>
           <article class="limit reveal">
             <h3>No cloud backup, on purpose</h3>
             <p>
-              Your notes exist on your phone and nowhere else. If you lose both your
+              CareDraft does not keep a server backup of your notes. If you lose both your
               PIN and your recovery code, the data is gone for good — no support
               ticket can bring it back. That's the cost of nobody else holding a key.
             </p>
@@ -645,9 +517,9 @@
           <article class="limit reveal">
             <h3>Needs a modern phone</h3>
             <p>
-              Running a multi-billion-parameter model locally takes recent hardware.
-              The AI model is a one-time multi-gigabyte download at setup; after
-              that, no connection is needed.
+              Local AI needs available storage and memory. CareDraft E2B starts at
+              8 GB phone RAM with a roughly 3.4 GB model download. After setup,
+              the drafting model can run offline.
             </p>
           </article>
         </div>
@@ -658,35 +530,37 @@
     <section class="faq" id="faq">
       <div class="shell shell-narrow">
         <p class="kicker">Questions</p>
-        <h2>Asked and answered.</h2>
+        <h2>A little more about CareDraft.</h2>
 
         <details class="qa reveal">
-          <summary>Does it really work in airplane mode?</summary>
+          <summary>What works offline?</summary>
           <p>
-            Yes. After one-time setup — installing the app and downloading the AI
-            model — dictation, transcription, drafting, and every tool in the app run
-            entirely on the device. Try it: flip on airplane mode, dictate a note, and
-            watch it draft.
+            After the model download, AI note drafting runs offline. You can also
+            type notes and use local records without a connection. Offline dictation
+            depends on your phone having offline speech recognition available. Address
+            suggestions and external map services need their own connections.
           </p>
         </details>
 
         <details class="qa reveal">
-          <summary>What happens to my dictation audio?</summary>
+          <summary>Does my dictation go to the cloud?</summary>
           <p>
-            It's transcribed on the device and stored encrypted on the phone. It is
-            never uploaded, never used for training, and never visible to us. There is
-            no "us" in the loop at all.
+            CareDraft uses your device's configured speech-recognition service. With
+            offline recognition available, it can transcribe locally; on Android, the
+            selected provider may use network processing depending on your settings.
+            CareDraft LLC does not receive the audio or transcript. The CareDraft
+            model drafts the note on your phone.
           </p>
         </details>
 
         <details class="qa reveal">
           <summary>Is CareDraft HIPAA compliant?</summary>
           <p>
-            CareDraft never receives your data, so there's no business-associate
-            relationship to govern — we don't sign BAAs because there's nothing on our
-            side to cover. It's intended for de-identified, post-encounter drafting.
-            Whether you may use it in your workflow depends on your employer's
-            policies and applicable law, so check before you chart.
+            CareDraft is intended for de-identified, post-encounter drafting. Local
+            processing and encryption do not by themselves establish that a workflow
+            meets your organization's requirements. Check with your organization
+            before using it for clinical work, and read the <a href="privacy/">Privacy Policy</a>
+            and <a href="terms/">Terms of Use</a>.
           </p>
         </details>
 
@@ -700,12 +574,23 @@
         </details>
 
         <details class="qa reveal">
-          <summary>What AI is under the hood?</summary>
+          <summary>What makes the CareDraft AI model custom?</summary>
           <p>
-            Note drafting runs on Google's Gemma open-weight models, executed locally
-            by an on-device inference engine. Speech-to-text uses on-device
-            recognition tuned with clinical vocabulary. Models are downloaded once at
-            setup and live on your phone from then on.
+            CareDraft E2B and E4B are our own fine-tuned versions of Google's Gemma
+            models. Fine-tuning means giving an AI additional training for a specific
+            job — in this case, organizing home-health dictation into clinical notes.
+            They run on your phone after download. This focused training does not
+            guarantee accuracy; every draft still needs clinician review.
+          </p>
+        </details>
+
+        <details class="qa reveal">
+          <summary>What data was used to train CareDraft AI?</summary>
+          <p>
+            Our downloadable models were trained on synthetic examples: fictional
+            home-health visit dictations paired with example notes. These cover
+            physical therapy, occupational therapy, speech therapy, and skilled nursing.
+            Your notes and dictation are not collected to train these models.
           </p>
         </details>
 
@@ -724,14 +609,15 @@
     <!-- ───────────────────────── Get the app ───────────────────────── -->
     <section class="get" id="get">
       <div class="shell get-inner">
-        <h2>Put an AI scribe in your pocket.<br>Leave the cloud out of it.</h2>
+        <p class="kicker kicker-light">CareDraft for home health</p>
+        <h2>Notes that go where you go.<br>Even without internet.</h2>
         <p class="section-lede">
           CareDraft is in field testing with home-health clinicians now, and is
           coming to Google Play.
         </p>
-        <!-- When the Play Store listing is live, replace the span below with:
-             <a class="btn btn-light" href="PLAY_STORE_URL">Get it on Google Play</a> -->
-        <span class="btn btn-light btn-static">Coming to Google Play</span>
+        <!-- Replace the release status with the verified store link when available. -->
+        <p class="release-status"><span aria-hidden="true"></span> In field testing · Google Play release planned</p>
+        <a class="btn btn-light" href="#caredraft-ai">Explore CareDraft AI <span aria-hidden="true">↑</span></a>
         <p class="get-foot">Built by a practicing home-health clinician.</p>
       </div>
     </section>
@@ -754,50 +640,14 @@
         <a href="terms/">Terms of Use</a>
       </nav>
       <p class="footer-fine">
-        On-device drafting powered by Gemma (Google), running locally. Speech
-        recognition runs on-device. CareDraft generates drafts, not final clinical
-        documentation — review every note before you rely on it.
+        CareDraft AI uses custom fine-tunes of Google's Gemma models, running locally.
+        Speech recognition depends on your device and provider settings. All AI output
+        is a draft for clinician review. Product previews use fictional content.
       </p>
       <p class="footer-copy">© <span id="year">2026</span> CareDraft</p>
     </div>
   </footer>
 
-  <script>
-    // Typed line in the phone mockup
-    (function () {
-      var el = document.getElementById('typed');
-      if (!el) return;
-      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var text = 'Pt ambulated 150 ft with rolling walker, CGA, no loss of balance.';
-      if (reduced) { el.textContent = text; return; }
-      var i = 0;
-      (function tick() {
-        if (i <= text.length) {
-          el.textContent = text.slice(0, i);
-          i += 1;
-          setTimeout(tick, i < 12 ? 55 : 32);
-        } else {
-          setTimeout(function () { i = 0; tick(); }, 6000);
-        }
-      })();
-    })();
-
-    // Scroll reveals
-    (function () {
-      var items = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window)) {
-        items.forEach(function (n) { n.classList.add('is-in'); });
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.15 });
-      items.forEach(function (n) { io.observe(n); });
-    })();
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="site.js?v=20260908b" defer></script>
 </body>
 </html>
