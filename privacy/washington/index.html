@@ -53,7 +53,7 @@
         <h1>Washington Consumer Health Data Privacy Policy</h1>
         <div class="legal-meta">
           <span>Effective date <strong>May 28, 2026</strong></span>
-          <span>Last updated <strong>June 7, 2026</strong></span>
+          <span>Last updated <strong>September 21, 2026</strong></span>
         </div>
       </div>
     </section>
@@ -80,121 +80,89 @@
         </details>
 
         <article class="legal-body">
-          <div class="legal-callout">
-            <p><strong>Washington consumer health data notice.</strong> This policy supplements CareDraft's general Privacy Policy for Washington consumers and describes CareDraft's current local-first product design and data practices under Washington's My Health My Data Act (RCW 19.373) ("MHMDA").</p>
-          </div>
-
           <section id="why-this-policy">
-            <h2>Why this policy exists</h2>
-            <p>The Washington My Health My Data Act (RCW 19.373) requires regulated entities that collect "consumer health data" of Washington consumers to publish a dedicated privacy policy describing their consumer health data practices. This is that policy.</p>
-            <p>Our general Privacy Policy is available at <a href="../"><strong>https://caredraft.app/privacy</strong></a>. This document supplements that policy with specific information required by Washington law. If anything in this document conflicts with the general Privacy Policy, this document governs with respect to Washington consumer health data.</p>
+          <h2>Why this policy exists</h2>
+          <p>The Washington My Health My Data Act (RCW 19.373) requires regulated entities that collect "consumer health data" of Washington consumers to publish a dedicated privacy policy describing their consumer health data practices. This is that policy.</p>
+          <p>Our general Privacy Policy is available at <strong>https://caredraft.app/privacy</strong>. This document supplements that policy with specific information required by Washington law. If anything in this document conflicts with the general Privacy Policy, this document governs with respect to Washington consumer health data.</p>
           </section>
-
           <section id="how-caredraft-works">
-            <h2>How CareDraft works (important context)</h2>
-            <p>CareDraft is a clinical productivity application that runs <strong>entirely on the device</strong> of the clinician who installs it. The App is intended for clinician-dictated, post-encounter, de-identified note drafting. It is not intended to record patient interactions or to capture patient identifiers. The App does not transmit clinical content, audio, transcripts, summaries, notes, or any patient information to CareDraft LLC's servers, to cloud services, or to any third party. Everything you create stays on your device. CareDraft LLC does not have, and cannot obtain, access to your clinical content.</p>
-            <p>This architectural decision shapes everything below. Because we do not collect or process consumer health data, our MHMDA obligations are substantially narrower than those of cloud-based health applications. We have nonetheless prepared this policy to be transparent about our practices and to provide a clear mechanism for Washington consumers to exercise their rights under MHMDA.</p>
+          <h2>How CareDraft works (important context)</h2>
+          <p>CareDraft is a clinical productivity application that stores clinical work and runs note-generation AI on the clinician's device. The App is intended for clinician-dictated, post-encounter, de-identified note drafting. It is not intended to record patient interactions or capture patient identifiers. CareDraft LLC does not receive or store clinical content, audio, transcripts, summaries, notes, or patient information. On Android, however, live dictation uses the speech recognition service selected on the device. It can work offline when offline recognition is available, or the selected service may use provider network processing under its own terms. CareDraft LLC does not receive that audio or transcript.</p>
+          <p>Optional Visit Router address suggestions send actively typed address or city/ZIP searches and a rounded search center directly to Photon (Komoot) only after the clinician taps Enable online suggestions. These queries may contain a visit address. The provider receives the query and ordinary network metadata; CareDraft LLC does not receive them or control provider retention. Foreground device location is optional, and there is no background tracking. Manual address entry remains available. See the general Privacy Policy for details.</p>
+          <p>Local storage does not by itself determine how privacy law applies. Optional address search, Android speech processing, and user-directed exports can send information to other recipients. A clinician's choice to enable a feature does not establish consent from a patient or replace any authorization required for that disclosure.</p>
           </section>
-
-          <hr>
-
           <section id="sec-1">
-            <h2>1. Categories of consumer health data we collect</h2>
-            <p><strong>We do not collect, receive, process, or store consumer health data on our servers or in any system we control.</strong></p>
-            <p>When you use the App, the following types of information are created and stored exclusively on your device, encrypted at rest:</p>
-            <ul>
-              <li>Audio recordings of dictations</li>
-              <li>Text transcriptions</li>
-              <li>AI-generated summaries and templates</li>
-              <li>Notes, including any patient information you input</li>
-              <li>Diagnoses, treatment plans, medication information, or other clinical content you enter</li>
-            </ul>
-            <p>While this information may meet MHMDA's definition of "consumer health data" with respect to <em>patients</em> whose information a clinician dictates, CareDraft LLC does not collect, receive, or process any of it. It never leaves the device of the clinician who entered it.</p>
+          <h2>1. Categories of consumer health data we collect</h2>
+          <p><strong>CareDraft LLC operates no clinical-content backend.</strong> The app processes clinical content locally. Connected features and recipients are described below and in the general Privacy Policy.</p>
+          <p>When you use the App, the following types of information are created and stored exclusively on your device, encrypted at rest:</p>
+          <ul>
+          <li>Legacy saved audio recordings, if present</li>
+          <li>Text transcriptions</li>
+          <li>AI-generated summaries and templates</li>
+          <li>Notes, including any patient information you input</li>
+          <li>Diagnoses, treatment plans, medication information, or other clinical content you enter</li>
+          </ul>
+          <p>While this information may meet MHMDA's definition of "consumer health data" with respect to <em>patients</em> whose information a clinician dictates, CareDraft LLC does not receive it through a clinical-content backend; the app processes it on-device. Android users should understand that their selected speech recognition provider may separately process live dictation as described above.</p>
           </section>
-
           <section id="sec-2">
-            <h2>2. Categories of sources from which consumer health data is collected</h2>
-            <p>Not applicable. CareDraft LLC does not collect consumer health data from any source.</p>
+          <h2>2. Categories of sources from which consumer health data is collected</h2>
+          <p>The clinician supplies dictated, typed, imported, or photographed content. Device location can supply a search center after online-search opt-in and platform permission. Address results come from Photon / Komoot. CareDraft LLC has no clinical-content backend; information emailed directly to us comes from the sender.</p>
           </section>
-
           <section id="sec-3">
-            <h2>3. Categories of consumer health data shared</h2>
-            <p>Not applicable. CareDraft LLC does not collect, and therefore cannot share, consumer health data.</p>
-            <p>We do not sell consumer health data, and we will not sell consumer health data in the future without first obtaining a separate, written, signed Valid Authorization from the consumer as required by RCW 19.373.040.</p>
+          <h2>3. Categories of consumer health data shared</h2>
+          <p>Connected features can transmit live speech containing clinical information to the selected Android speech provider, address queries and a rounded search center to Photon / Komoot after opt-in, and user-selected clinical content to export recipients. A visit address or speech content can reveal health-related information depending on what the clinician enters. CareDraft LLC does not receive a copy through a clinical-content backend.</p>
+          <p>We do not sell consumer health data, and we will not sell consumer health data in the future without first obtaining a separate, written, signed Valid Authorization from the consumer as required by RCW 19.373.090.</p>
           </section>
-
           <section id="sec-4">
-            <h2>4. Categories of third parties and affiliates with whom consumer health data is shared</h2>
-            <p>Not applicable. CareDraft LLC does not share consumer health data with any third party, affiliate, processor, or service provider, because we do not collect it.</p>
+          <h2>4. Categories of third parties and affiliates with whom consumer health data is shared</h2>
+          <p>The selected Android speech provider may receive live dictation, and apps or services chosen for exports receive the content the user sends. Photon (Komoot) receives address-search queries, a rounded search center, and network metadata only after Visit Router online suggestions are enabled. CareDraft LLC does not receive those requests. The provider controls its own handling and retention.</p>
           </section>
-
           <section id="sec-5">
-            <h2>5. How a consumer can exercise their MHMDA rights</h2>
-            <p>Even though we do not collect consumer health data, we provide the following process so that Washington consumers can confirm this and exercise the rights MHMDA provides:</p>
-
-            <h3>5.1 Rights</h3>
-            <p>Washington consumers have the right to:</p>
-            <ul>
-              <li><strong>Confirm</strong> whether CareDraft LLC is collecting, sharing, or selling consumer health data about them, and to access that data.</li>
-              <li><strong>Withdraw consent</strong> from CareDraft LLC's collection and sharing of consumer health data.</li>
-              <li><strong>Delete</strong> consumer health data CareDraft LLC has collected.</li>
-            </ul>
-
-            <h3>5.2 How to exercise these rights</h3>
-            <p>Email <strong>privacy@caredraft.app</strong> with the subject line "Washington MHMDA Request" and include:</p>
-            <ul>
-              <li>Your name (and, if you are a patient submitting a request about your own data, the name of the clinician who may have used the App with respect to your care, if known);</li>
-              <li>The specific right you wish to exercise (confirm/access, withdraw consent, or delete);</li>
-              <li>A description sufficient for us to verify your identity (we will request additional verification information if needed);</li>
-              <li>Your preferred contact method for our response.</li>
-            </ul>
-
-            <h3>5.3 Our response</h3>
-            <p>We will respond within <strong>45 days</strong> of receiving a verifiable request, as required by RCW 19.373.050. We may extend that period by an additional 45 days if reasonably necessary, in which case we will notify you of the extension and the reason for it.</p>
-            <p>Because we do not collect consumer health data on our servers, the substance of our response to confirm/access, withdraw consent, and delete requests will typically be: <em>"CareDraft LLC does not collect, receive, store, or process any consumer health data about you on our systems. Any clinical information about you created in the CareDraft App resides exclusively on the device of the clinician who installed the App; we have no access to it and cannot retrieve, modify, or delete it. To address consumer health data residing on a specific clinician's device, please contact that clinician directly or their healthcare practice."</em></p>
-
-            <h3>5.4 Appeals</h3>
-            <p>If we deny your request and you wish to appeal, reply to our denial within 30 days. We will respond to your appeal within 60 days. If we deny your appeal, you may submit a complaint to the Washington State Attorney General at <a href="https://www.atg.wa.gov/file-complaint" target="_blank" rel="noopener"><strong>https://www.atg.wa.gov/file-complaint</strong></a>.</p>
+          <h2>5. How a consumer can exercise their MHMDA rights</h2>
+          <p>Use the following process for questions or requests about consumer health data:</p>
+          <h3>5.1 Rights</h3>
+          <p>Washington consumers have the right to:</p>
+          <ul>
+          <li><strong>Confirm</strong> whether CareDraft LLC is collecting, sharing, or selling consumer health data about them, and to access that data.</li>
+          <li><strong>Withdraw consent</strong> from CareDraft LLC's collection and sharing of consumer health data.</li>
+          <li><strong>Delete</strong> consumer health data CareDraft LLC has collected.</li>
+          </ul>
+          <h3>5.2 How to exercise these rights</h3>
+          <p>Email <strong>privacy@caredraft.app</strong> with the subject line "Washington MHMDA Request" and include:</p>
+          <ul>
+          <li>Your name (and, if you are a patient submitting a request about your own data, the name of the clinician who may have used the App with respect to your care, if known);</li>
+          <li>The specific right you wish to exercise (confirm/access, withdraw consent, or delete);</li>
+          <li>A description sufficient for us to verify your identity (we will request additional verification information if needed);</li>
+          <li>Your preferred contact method for our response.</li>
+          </ul>
+          <h3>5.3 Our response</h3>
+          <p>We will respond within <strong>45 days</strong> of receiving a verifiable request, as required by RCW 19.373.040. We may extend that period by an additional 45 days if reasonably necessary, in which case we will notify you of the extension and the reason for it.</p>
+          <p>We will investigate the request and explain which information is available to us and which is held on a clinician's device or by an independent provider. Contact the clinician or practice to request changes to local clinical records. Contact us for help identifying the relevant recipient; do not email unnecessary patient information. We cannot promise remote erasure of device content or provider records we do not control.</p>
+          <h3>5.4 Appeals</h3>
+          <p>If we deny your request and you wish to appeal, reply to our denial within 30 days. We will respond to your appeal within 60 days. If we deny your appeal, you may submit a complaint to the Washington State Attorney General at <strong><a href="https://www.atg.wa.gov/file-complaint">https://www.atg.wa.gov/file-complaint</a></strong>.</p>
           </section>
-
           <section id="sec-6">
-            <h2>6. Processors</h2>
-            <p>CareDraft LLC does not engage processors to handle consumer health data, because we do not collect consumer health data.</p>
+          <h2>6. Processors</h2>
+          <p>The app has no CareDraft-hosted clinical processing service. Photon / Komoot receives optional address queries; the selected Android speech service may receive dictation; export recipients receive what the user sends. Android Google ML Kit receives technical SDK information, not the medication images or recognized text. These flows are described in the general Privacy Policy. This notice does not represent that every recipient acts as our contracted processor.</p>
           </section>
-
           <section id="sec-7">
-            <h2>7. Consent and authorization</h2>
-            <p>Because CareDraft LLC does not collect, share, or sell consumer health data, no consumer consent or authorization is required for those activities. The App, however, displays a privacy notice at first launch that summarizes its on-device architecture and confirms the user has read this policy and the general Privacy Policy.</p>
-            <p>If our architecture or practices ever change such that CareDraft LLC would collect, process, share, or sell consumer health data of Washington consumers, we will:</p>
-            <ul>
-              <li>Update this policy before any such change takes effect;</li>
-              <li>Obtain affirmative opt-in consent under RCW 19.373.030 before any collection;</li>
-              <li>Obtain a separate written, signed Valid Authorization under RCW 19.373.040 before any sale.</li>
-            </ul>
+          <h2>7. Consent and authorization</h2>
+          <p>Visit Router starts with online suggestions off and displays a notice before enabling them. Turn off suggestions or leave Visit Router to stop further searches. You can enter addresses manually. Withdrawing consent cannot recall requests already sent. Device location requires a separate platform permission when it has not already been granted.</p>
+          <p>The app's acknowledgement and clinician opt-in do not replace any patient consent required by law. CareDraft is intended for de-identified note drafting. Do not send identifiable clinical content to a speech service, address provider, or export recipient without the necessary authority. If our practices change, we will update this policy and obtain any legally required consent before the changed processing begins.</p>
           </section>
-
           <section id="sec-8">
-            <h2>8. Geofencing</h2>
-            <p>CareDraft LLC does not operate a geofence around any in-person healthcare facility, as those terms are defined in RCW 19.373.005, and does not use any geofencing technology to identify, track, or collect information from Washington consumers near healthcare facilities.</p>
+          <h2>8. Geofencing</h2>
+          <p>CareDraft LLC does not operate a geofence around any in-person healthcare facility, as those terms are defined in RCW 19.373.005, and does not use any geofencing technology to identify, track, or collect information from Washington consumers near healthcare facilities.</p>
           </section>
-
           <section id="sec-9">
-            <h2>9. Changes to this policy</h2>
-            <p>We may update this policy from time to time. When we do, we will update the "Last Updated" date at the top of the policy. If we make material changes that expand the scope of consumer health data we collect, share, or sell, we will obtain any consents required by MHMDA before those changes apply to existing users.</p>
+          <h2>9. Changes to this policy</h2>
+          <p>We may update this policy from time to time. When we do, we will update the "Last Updated" date at the top of the policy. If we make material changes that expand the scope of consumer health data we collect, share, or sell, we will obtain any consents required by MHMDA before those changes apply to existing users.</p>
           </section>
-
           <section id="sec-10">
-            <h2>10. Contact us</h2>
-            <p>
-              <strong>CareDraft LLC</strong><br>
-              95 Christmas Lane, Bunker Hill, WV 25413<br>
-              Email: <a href="mailto:privacy@caredraft.app">privacy@caredraft.app</a>
-            </p>
-
-            <hr>
-            <p class="legal-fine">This policy was prepared with drafting assistance and describes CareDraft's current local-first product design. It is not a substitute for individualized legal or compliance advice.</p>
+          <h2>10. Contact us</h2>
+          <p><strong>CareDraft LLC</strong> 95 Christmas Lane, Bunker Hill, WV 25413 Email: privacy@caredraft.app</p>
+          <p><em>This policy is provided for transparency and is not a substitute for individualized legal advice.</em></p>
           </section>
-
         </article>
       </div>
     </section>
@@ -218,8 +186,7 @@
         <a href="../../terms/">Terms of Use</a>
       </nav>
       <p class="footer-fine">
-        On-device drafting powered by Gemma (Google), running locally. Speech
-        recognition runs on-device. CareDraft generates drafts, not final clinical
+        On-device drafting powered by Gemma (Google), running locally. Speech recognition depends on platform and settings; Android providers may use network processing. CareDraft generates drafts, not final clinical
         documentation — review every note before you rely on it.
       </p>
       <p class="footer-copy">© <span id="year">2026</span> CareDraft</p>
