@@ -1927,3 +1927,40 @@ h2 {
 @media (prefers-reduced-motion: reduce) {
   .home *, .home *::before, .home *::after { animation: none !important; transition: none !important; }
 }
+
+/* Concise release overview; deeper details live in the FAQ. */
+.security-link { display: inline-block; color: #8be0c7; margin-top: 26px; font-size: 14px; text-underline-offset: 4px; }
+.home .review-reminder { padding-block: 36px; background: #f0ede5; }
+.review-reminder .shell { display: flex; align-items: center; gap: 32px; }
+.home .review-reminder h2 { font-size: 28px; flex-shrink: 0; }
+.review-reminder p { color: var(--ink-soft); font-size: 14px; line-height: 1.7; }
+@media (max-width: 640px) {
+  .review-reminder .shell { display: block; }
+  .review-reminder p { margin-top: 12px; }
+  .demo-enhanced .demo-options { display: flex; }
+  .demo-options button { flex: 1 1 auto; }
+}
+
+/* Feature previews retain visual detail alongside concise descriptions. */
+.education-paper { padding: 20px; background: white; border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 5px 0 -2px #fff, 0 6px 0 -2px var(--line); }
+.paper-mark { display: block; color: #15803d; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 15px; }
+.packet-topic { display: flex; gap: 12px; align-items: center; padding-top: 15px; margin-top: 15px; border-top: 1px solid var(--line-soft); }
+.packet-topic > span { color: #15803d; background: #e8f3ea; border-radius: 50%; padding: 7px; font-size: 11px; }
+.packet-topic strong { font-size: 12px; color: var(--navy); }
+.packet-topic p { font-size: 11px; color: var(--ink-soft); margin-top: 3px; }
+.mileage-totals { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.mileage-totals > div { padding: 18px 12px; background: #edf3fc; border: 1px solid #d9e3f3; border-radius: 12px; }
+.mileage-totals span { display: block; font-size: 10px; color: var(--ink-soft); margin-bottom: 8px; }
+.mileage-totals strong { font-size: clamp(20px, 2.4vw, 30px); color: #1e477c; }
+.mileage-totals small { font-size: 12px; font-weight: 500; }
+.toolkit-caption { text-align: center; font-size: 12px; color: var(--ink-soft); margin-top: 36px; line-height: 1.7; }
+.toolkit-caption a { text-underline-offset: 3px; }
+
+/* Lead with the account-free, subscription-free experience. */
+.signup-callout { margin: 24px 0; padding: 20px 24px; border-radius: 12px; background: #164e46; color: #fff; border-left: 5px solid #8be0c7; }
+.signup-callout strong { display: block; font: 600 clamp(26px, 2.5vw, 34px)/1.18 var(--font-display); letter-spacing: -.02em; }
+.signup-callout p + p { margin-top: 10px; color: #d8eee6; font-size: 13px; line-height: 1.6; }
+@media (max-width: 640px) {
+  .signup-callout { padding: 18px 20px; margin: 20px 0; }
+  .signup-callout strong { font-size: 28px; }
+}
