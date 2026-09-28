@@ -42,6 +42,24 @@
     mobile.addEventListener('change', closeMenu);
   }
 
+  // Footnotes open their FAQ answer on click, direct link, and back/forward.
+  const openLinkedFaq = () => {
+    const answer = document.getElementById(window.location.hash.slice(1));
+    if (!answer || !answer.matches('details.qa')) return;
+    answer.open = true;
+    answer.scrollIntoView({ block: 'start' });
+    answer.querySelector('summary').focus({ preventScroll: true });
+  };
+  document.querySelectorAll('.footnote-ref').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      if (window.location.hash === link.hash) openLinkedFaq();
+      else window.location.hash = link.hash;
+    });
+  });
+  window.addEventListener('hashchange', openLinkedFaq);
+  openLinkedFaq();
+
   // Actual, unedited CareDraft outputs supplied by the owner.
   // Nursing example supplied September 27, 2026.
   // PT: 7:04 AM; OT: 7:23 AM. Preserve the exported wording.

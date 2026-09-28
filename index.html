@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css?v=20260927d">
-  <link rel="stylesheet" href="home.css?v=20260927e">
+  <link rel="stylesheet" href="home.css?v=20260928a">
 
   <script>
     // Redirect old GitHub Pages host to the custom domain.
@@ -77,21 +77,17 @@
       <div class="shell hero-grid">
         <div class="hero-copy">
           <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Made for home-health clinicians.</p>
-          <h1>Draft your notes.<br><em>Even offline.</em></h1>
+          <h1>Draft your notes.<br><em>Even offline.<a class="footnote-ref" href="#faq-offline" aria-label="Offline setup and dictation details">*</a></em></h1>
           <div class="signup-callout">
-            <div><span class="benefit-check" aria-hidden="true">✓</span><strong>No sign-up.</strong><span>No account to create.</span></div>
-            <div><span class="benefit-check" aria-hidden="true">✓</span><strong>No subscription.</strong><span>No monthly payment.</span></div>
+            <div><span class="benefit-check" aria-hidden="true">✓</span><strong>No sign-up.</strong></div>
+            <div><span class="benefit-check" aria-hidden="true">✓</span><strong>No subscription.</strong></div>
           </div>
-          <p class="lede">Your visit recap, turned into a clear draft. CareDraft AI works on your phone—even offline after setup.</p>
+          <p class="lede">Turn your visit recap into a clear clinical draft with CareDraft AI.</p>
           <div class="hero-ctas">
             <a class="btn btn-primary" href="#note-examples">See a sample note <span aria-hidden="true">↗</span></a>
             <a class="btn btn-ghost" href="#how">See how it works</a>
           </div>
           <ul class="hero-chips" aria-label="Key facts">
-            <li>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 14.6v-2.2l-8-4.5V3.5a1.5 1.5 0 0 0-3 0v4.4l-8 4.5v2.2l8-2.5v4.9l-2.2 1.6v1.7l3.7-1.1 3.7 1.1v-1.7L13 17.5v-4.9l8 2z"/></svg>
-              No internet needed to draft
-            </li>
             <li>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z"/></svg>
               Encrypted on your device
@@ -101,15 +97,10 @@
               No per-note AI charges
             </li>
           </ul>
-          <p class="offline-setup">Review every draft. Offline dictation depends on your phone’s speech settings.</p>
           <p class="hero-availability"><span>Android</span><span>Apple · iOS</span></p>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <div class="float-pill float-pill-top">
-            <svg viewBox="0 0 24 24"><path d="M21 14.6v-2.2l-8-4.5V3.5a1.5 1.5 0 0 0-3 0v4.4l-8 4.5v2.2l8-2.5v4.9l-2.2 1.6v1.7l3.7-1.1 3.7 1.1v-1.7L13 17.5v-4.9l8 2z"/></svg>
-            Offline &amp; ready
-          </div>
           <div class="phone">
             <div class="phone-screen">
               <div class="statusbar">
@@ -129,7 +120,7 @@
                   <span class="note-chip">Routine Visit</span>
                   <span class="note-date">Draft · today</span>
                 </div>
-                <div class="ai-banner">Draft — verify before signing</div>
+                <div class="ai-banner">AI-generated draft</div>
                 <p class="mock-label">Draft preview</p>
                 <p class="mock-text">The patient was seen for a physical therapy follow-up visit and reports easier chair transfers, though they remain unsteady with turns. Gait was observed with a rolling walker, requiring contact guard assist, with improved foot clearance following cues. Skilled intervention included sit-to-stand practice, noting decreased upper extremity push-off.</p>
               </div>
@@ -145,47 +136,24 @@
             <svg viewBox="0 0 24 24"><path d="M9 3h6v2h3a1 1 0 0 1 1 1v3h2v6h-2v3a1 1 0 0 1-1 1h-3v2H9v-2H6a1 1 0 0 1-1-1v-3H3V9h2V6a1 1 0 0 1 1-1h3V3zm-1 6v6h8V9H8z"/></svg>
             Your notes. Your device.
           </div>
-          <div class="recap-card"><span class="recap-icon" aria-hidden="true">↗</span><div><span class="recap-label">Your quick recap</span><p>“PT f/u. Pt reports easier chair transfers…”</p><span class="recap-result">Organized into a draft for review</span></div></div>
-          <p class="visual-caption">Illustrative preview · actual AI output excerpt</p>
+          <div class="recap-card"><span class="recap-icon" aria-hidden="true">↗</span><div><span class="recap-label">Your quick recap</span><p>“PT f/u. Pt reports easier chair transfers…”</p></div></div>
+          <p class="visual-caption">Illustrative preview</p>
         </div>
-      </div>
-    </section>
-
-    <section class="pillars" aria-label="CareDraft at a glance">
-      <div class="shell pillar-grid">
-        <article class="pillar"><span class="pillar-index">01 / PURPOSE</span><h2>Made for home health.</h2><p>For therapy and skilled nursing visits.</p></article>
-        <article class="pillar"><span class="pillar-index">02 / OFFLINE</span><h2>Works where you work.</h2><p>Keep drafting, even without a connection.</p></article>
-        <article class="pillar"><span class="pillar-index">03 / CONTROL</span><h2>You make the final call.</h2><p>Review, edit, and choose what to share.</p></article>
       </div>
     </section>
 
     <section class="model-section" id="caredraft-ai" aria-labelledby="model-title">
       <div class="shell">
-        <div class="model-heading">
-          <p class="kicker kicker-light">Meet CareDraft AI</p>
-          <span class="model-status"><span aria-hidden="true"></span> Built for home health. Works offline.</span>
-        </div>
-        <div class="model-grid">
+        <div class="model-intro">
           <div class="model-copy">
+            <p class="kicker kicker-light">Meet CareDraft AI</p>
             <h2 id="model-title">Made for the way<br><em>you document.</em></h2>
-            <p class="section-lede">Your words in. A clearer draft out.</p>
-            <dl class="model-benefits">
-              <div><dt>Built for your discipline</dt><dd>Physical therapy, occupational therapy, speech therapy, and skilled nursing.</dd></div>
-              <div><dt>Your details, organized</dt><dd>One narrative or your own note template.</dd></div>
-              <div><dt>You make it final</dt><dd>Check the facts, edit, and approve before sharing.</dd></div>
-            </dl>
           </div>
-          <aside class="offline-panel" aria-labelledby="offline-title">
-            <span class="offline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 14.6v-2.2l-8-4.5V3.5a1.5 1.5 0 0 0-3 0v4.4l-8 4.5v2.2l8-2.5v4.9l-2.2 1.6v1.7l3.7-1.1 3.7 1.1v-1.7L13 17.5v-4.9l8 2z"/></svg></span>
-            <p class="kicker kicker-light">No Wi-Fi. No cell service.</p>
-            <h3 id="offline-title">Your AI still works.</h3>
-            <p>Download the AI once. Draft, review, and edit your notes on your phone — even without a connection.</p>
-            <p class="offline-detail">Typing works offline. Voice dictation depends on your phone. <a href="#faq">Setup &amp; device details</a></p>
-          </aside>
+          <p class="section-lede">Custom AI for physical, occupational, and speech therapy and skilled nursing. Use a narrative or your own note template.</p>
         </div>
         <div class="draft-demo" id="note-examples" aria-labelledby="demo-title">
           <div class="demo-top">
-            <div><p class="demo-eyebrow">A few words from you. A readable draft.</p><h3 id="demo-title">From shorthand to a clinical note.</h3></div>
+            <div><p class="demo-eyebrow">See it in action</p><h3 id="demo-title">From shorthand to a clinical note.</h3></div>
             <span class="demo-mark" aria-hidden="true">✦</span>
           </div>
           <div class="demo-options" role="group" aria-label="Choose a CareDraft AI note example">
@@ -197,8 +165,6 @@
             <div class="demo-input">
               <p class="demo-label">01 / Your quick recap</p>
               <p id="demo-transcript">“PT f/u. Pt reports easier chair transfers, still unsteady with turns. Gait w RW, CGA; better foot clearance after cues. Practiced sit-to-stand, less UE push-off. Continue skilled gait/balance work per POC.”</p>
-              <p class="demo-input-caption">Recap the visit in your own words. CareDraft helps turn your shorthand into a readable narrative.</p>
-
             </div>
             <div class="demo-output">
               <div class="demo-note-header"><p class="demo-label">02 / Your note, organized</p><span class="review-label">Draft for review</span></div>
@@ -207,7 +173,7 @@
               <p id="demo-kind">Generated by CareDraft AI</p>
             </div>
           </div>
-          <p class="demo-fine">Actual CareDraft AI output from sample visit recaps, shown without edits. Results vary; review every draft against the details you provided.</p>
+          <p class="demo-fine">Actual, unedited AI output.<a class="footnote-ref" href="#faq-examples" aria-label="Sample note and AI review details">†</a></p>
         </div>
 
       </div>
@@ -217,17 +183,17 @@
     <section class="how" id="how">
       <div class="shell">
         <p class="kicker">How it works</p>
-        <h2>Recap. Draft. Review. Share.</h2>
+        <h2>From visit to finished note.</h2>
         <div class="steps-grid">
           <article class="step reveal">
             <span class="step-num">1</span>
-            <h3>Dictate</h3>
+            <h3>Recap</h3>
             <p>Recap the visit by voice or text. Leave out patient identifiers.</p>
           </article>
           <article class="step reveal">
             <span class="step-num">2</span>
             <h3>Draft</h3>
-            <p>Turn your recap into a narrative or use your own note template.</p>
+            <p>Let CareDraft AI organize your recap.</p>
           </article>
           <article class="step reveal">
             <span class="step-num">3</span>
@@ -237,7 +203,7 @@
           <article class="step reveal">
             <span class="step-num">4</span>
             <h3>Export</h3>
-            <p>Share reviewed text or a PDF with your approved destination.</p>
+            <p>Share text or a PDF with your approved destination.</p>
           </article>
         </div>
       </div>
@@ -306,7 +272,7 @@
             <div class="feature-emblem"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="5" transform="rotate(40 12 12)"/><path d="m8 9 8 6"/></svg><span>02 / VISIT TOOLKIT</span></div>
             <span class="feature-tag">Medication manager</span>
             <h3>Take a photo. Build your list.</h3>
-            <p>Read a medication list from a photo, right on your phone. Review every detail before saving.</p>
+            <p>Turn a medication photo into an editable list.</p>
             <ul class="feature-points"><li>Check names, doses, and instructions</li><li>Save dated snapshots</li><li>Search your medication history</li></ul>
           </div>
           <div class="feature-shot">
@@ -413,14 +379,14 @@
             </div>
           </div>
         </div>
-        <p class="toolkit-caption">Illustrative previews with sample content. <a href="#faq">Explore setup and privacy details.</a></p>
+        <p class="toolkit-caption">Illustrative previews with sample content.</p>
       </div>
     </section>
 
     <section class="cost" id="cost">
       <div class="shell ownership-grid">
-        <div><p class="kicker">Simple to start. Simple to keep using.</p><h2>No account.<br>No subscription.</h2><p class="section-lede">Start without an account. Draft without a subscription or per-note AI charges.</p><a class="text-link" href="#get">Explore supported platforms <span aria-hidden="true">↗</span></a></div>
-        <div class="ownership-details"><div><strong>$0<span> / month</span></strong><p>Recurring AI fee</p></div><ul><li>Download your model during setup</li><li>Draft locally without a cloud AI connection</li><li>Keep the visit toolkit in one app</li></ul><p class="ownership-fine">Refers to recurring AI fees. App pricing is separate.</p></div>
+        <div><p class="kicker">Cost</p><h2>More notes.<br>No added AI fees.</h2><a class="text-link" href="#get">Explore supported platforms <span aria-hidden="true">↗</span></a></div>
+        <div class="ownership-details"><div><strong>$0<span> / month</span></strong><p>Recurring AI fee<a class="footnote-ref" href="#faq-pricing" aria-label="App pricing and AI fee details">‡</a></p></div><p class="ownership-summary">No subscription or per-note charges.</p></div>
       </div>
     </section>
 
@@ -433,14 +399,10 @@
         <div class="sec-grid">
           <article class="sec-card"><h3>On your device</h3><p>Draft notes without sending your recap to a cloud AI service.</p></article>
           <article class="sec-card"><h3>Protected access</h3><p>Use a PIN or biometric unlock. Keep your recovery code somewhere safe.</p></article>
-          <article class="sec-card"><h3>You choose what to share</h3><p>Review before exporting. Dictation and connected tools have their own privacy settings.</p></article>
+          <article class="sec-card"><h3>You choose what to share</h3><p>Choose your export destination and connected-tool settings.</p></article>
         </div>
         <a class="security-link" href="#faq">Privacy &amp; security details <span aria-hidden="true">↗</span></a>
       </div>
-    </section>
-
-    <section class="review-reminder" id="limits" aria-label="Before you start">
-      <div class="shell"><h2>AI drafts. You decide.</h2><p>Use de-identified visit recaps, review every draft, and follow your organization’s policies.</p></div>
     </section>
 
     <!-- ───────────────────────── FAQ ───────────────────────── -->
@@ -459,8 +421,8 @@
           </p>
         </details>
 
-        <details class="qa reveal">
-          <summary>What works offline?</summary>
+        <details class="qa reveal" id="faq-offline">
+          <summary><span><span class="faq-marker" aria-hidden="true">*</span> What works offline?</span></summary>
           <p>
             After the model download, AI note drafting runs offline. You can also
             type notes and use local records without a connection. Offline dictation
@@ -469,9 +431,14 @@
           </p>
         </details>
 
-        <details class="qa reveal">
-          <summary>What should I check before using a draft?</summary>
-          <p>Compare the draft with your visit recap and verify every clinical fact, number, side, medication, and plan. AI can misinterpret shorthand or introduce errors. The examples show drafting behavior, not complete documentation templates; your final note must reflect the visit and your organization’s requirements.</p>
+        <details class="qa reveal" id="faq-examples">
+          <summary><span><span class="faq-marker" aria-hidden="true">†</span> What should I know about the sample notes?</span></summary>
+          <p>The note examples are actual, unedited CareDraft AI output from sample visit recaps; the phone preview shows an excerpt. Results vary, and all AI output is a draft for clinician review. AI can misinterpret shorthand or introduce errors. Compare each draft with your recap and verify every clinical fact, number, side, medication, and plan. These examples show drafting behavior, not complete documentation templates. Use de-identified recaps and follow your organization’s requirements.</p>
+        </details>
+
+        <details class="qa reveal" id="faq-pricing">
+          <summary><span><span class="faq-marker" aria-hidden="true">‡</span> What does “no AI fees” mean?</span></summary>
+          <p>The $0 monthly amount refers to recurring AI fees. There is no AI subscription or per-note charge. App pricing is separate.</p>
         </details>
 
         <details class="qa reveal">
@@ -563,9 +530,6 @@
       <div class="shell get-inner">
         <p class="kicker kicker-light">CareDraft for home health</p>
         <h2>Your next visit.<br>Your next clear draft.</h2>
-        <p class="section-lede">
-          No account. No subscription. Built around your work.
-        </p>
         <p class="release-status"><span aria-hidden="true"></span> Android &amp; Apple (iOS)</p>
         <a class="btn btn-light" href="#caredraft-ai">Explore CareDraft AI <span aria-hidden="true">↑</span></a>
         <p class="get-foot">Built by a practicing home-health clinician.</p>
@@ -589,11 +553,10 @@
         <a href="privacy/washington/">Washington Health Data Notice</a>
         <a href="terms/">Terms of Use</a>
       </nav>
-      <p class="footer-fine">All AI output is a draft for clinician review. Note examples use sample visit recaps.</p>
       <p class="footer-copy">© <span id="year">2026</span> CareDraft</p>
     </div>
   </footer>
 
-  <script src="site.js?v=20260927a" defer></script>
+  <script src="site.js?v=20260928a" defer></script>
 </body>
 </html>
